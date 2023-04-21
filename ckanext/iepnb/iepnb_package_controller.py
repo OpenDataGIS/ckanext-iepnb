@@ -34,7 +34,6 @@ class IepnbPackageController():
         pass
     
     def before_search(self, search_params):
-        log.debug('before_search-search_params {0}'.format(search_params))
         facet_field= search_params.get('facet.field', '')
         if facet_field is not None and len(facet_field) > 0:
             new_fq = self._facet_search_operator(
@@ -86,13 +85,12 @@ class IepnbPackageController():
         new_fq = fq
         facets_group=""
         no_facets_group=""
-        log.debug('old fq {0}'.format(fq))
         try:
             facet_operator = self.default_facet_operator
             try:
                 #busco si hay definido un operador de facetas en el request, y lo guardo en facet_operator
                 if request is not None and request.params and request.params.items():
-                    log.info('request.params %r' % request.params)
+                    log.debug('request.params %r' % request.params)
                     if (FACET_OPERATOR_PARAM_NAME, 'AND') in request.params.items():
                         facet_operator = 'AND'
                     elif (FACET_OPERATOR_PARAM_NAME, 'OR') in request.params.items():
@@ -107,7 +105,6 @@ class IepnbPackageController():
             #Por defecto la búsqueda por facetas es por intersección, pero si he pedido el operador OR, la hago aditiva
             if (facet_operator == 'OR'):
                 fq_split = fq.split('" ')
-                log.debug('fq_split {0}'.format(fq_split))
                 faceted=False
                 first_facet = True
                 first_no_facet = True

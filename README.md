@@ -119,6 +119,39 @@ python setup.py develop
 pip install -r dev-requirements.txt
 ```
 
+## Icons management
+
+This extension made automatic use of icons for fields defined in the schema file and using uris as values.
+
+To be this extension able to use the icons they must be stored acording these rules:
+
+* Icons for items must be in a subdirectory of public/images/icons, named after the field name.
+* For each item, its icon must be in a directory inside the named before, this named as the second-to-last fragment in the value´s path, and the file named as the last fragment of this value.
+* All names in lowercase letters
+* Icons can have svg, png, jpg or gif extensions.
+
+Examples:
+
+field_name: theme
+
+* value: http://inspire.ec.europa.eu/theme/mf1
+  * icon -> public/images/icons/theme/theme/mf1.svg (the repeated 'theme' is not a mistake)
+
+field_name: spatial
+
+* value: http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon
+  * icon -> public/images/icons/autonomia/aragon.svg
+  
+* value: http://datos.gob.es/recurso/sector-publico/territorio/Pais/España
+  * icon -> public/images/icons/pais/españa (note the lowercases and keep an eye on non-ascii-128 character translations between systems)
+
+To take advantage of the automatic use of icons, two display_snippets are provided in templates/scheming/display_snipets:
+
+* select_icon.html: to be used with one-select fields
+* multiple_choice_icon.html: to be used with multiple-select fields
+
+You can use these snippets configuring the display_snippet property in your scheming file as appropiate.  
+
 ## Tests
 
 To run the tests, do:

@@ -522,10 +522,22 @@ button.image {
 	font-size: 14px;
 }
 
+#iepnb .modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 30px auto;
+}
+
+
 @media (min-width: 768px) {
-#iepnb_ckan {
+	#iepnb_ckan {
     	max-width: 750px;
     	width: 750px;
+	}
+	
+	#iepnb .modal-dialog {
+		width: 600px;
+		margin: 30px auto;
 	}
 
 }
@@ -534,6 +546,10 @@ button.image {
 #iepnb_ckan {
     	max-width: 970px;
     	width: 970px;
+	}
+	
+	#iepnb .modal-dialog {
+		width: 900px;
 	}
 
 }
@@ -822,245 +838,11 @@ button.image {
 
 
 /* Iconos para facetado */
-ul.nav-facet.theme li.nav-item span.item-label, 
-ul.nav-facet.theme_es li.nav-item span.item-label
-{
-	background-repeat: no-repeat;
-	background-position:left;
-	background-size:15px;
-	padding-left:17px;
-}
 
-/* facet THEME */
-
-ul.nav-facet.theme li.nav-item.ac span.item-label{
-	background-image: url("../images/icons/inspire/ac.svg");
-}
-
-ul.nav-facet.theme li.nav-item.ad span.item-label{
-	background-image: url("../images/icons/inspire/ad.svg");
-}
-
-ul.nav-facet.theme li.nav-item.af span.item-label{
-	background-image: url("../images/icons/inspire/af.svg");
-}
-
-ul.nav-facet.theme li.nav-item.am span.item-label{
-	background-image: url("../images/icons/inspire/am.svg");
-}
-
-ul.nav-facet.theme li.nav-item.au span.item-label{
-	background-image: url("../images/icons/inspire/au.svg");
-}
-
-ul.nav-facet.theme li.nav-item.br span.item-label{
-	background-image: url("../images/icons/inspire/br.svg");
-}
-
-ul.nav-facet.theme li.nav-item.bu span.item-label{
-	background-image: url("../images/icons/inspire/bu.svg");
-}
-
-ul.nav-facet.theme li.nav-item.cp span.item-label{
-	background-image: url("../images/icons/inspire/cp.svg");
-}
-
-ul.nav-facet.theme li.nav-item.ef span.item-label{
-	background-image: url("../images/icons/inspire/ef.svg");
-}
-
-ul.nav-facet.theme li.nav-item.el span.item-label{
-	background-image: url("../images/icons/inspire/el.svg");
-}
-
-ul.nav-facet.theme li.nav-item.er span.item-label{
-	background-image: url("../images/icons/inspire/er.svg");
-}
-
-ul.nav-facet.theme li.nav-item.ge span.item-label{
-	background-image: url("../images/icons/inspire/ge.svg");
-}
-
-ul.nav-facet.theme li.nav-item.gg span.item-label{
-	background-image: url("../images/icons/inspire/gg.svg");
-}
-
-ul.nav-facet.theme li.nav-item.gn span.item-label{
-	background-image: url("../images/icons/inspire/gn.svg");
-}
-
-ul.nav-facet.theme li.nav-item.hb span.item-label{
-	background-image: url("../images/icons/inspire/hb.svg");
-}
-
-ul.nav-facet.theme li.nav-item.hh span.item-label{
-	background-image: url("../images/icons/inspire/hh.svg");
-}
-
-ul.nav-facet.theme li.nav-item.hy span.item-label{
-	background-image: url("../images/icons/inspire/hy.svg");
-}
-
-ul.nav-facet.theme li.nav-item.lc span.item-label{
-	background-image: url("../images/icons/inspire/lc.svg");
-}
-
-ul.nav-facet.theme li.nav-item.lu span.item-label{
-	background-image: url("../images/icons/inspire/lu.svg");
-}
-
-ul.nav-facet.theme li.nav-item.mf span.item-label{
-	background-image: url("../images/icons/inspire/mf.svg");
-}
-
-ul.nav-facet.theme li.nav-item.mr span.item-label{
-	background-image: url("../images/icons/inspire/mr.svg");
-}
-
-ul.nav-facet.theme li.nav-item.nz span.item-label{
-	background-image: url("../images/icons/inspire/nz.svg");
-}
-
-ul.nav-facet.theme li.nav-item.of span.item-label{
-	background-image: url("../images/icons/inspire/of.svg");
-}
-
-ul.nav-facet.theme li.nav-item.oi span.item-label{
-	background-image: url("../images/icons/inspire/oi.svg");
-}
-
-ul.nav-facet.theme li.nav-item.pd span.item-label{
-	background-image: url("../images/icons/inspire/pd.svg");
-}
-
-ul.nav-facet.theme li.nav-item.pf span.item-label{
-	background-image: url("../images/icons/inspire/pf.svg");
-}
-
-ul.nav-facet.theme li.nav-item.ps span.item-label{
-	background-image: url("../images/icons/inspire/ps.svg");
-}
-
-ul.nav-facet.theme li.nav-item.rs span.item-label{
-	background-image: url("../images/icons/inspire/rs.svg");
-}
-
-ul.nav-facet.theme li.nav-item.sd span.item-label{
-	background-image: url("../images/icons/inspire/sd.svg");
-}
-
-ul.nav-facet.theme li.nav-item.so span.item-label{
-	background-image: url("../images/icons/inspire/so.svg");
-}
-
-ul.nav-facet.theme li.nav-item.sr span.item-label{
-	background-image: url("../images/icons/inspire/sr.svg");
-}
-
-ul.nav-facet.theme li.nav-item.su span.item-label{
-	background-image: url("../images/icons/inspire/su.svg");
-}
-
-ul.nav-facet.theme li.nav-item.tn span.item-label{
-	background-image: url("../images/icons/inspire/tn.svg");
-}
-
-ul.nav-facet.theme li.nav-item.us span.item-label{
-	background-image: url("../images/icons/inspire/us.svg");
-}
-
-/* facet THEME-ES */
-
-ul.nav-facet.theme_es li.nav-item.ciencia-tecnologia span.item-label{
-	background-image: url("../images/icons/theme_es/ciencia-tecnologia.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.comercio span.item-label{
-	background-image: url("../images/icons/theme_es/comercio.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.cultura-ocio span.item-label{
-	background-image: url("../images/icons/theme_es/cultura-ocio.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.demografia span.item-label{
-	background-image: url("../images/icons/theme_es/demografia.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.deporte span.item-label{
-	background-image: url("../images/icons/theme_es/deporte.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.economia span.item-label{
-	background-image: url("../images/icons/theme_es/economia.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.educacion span.item-label{
-	background-image: url("../images/icons/theme_es/educacion.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.empleo span.item-label{
-	background-image: url("../images/icons/theme_es/empleo.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.energia span.item-label{
-	background-image: url("../images/icons/theme_es/energia.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.hacienda span.item-label{
-	background-image: url("../images/icons/theme_es/hacienda.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.industria span.item-label{
-	background-image: url("../images/icons/theme_es/industria.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.legislacion-justicia span.item-label{
-	background-image: url("../images/icons/theme_es/legislacion-justicia.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.medio-ambiente span.item-label{
-	background-image: url("../images/icons/theme_es/medio-ambiente.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.medio-rural-pesca span.item-label{
-	background-image: url("../images/icons/theme_es/medio-rural-pesca.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.salud span.item-label{
-	background-image: url("../images/icons/theme_es/salud.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.sector-publico span.item-label{
-	background-image: url("../images/icons/theme_es/sector-publico.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.seguridad span.item-label{
-	background-image: url("../images/icons/theme_es/seguridad.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.sociedad-bienestar span.item-label{
-	background-image: url("../images/icons/theme_es/sociedad-bienestar.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.spain span.item-label{
-	background-image: url("../images/icons/theme_es/spain.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.transporte span.item-label{
-	background-image: url("../images/icons/theme_es/transporte.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.turismo span.item-label{
-	background-image: url("../images/icons/theme_es/turismo.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.urbanismo-infraestructuras span.item-label{
-	background-image: url("../images/icons/theme_es/urbanismo-infraestructuras.png");
-}
-
-ul.nav-facet.theme_es li.nav-item.vivienda span.item-label{
-	background-image: url("../images/icons/theme_es/vivienda.png");
+img.facet-icon {
+	width: 15px;
+	height: auto;
+	margin-right: 5px;
 }
 
 

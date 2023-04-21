@@ -2,7 +2,7 @@ from ckan.common import json, config, is_flask_request, c, request
 from ckan.lib.plugins import DefaultTranslation
 from ckan.lib import helpers as ckan_helpers
 import ckanext.iepnb.config as iepnb_config
-from ckanext.iepnb.utils import get_facets_dict
+from ckanext.iepnb.utils import get_facets_dict, public_file_exists, public_dir_exists
 from ckanext.scheming.helpers import scheming_choices_label
 from urllib.request import urlopen
 import ckan.logic as logic
@@ -282,5 +282,76 @@ def iepnb_new_order_url(name,orden):
            
     return url
 
+@helper
+def iepnb_schema_get_icons_dir(field):
+    """
+    :param field: scheming field definition
+    :returns: defined icons directory or None if not found.
+    """
+    
+    if field:
+        if 'icons_dir' in field:
+            return field['icons_dir']
+        
+        if 'field_name' in field:
+            dir = iepnb_config.icons_dir + '/' + field['field_name']
+            if public_dir_exists(dir):  
+                return dir
+        logger.debug("No hay directorio para ".format(field['field_name']))
+    return None
+    
+@helper
+def iepnb_schema_get_no_icon(field):
+    """
+    :param field: scheming field definition
+    :returns: defined icons directory or None if not found.
+    """
+    if 'no_icon' in field:
+        return field['no_icon']
+
+@helper
+def iepnb_schema_icon(choice, dir=None):
+    """ Returns path for icon for the item
+    :param choice: Choice selected for field
+    :param dir: Path to search for icon
+    
+    :returns: Relative url to icon
+    """
+    
+    extensiones=['.svg','.png','jpg','gif']
+    nombre=None
+    logger.debug("Busco icono para {0}".format(choice))
+    if 'icon' in choice:
+        return (dir+"/" if dir else "") + choice['icon']
+    cadena=choice['value'].split('/')
+
+    if len(cadena)==1:
+        nombre=cadena[-1].lower()
+    else:
+        nombre=cadena[-2].lower()+'/'+cadena[-1].lower()
+    
+    url_path=(dir+"/" if dir else "") + nombre
+    
+    for extension in extensiones:
+        if public_file_exists(url_path+extension):
+            return url_path+extension
+    
+    return None
+
+@helper
+def iepnb_get_choice_dic(field, value):
+    """Gets whole choice item for the given value in field
+    :param field: scheming field to look for choice item into
+    :param value: option item value
+    
+    :returns: The whole option item in scheming
+    """
+    if field and ('choices' in field):
+        logger.debug("Busco {0} en {1}".format(value,field['choices']))
+        for choice in field['choices']:
+            if choice['value']==value:
+                return choice
+    
+    return None
 
 

@@ -2,6 +2,7 @@ from ckanext.iepnb.iepnb_faceted import IepnbFaceted
 from ckanext.iepnb.iepnb_package_controller import IepnbPackageController
 import ckanext.iepnb.config as iepnb_config
 import ckanext.iepnb.helpers as iepnb_helpers
+#from ckanext.iepnb.utils import get_public_dirs
 #import ckanext.iepnb.dge_helpers as helpers
 import ckan.model as model
 import ckan.plugins as plugins
@@ -100,10 +101,6 @@ class IepnbPlugin(plugins.SingletonPlugin,IepnbFaceted,IepnbPackageController, D
         #    breadcrumbs = json.loads(breadcrumbs)
         iepnb_config.path_breadcrumbs = config.get('iepnb.path_breadcrumbs', '')
         iepnb_config.gcontext = ssl.SSLContext()
-        
-            
-        
-        
         
     def get_helpers(self):
         logger.debug('Getting helpers...')
