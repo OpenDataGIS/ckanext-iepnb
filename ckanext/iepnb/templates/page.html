@@ -162,7 +162,7 @@
    <link rel="stylesheet" href="{{ h.url_for_static('css/spatial_query.css') }}" />
    {%- endif %#}
 {% endblock %}
-{% block bodytag %} class="node-16 node-type--pagina-interior-simple" {{ super() }} {% endblock %}
+{% block bodytag %} data-aos-easing="ease-out-back" data-aos-duration="900" data-aos-delay="0" {{ super() }} {% endblock %}
 {#%- block scripts %}
   {{ super() }}
    <script src="{{ h.url_for_static('js/vendor/leaflet/1.9.3/leaflet.js') }}"></script>

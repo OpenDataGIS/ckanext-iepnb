@@ -72,6 +72,22 @@ background:unset;
     display: block;
 }
 
+.header .nav-item.active,
+.header .nav-aside li.active,
+.header .nav-item.active > a,
+.header  .nav-aside li.active a  {
+    background-color: #ffffff; 
+}
+
+.header .nav-item.active > a:before, 
+.header .nav-aside li.active a:before {
+	content: unset;
+}
+
+.header .nav > li > a.nav-link{
+	padding: 0.5rem;
+}
+
 footer.iepnb li a {
 	position:unset;
 	padding: 0.5rem 1rem;
@@ -766,8 +782,16 @@ button.image {
     display: none;
 }
 
+.header .navbar-nav > li > a {
+	line-height: var(--bs-body-line-height);
+}
+.header .nav-item > a, .nav-aside li a {
+	margin: unset;
+}
+
+
 /***********************************************/
-/* Estílos específicos para la extensión IEPNB */
+/* Estilos específicos para la extensión IEPNB */
 /***********************************************/
 
 .filters .module .orden {
