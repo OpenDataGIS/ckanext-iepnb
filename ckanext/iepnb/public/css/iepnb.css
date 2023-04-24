@@ -538,11 +538,29 @@ button.image {
 	font-size: 14px;
 }
 
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+    max-width: unset;
+}
+
 @media (min-width: 768px) {
 #iepnb_ckan {
     	max-width: 750px;
     	width: 750px;
 	}
+.modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+.modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+.modal-sm {
+    width: 300px;
+  }
 
 }
 
@@ -551,7 +569,10 @@ button.image {
     	max-width: 970px;
     	width: 970px;
 	}
-
+	
+.modal-lg {
+    width: 900px;
+  }
 }
 
 @media (min-width: 1200px) {
