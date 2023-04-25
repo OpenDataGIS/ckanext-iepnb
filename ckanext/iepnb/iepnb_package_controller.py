@@ -47,13 +47,14 @@ class IepnbPackageController():
         return search_results
     
     def before_index(self, data_dict):
-        data_dict['theme_es']               = json.loads(data_dict.get('theme_es', '[]'))
         data_dict['tag_uri']                = json.loads(data_dict.get('tag_uri', '[]'))
         data_dict['conforms_to']            = json.loads(data_dict.get('conforms_to', '[]'))
         data_dict['lineage_source']         = json.loads(data_dict.get('lineage_source', '[]'))
         data_dict['lineage_process_steps']  = json.loads(data_dict.get('lineage_process_steps', '[]'))
         data_dict['reference']              = json.loads(data_dict.get('reference', '[]'))
         data_dict['theme']                  = json.loads(data_dict.get('theme', '[]'))
+        data_dict['theme_es']               = json.loads(data_dict.get('theme_es', '[]'))
+        data_dict['metadata_profile']       = json.loads(data_dict.get('metadata_profile', '[]'))
         data_dict['resource_relation']      = json.loads(data_dict.get('resource_relation', '[]'))
         
         return data_dict
