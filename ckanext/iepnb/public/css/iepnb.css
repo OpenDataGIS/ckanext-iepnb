@@ -72,6 +72,22 @@ background:unset;
     display: block;
 }
 
+.header .nav-item.active,
+.header .nav-aside li.active,
+.header .nav-item.active > a,
+.header  .nav-aside li.active a  {
+    background-color: #ffffff; 
+}
+
+.header .nav-item.active > a:before, 
+.header .nav-aside li.active a:before {
+	content: unset;
+}
+
+.header .nav > li > a.nav-link{
+	padding: 0.5rem;
+}
+
 footer.iepnb li a {
 	position:unset;
 	padding: 0.5rem 1rem;
@@ -522,10 +538,11 @@ button.image {
 	font-size: 14px;
 }
 
-#iepnb .modal-dialog {
-	position: relative;
-	width: auto;
-	margin: 30px auto;
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 30px auto;
+    max-width: unset;
 }
 
 
@@ -534,11 +551,18 @@ button.image {
     	max-width: 750px;
     	width: 750px;
 	}
-	
-	#iepnb .modal-dialog {
-		width: 600px;
-		margin: 30px auto;
-	}
+.modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+
+.modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+.modal-sm {
+    width: 300px;
+  }
 
 }
 
@@ -548,10 +572,9 @@ button.image {
     	width: 970px;
 	}
 	
-	#iepnb .modal-dialog {
-		width: 900px;
-	}
-
+.modal-lg {
+    width: 900px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -782,8 +805,16 @@ button.image {
     display: none;
 }
 
+.header .navbar-nav > li > a {
+	line-height: var(--bs-body-line-height);
+}
+.header .nav-item > a, .nav-aside li a {
+	margin: unset;
+}
+
+
 /***********************************************/
-/* Estílos específicos para la extensión IEPNB */
+/* Estilos específicos para la extensión IEPNB */
 /***********************************************/
 
 .filters .module .orden {
