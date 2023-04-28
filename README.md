@@ -12,10 +12,9 @@ Compatibility with core CKAN versions:
 
 | CKAN version    | Compatible?   |
 | --------------- | ------------- |
-| 2.6 and earlier | not tested    |
-| 2.7             | not tested    |
 | 2.8             | not tested    |
-| 2.9             | yes    |
+| 2.9             | yes           |
+| 2.10            | not tested    |
 
 Suggested values:
 
@@ -49,52 +48,14 @@ To install ckanext-iepnb:
    config file (by default the config file is located at
    `/etc/ckan/default/ckan.ini`).
    
-4. Clear the index in solr:
 
-	`ckan -c [route to your .ini ckan config file] search-index clear`
-   
-5. Modify the schema file on Solr (schema or managed schema) to add the multivalued fields added in the scheming extension used for faceting. You can add any field defined in the schema file used in the ckanext-scheming extension that you want to use for faceting.
-   You must define each field with these parameters:
-   - type: string - to avoid split the text in tokens, each individually "faceted".
-   - uninvertible: false - as recomended by solr´s documentation 
-   - docValues: true - to ease recovering faceted resources
-   - indexed: true - to let ckan recover resources under this facet 
-   - stored: true - to let the value to be recovered by queries
-   - multiValued: well... it depends on if it is a multivalued field (several values for one resource) or a regular field (just one value). Use "true" or "false" respectively. 
-   
-   By now iepnb extension are ready to use these multivalued fields. You have to add this configuration fragment to solr schema in order to use them:
-
-	
-```xml
-	<! IEPNB extra fields - >
-    <field name="tag_uri" type="string" uninvertible="false" docValues="true" indexed="true" stored="true" multiValued="true"/>
-    <field name="conforms_to" type="string" uninvertible="false" docValues="true" indexed="true" stored="true" multiValued="true"/>
-    <field name="lineage_source" type="string" uninvertible="false" docValues="true" indexed="true" stored="true" multiValued="true"/>
-    <field name="lineage_process_steps" type="string" uninvertible="false" docValues="true" indexed="true" stored="true" multiValued="true"/>
-    <field name="reference" type="string" uninvertible="false" docValues="true" indexed="true" stored="true" multiValued="true"/>
-    <field name="theme" type="string" uninvertible="false" docValues="true" indexed="true" stored="true" multiValued="true"/>
-    <field name="theme_es" type="string" uninvertible="false" docValues="true" multiValued="true" indexed="true" stored="true"/>
-    <field name="metadata_profile" type="string" uninvertible="false" docValues="true" multiValued="true" indexed="true" stored="true"/>
-    <field name="resource_relation" type="string" uninvertible="false" docValues="true" indexed="true" stored="true" multiValued="true"/>
-	
-```
-    You can ommit any field you're not going to use for faceting, but the best policy could be to add all values at the beginning.
-   	
-	Be sure to restart Solr after modify the schema.
 		
-6. Add iepnb specific configuration to the CKAN config file
+4. Add iepnb specific configuration to the CKAN config file
 
-7. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
+5. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
 
      `sudo service apache2 reload`
      
-8. Reindex solr index:
-
-	`ckan -c [route to your .ini ckan config file] search-index rebuild`
-
-	Sometimes solr can issue an error while reindexing. In that case I´d try to restart solr, delete index ("search-index clear"), restart solr, rebuild index, and restart solr again.
-	
-	Ckan needs to "fix" multivalued fields to be able to recover values correctly for faceting, so this step must be done in order to use faceting with multivalued fields. 
 
 
 ## Config settings
@@ -117,8 +78,6 @@ At CKAN config .ini file (in `/etc/ckan/default` dir), into the [app:main] secti
 	#relative path to download breadcrumbs definition. Will take precedence over iepnb.headcrumbs if defined
 	iepnb.path_breadcrumbs = No_Default_Value
 	
-	#list of facets to show in search page, and its order. This options are just an example, you can select your own
-	iepnb.facet_list = theme theme_es dcat_type owner_org res_format publisher_name publisher_type frequency tags tag_uri conforms_to
 ```	
 
 ## Developer installation
