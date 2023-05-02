@@ -4,7 +4,6 @@
 {%- block header_debug %} {% if g.debug and not g.debug_supress_header %}
         <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
 {%- endif %} {% endblock %}
-{#- <header class="navbar navbar-static-top masthead"> #}
 	  <div class="header border-bottom border-lg-3 border-primary iepnb">
 		<div class="container">
 		  <nav class="navbar navbar-expand-lg justify-content-between navbar-light sticky-top ">
@@ -72,10 +71,10 @@
             </nav>
           </div>
         </div>
-        <div style="height:200px; background-repeat: no-repeat;background-size: cover;background-image:url({{h.url_for_static('/img/cabecera_catalogo.jpg')}}); background-position:0% 75%;" class="layout__region layout__region--content contenedor-titulo">
+        {%- set banner_fondo = h.url_for_static('/img/cabecera_catalogo.jpg') %}
+        <div style="height:200px; background-repeat: no-repeat;background-size: cover;background-image:url({{banner_fondo}}); background-position:0% 75%;" class="layout__region layout__region--content contenedor-titulo">
           <h1>{{_('Catálogo de datos')}}</h1>
 	      <div class="linea-titulo">
+          </div>
         </div>
-      </div>
- {#- </header> #}
 {%- endblock %}
