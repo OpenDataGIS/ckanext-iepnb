@@ -41,3 +41,7 @@ locale_default='es'
 
 schema_info={}
 
+attrs_logo_ministerio=None
+footer_iepnb=None
+
+menu=None

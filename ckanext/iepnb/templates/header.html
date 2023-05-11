@@ -11,7 +11,8 @@
 {#- inicio emulación block/block--system-branding-block.html.twig #}
             <div class="settings-tray-editable block--type-image block block--image block--logomiteco block-block-content block-block-contenta5130b59-2e93-48f5-b2a0-0ed596a906af" data-drupal-settingstray="editable">
               <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item">
-                <img src="{{h.iepnb_home()}}/sites/default/files/2023-03/logo_miteco.png" width="233" height="54" alt="logo MITECO" loading="lazy" typeof="foaf:Image" class="img-fluid">
+                {{ h.iepnb_tag_img_ministerio()|safe }}
+                <!-- img src="{{h.iepnb_home()}}/sites/default/files/2023-03/logo_miteco.png" width="233" height="54" alt="logo MITECO" loading="lazy" typeof="foaf:Image" class="img-fluid" -->
               </div>
             </div>
             <a href="{{h.iepnb_home()}}/" class="navbar-brand d-flex align-items-center " aria-label="Inventario español del Patrimonio Natural y la Biodiversidad">
@@ -71,8 +72,7 @@
             </nav>
           </div>
         </div>
-        {%- set banner_fondo = h.url_for_static('/img/cabecera_catalogo.jpg') %}
-        <div style="height:200px; background-repeat: no-repeat;background-size: cover;background-image:url({{banner_fondo}}); background-position:0% 75%;" class="layout__region layout__region--content contenedor-titulo">
+        <div style="height:200px; background-repeat: no-repeat;background-size: cover;background-image:url({{h.url_for_static('/img/cabecera_catalogo.jpg')}}); background-position:0% 75%;" class="layout__region layout__region--content contenedor-titulo">
           <h1>{{_('Catálogo de datos')}}</h1>
 	      <div class="linea-titulo">
           </div>

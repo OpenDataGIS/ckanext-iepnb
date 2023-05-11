@@ -124,7 +124,8 @@
         </div> <!-- /container py-4 -->
       </div> <!-- /content -->
   {%- block footer %}<!-- Bloque footer @ page -->
-    {% include "footer.html" %}
+    {{ h.iepnb_get_footer()|safe }}
+    {#% include "footer.html" %#}
     <!-- Fin bloque footer @ page -->
   {% endblock -%}
 	
