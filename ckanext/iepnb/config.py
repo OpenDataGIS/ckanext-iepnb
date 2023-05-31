@@ -39,5 +39,7 @@ default_facet_operator = 'OR'
 
 locale_default='es'
 
-schema_info={}
+schema_info = {}
+
+icons_dir = 'images/icons'
 

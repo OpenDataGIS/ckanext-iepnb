@@ -2,7 +2,7 @@ from ckan.common import json, config, is_flask_request, c, request
 from ckan.lib.plugins import DefaultTranslation
 from ckan.lib import helpers as ckan_helpers
 import ckanext.iepnb.config as iepnb_config
-from ckanext.iepnb.utils import get_facets_dict
+from ckanext.iepnb.utils import get_facets_dict, public_file_exists, public_dir_exists
 from ckanext.scheming.helpers import scheming_choices_label
 from urllib.request import urlopen
 import ckan.logic as logic
