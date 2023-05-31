@@ -1,5 +1,6 @@
 import ckanext.iepnb.config as iepnb_config
 import ckanext.iepnb.helpers as iepnb_helpers
+#from ckanext.iepnb.utils import get_public_dirs
 #import ckanext.iepnb.dge_helpers as helpers
 import ckan.model as model
 import ckan.plugins as plugins

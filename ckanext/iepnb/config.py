@@ -39,7 +39,9 @@ default_facet_operator = 'OR'
 
 locale_default='es'
 
-schema_info={}
+schema_info = {}
+
+icons_dir = 'images/icons'
 
 attrs_logo_ministerio=None
 footer_iepnb=None

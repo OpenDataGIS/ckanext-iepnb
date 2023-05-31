@@ -578,12 +578,13 @@ button.image {
 .modal-dialog {
     position: relative;
     width: auto;
-    margin: 10px;
+    margin: 30px auto;
     max-width: unset;
 }
 
+
 @media (min-width: 768px) {
-#iepnb_ckan {
+	#iepnb_ckan {
     	max-width: 750px;
     	width: 750px;
 	}
@@ -591,6 +592,7 @@ button.image {
     width: 600px;
     margin: 30px auto;
   }
+
 .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -846,8 +848,4 @@ button.image {
 .header .nav-item > a, .nav-aside li a {
 	margin: unset;
 }
-
-
-
-
 
