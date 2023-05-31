@@ -8,7 +8,7 @@
           <div class="bloque_columna_derecha">
             <div class="contenedor_introduccion">
               <div class="resaltado">
-                <p class="parrafo_catalogo_datos">El Catálogo de datos del <strong>Inventario Español del patrimonio Natural y la Biodiversidad</strong> es una aplicación con tecnología CKAN que se utiliza para distribuir mapas, datos y metadatos espaciales en la web.</p>
+                <p class="parrafo_catalogo_datos">El catálogo de datos abiertos del <a href="https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-espanol-patrimonio-natural-biodiv" style="color: #333333;"><strong>Inventario Español del patrimonio Natural y la Biodiversidad</strong></a></strong> consta de una aplicación con tecnología CKAN que se utiliza para distribuir mapas, datos y metadatos espaciales y un <a href="{{ h.iepnb_home() }}/csw" style="color: #333333;"><strong>catálogo CSW</strong></a> (estándar OGC) para la publicación y descubrimiento de metadatos sobre recursos espaciales en la web.</p>
               </div>
             </div>
             <div class="contenedor_buscador_datos">
@@ -32,9 +32,9 @@
                   <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
   {% endfor %}
   {% if (h.iepnb_popular_tags()-len_tags)>0 %}
-                  <a class="tag" href="https://es.wikipedia.org/wiki/Gusano_de_arena" target="_blank">Shaihuludata gigantica</a>
-    {% if (h.iepnb_popular_tags()-len_tags)>1 %}                
                   <a class="tag" href="{% url_for 'dataset.search', tags='medio ambiente' %}">medio ambiente</a>
+    {% if (h.iepnb_popular_tags()-len_tags)>1 %}                
+                  <a class="tag" href="{% url_for 'dataset.search', tags='biota' %}">biota</a>
       {% if (h.iepnb_popular_tags()-len_tags)>2 %}
                   <a class="tag" href="{% url_for 'dataset.search', tags='iepnb' %}">iepnb</a>
       {% endif %}
