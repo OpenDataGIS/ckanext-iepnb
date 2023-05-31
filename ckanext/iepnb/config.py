@@ -43,3 +43,7 @@ schema_info = {}
 
 icons_dir = 'images/icons'
 
+attrs_logo_ministerio=None
+footer_iepnb=None
+
+menu=None
