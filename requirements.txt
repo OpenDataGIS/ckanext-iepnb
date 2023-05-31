@@ -1,3 +1,6 @@
-rfc3987
-PasteDeploy
-pyRdfa3
+
+# This modules are used in previous versions, but they are no needed anymore. We keep track of them just in case.
+
+# rfc3987
+# PasteDeploy
+# pyRdfa3
