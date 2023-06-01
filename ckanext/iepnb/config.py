@@ -1,24 +1,24 @@
-proxy=None
-gcontext=None
+proxy = None
+gcontext = None
 
 #migas de pan por defecto definidas en el fichero de configuración con iepnb.breadcrumbs
-breadcrumbs=""
+breadcrumbs = ""
 
 #servidor al que se ha de solicitar el objeto json con el menú y las migas de pan
-server_menu="https://iepnb-des.tragsatec.es"
+server_menu = "https://iepnb-des.tragsatec.es"
 
 #path dentro del servidor para solicitar el menu. Va separado para poder intercalar el prefijo de idioma
 #se define en el menú ini con epnb.path_menu
-path_menu="/api/menu_items/main"
+path_menu = "/api/menu_items/main"
 
 #Ruta a la descarga de migas de pan del servidor definida en el fichero de configuración con iepnb.path.breadcrumbs 
-path_breadcrumbs=""
+path_breadcrumbs = ""
 
-#número de etiquetas populares para mostrar en la página principal
-popular_tags=3
+# número de etiquetas populares para mostrar en la página principal
+popular_tags = 3
 
-#lista de campos sobre los que realizar un facetado y etiqueta correspondiente
-facets_dict_default={
+# lista de campos sobre los que realizar un facetado y etiqueta correspondiente
+facets_dict_default = {
         'theme'                 : 'Temas INSPIRE',
         'theme_es'              : 'Theme',
         'dcat_theme'            : 'Resource DCAT theme',
@@ -37,13 +37,15 @@ facets_dict_default={
 
 default_facet_operator = 'OR'
 
-locale_default='es'
+locale_default = 'es'
 
 schema_info = {}
 
 icons_dir = 'images/icons'
 
-attrs_logo_ministerio=None
-footer_iepnb=None
+attrs_logo_ministerio = None
+footer_iepnb = None
 
-menu=None
+menu = None
+
+stats = False
