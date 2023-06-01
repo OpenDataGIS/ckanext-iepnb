@@ -52,6 +52,8 @@ class IepnbPlugin(plugins.SingletonPlugin, DefaultTranslation):
         iepnb_config.path_breadcrumbs = config.get('iepnb.path_breadcrumbs', '')
         iepnb_config.gcontext = ssl.SSLContext()
         
+        iepnb_config.stats = ('stats' in config.get('ckan.plugins','').split())
+        
     def get_helpers(self):
         logger.debug('Getting helpers...')
         #respuesta= _get_dge_helpers().copy()

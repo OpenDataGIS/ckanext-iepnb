@@ -9,7 +9,10 @@ import ckan.logic as logic
 import logging
 from six.moves.urllib.parse import urlencode
 
-
+from sqlalchemy import Table, select, join, func, and_
+from six import text_type
+import ckan.plugins as p
+import ckan.model as model
 
 logger = logging.getLogger(__name__)
 all_helpers = {}
@@ -160,7 +163,7 @@ def iepnb_get_facet_items_dict(
     '''
     
     logger.debug("Returning facets for: {0}".format(facet))
-    order="default"
+    order = "default"
     if search_facets is None:
         search_facets = getattr(c, u'search_facets', None)
 
@@ -172,9 +175,9 @@ def iepnb_get_facet_items_dict(
     facets = []
     for facet_item in search_facets.get(facet)['items']:
         if scheming_choices:
-            facet_item['label']=scheming_choices_label(scheming_choices,facet_item['name'])
+            facet_item['label'] = scheming_choices_label(scheming_choices,facet_item['name'])
         else:
-            facet_item['label']=facet_item['display_name']
+            facet_item['label'] = facet_item['display_name']
         if not len(facet_item['name'].strip()):
             continue
         params_items = request.params.items(multi=True) \
@@ -185,18 +188,18 @@ def iepnb_get_facet_items_dict(
             facets.append(dict(active=True, **facet_item))
             
         #logger.debug("params: {0}:{1}".format(facet,request.params.getlist("_%s_sort" % facet)))
-        order_lst=request.params.getlist("_%s_sort" % facet)
+        order_lst = request.params.getlist("_%s_sort" % facet)
         if len(order_lst):
-            order=order_lst[0]
+            order = order_lst[0]
     # Sort descendingly by count and ascendingly by case-sensitive display name
     #facets.sort(key=lambda it: (-it['count'], it['display_name'].lower()))
-    if order=="name":
+    if order == "name":
         facets.sort(key=lambda it: (it['label']))
-    elif order=="name_r":
-        facets.sort(key=lambda it: (it['label']),reverse=True)
-    elif order=="count":
-        facets.sort(key=lambda it: (it['count']),reverse=True)
-    elif order=="count_r":
+    elif order == "name_r":
+        facets.sort(key=lambda it: (it['label']), reverse=True)
+    elif order == "count":
+        facets.sort(key=lambda it: (it['count']), reverse=True)
+    elif order == "count_r":
         facets.sort(key=lambda it: (it['count']))
     else:
         facets.sort(key=lambda it: (-it['count'], it['label'].lower()))
@@ -218,10 +221,10 @@ def iepnb_new_order_url(name,orden):
     orden -- the concept (name or count) that will be used to order
     
     '''
-    old_order=None
-    param="_%s_sort" % name
-    order_lst=request.params.getlist(param)
-    new_param=None
+    old_order = None
+    param = "_%s_sort" % name
+    order_lst = request.params.getlist(param)
+    new_param = None
     
     controller = getattr(c, 'controller', False) or request.blueprint
     action = getattr(c, 'action', False) or p.toolkit.get_endpoint()[1]
@@ -230,50 +233,58 @@ def iepnb_new_order_url(name,orden):
 
     
     if len(order_lst):
-        old_order=order_lst[0]
+        old_order = order_lst[0]
     
-    if orden=="name":
-        if old_order=="name":
-            new_param=(param,"name_r")
-        elif old_order=="name_r":
+    if orden == "name":
+        if old_order == "name":
+            new_param = (param,"name_r")
+        elif old_order == "name_r":
             pass
         else:
-            new_param=(param,"name")
-    if orden=="count":
-        if old_order=="count":
-            new_param=(param,"count_r")
-        elif old_order=="count_r":
+            new_param = (param,"name")
+    if orden == "count":
+
+        if old_order == "count":
+            new_param = (param,"count_r")
+
+        elif old_order == "count_r":
             pass
+
         else:
-            new_param=(param,"count")
-            
+            new_param = (param,"count")
+
     params_items = request.params.items(multi=True) \
         if is_flask_request() else request.params.items()
     params_nopage = [
         (k, v) for k, v in params_items
         if k != param
     ]
-    
+
     if new_param:
         params_nopage.append(new_param)
+
     if params_nopage:    
-        url=url + u'?' + urlencode(params_nopage)
-           
+        url = url + u'?' + urlencode(params_nopage)
+
     return url
 
 @helper
 def iepnb_tag_img_ministerio():
-    attrs=get_logo_ministerio_attrs()
+    attrs = get_logo_ministerio_attrs()
     if attrs:
-        tag='<img'
+        tag = '<img'
         for x in attrs:
-            tag=tag+" " + x[0]
+            tag = tag+" " + x[0]
             if x[1]:
-                tag=tag+'="'+x[1]+'"'
-        tag=tag+'>'
-        
+                tag = tag + '="' + x[1]+'"'
+        tag = tag+'>'
+
     return tag
-        
+
 @helper
 def iepnb_get_footer():
     return get_footer_iepnb()
+
+@helper
+def iepnb_stats_plugin_defined():
+    return iepnb_config.stats

@@ -43,6 +43,9 @@
             <h1 class="catalogo_datos_con_linea">{{ _('Estadísticas') }}</h1>
           </div>
           <div class="contenedor_links">
+{% if c.userobj and h.iepnb_stats_plugin_defined() %}
+            <a href="{{ h.url_for('/stats') }}" class="link_menu_lateral w-inline-block" title="{{ _('harvest') }}"><p class="paragraph">{{ _('Statistics Menu') }}</p></a>
+{% endif %}
             <a href="{{ h.url_for('dataset.search') }}" class="link_menu_lateral w-inline-block"><p class="paragraph"><span class="text-span-2">{{ h.SI_number_span(stats.dataset_count) }}</span> {{ _('Dataset') if stats.dataset_count == 1 else _('Datasets') }}</p></a>
             <a href="{{ h.url_for(controller='organization', action='index') }}" class="link_menu_lateral w-inline-block"><p class="paragraph"><span class="text-span-3">{{ h.SI_number_span(stats.organization_count) }}</span> {{ _('Organization') if stats.organization_count == 1 else _('Organizations') }}</p></a>
             <a href="{{ h.url_for(controller='group', action='index') }}" class="link_menu_lateral w-inline-block"><p class="paragraph"><span class="text-span-4">{{ h.SI_number_span(stats.group_count) }}</span> {{ _('Group') if stats.group_count == 1 else _('Groups') }}</p></a>

@@ -86,6 +86,14 @@ And in order to replace the default ckan favicon with the , change the appropria
 ckan.favicon=/base/images/iepnb.ico
 ```
 
+###Stats configuration
+
+Having stats on is a bit tricky. First of all you must have the plugin activated at the `ckan.plugins` setting in the config .ini file. usually you have it out-of-the-box, so it's not a big deal. Since you have it enabled, you'll get a "Stats menu" option under the "Stats" section in the main page when logged as a ckan user.
+
+Ok. That was the easy part. Unfortunately, even thoug stats plugin is part of the ckan core, it is a little outdated in ckan 2.9, and it doesn't work. In order to have stats enabled you must edit `index.html` template in `ckanext/stats/templates/ckanext/stats`, and change all the references to the "c" object to access its properties directly. So for example you must replace `c.largest_groups` by just `largest_groups` (without the 'c.' part).
+
+This is just a patch for ckan versions shipped with an outdated 'stats' plugin, so you must first test if the plugin works (just accessing the main menu option and checking the stats), and only then apply the proposed patch (if the plugin doesn't works).
+
 ## Developer installation
 
 To install ckanext-iepnb for development, activate your CKAN virtualenv and
