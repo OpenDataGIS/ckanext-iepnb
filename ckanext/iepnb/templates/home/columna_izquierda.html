@@ -28,6 +28,12 @@
                 <img src="{{ h.url_for_static('img/icono_perfil.svg') }}" loading="lazy" alt="Ajustes de perfil" class="image-4">
                 <p class="text_menu_area_privada">{{ _('Profile settings') }}</p>
               </a>
+              {% if h.iepnb_plugin_defined("sparql_interface") %}
+              <a href="{{ h.url_for('/sparql') }}" title="{{ _('Sparql point') }}" class="menu_area_privada w-inline-block">
+                <img src="{{ h.url_for_static('img/icono_rdf.svg') }}" loading="lazy" alt="Punto Sparql" class="image-4">
+                <p class="text_menu_area_privada">{{ _('Punto Sparql') }}</p>
+              </a>
+              {% endif %}
               <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}" class="menu_area_privada w-inline-block">
                 <img src="{{ h.url_for_static('img/icono_salir.svg') }}" loading="lazy" alt="Cerrar sesión" class="image-4">
                 <p class="text_menu_area_privada">{{ _('Log out') }}</p>
@@ -43,7 +49,7 @@
             <h1 class="catalogo_datos_con_linea">{{ _('Estadísticas') }}</h1>
           </div>
           <div class="contenedor_links">
-{% if c.userobj and h.iepnb_stats_plugin_defined() %}
+{% if c.userobj and h.iepnb_plugin_defined("stats") %}
             <a href="{{ h.url_for('/stats') }}" class="link_menu_lateral w-inline-block" title="{{ _('harvest') }}"><p class="paragraph">{{ _('Statistics Menu') }}</p></a>
 {% endif %}
             <a href="{{ h.url_for('dataset.search') }}" class="link_menu_lateral w-inline-block"><p class="paragraph"><span class="text-span-2">{{ h.SI_number_span(stats.dataset_count) }}</span> {{ _('Dataset') if stats.dataset_count == 1 else _('Datasets') }}</p></a>

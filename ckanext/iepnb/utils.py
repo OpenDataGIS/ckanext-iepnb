@@ -1,15 +1,18 @@
 import ckanext.iepnb.config as iepnb_config
 import ckan.logic as logic
 import ckan.plugins as plugins
+from ckan.common import config
 from ckan.lib import helpers as ckan_helpers
 import logging
 from html.parser import HTMLParser
 from urllib.request import urlopen
+from ckanext.audioview import plugin
 
 logger = logging.getLogger(__name__)
 
 _facets_dict=None
 _public_dirs = None
+_plugins_defined={}
 
 
 def get_facets_dict():
@@ -119,3 +122,10 @@ def iepnb_handle_data(obj,data):
             obj.footer=obj.footer+data
             logger.debug("Datos: ---{0!s}---".format(data))
             logger.debug("longitud: {}".format(len(data)))
+            
+def plugin_defined(_plugin):
+
+    if _plugins_defined.get(_plugin) is None:
+        _plugins_defined[_plugin] = (_plugin in config.get('ckan.plugins','').split())
+
+    return _plugins_defined[_plugin]
