@@ -46,9 +46,18 @@ footer .navbar-collapse,
     box-shadow: unset;
     -webkit-overflow-scrolling: unset;
 }
-
-footer .nav-item > a,
-.header .nav-item > a {
+.header .navbar-collapse:before,
+.header .nav:before,
+.header .nav:before,
+.header .navbar:before,
+.header .navbar:after,
+.header .nav:after,
+.header .navbar-collapse:after,
+.header .container:after {
+	content: unset;
+}
+	
+footer .nav-item > a {
 	font-size: unset;
 }
 
