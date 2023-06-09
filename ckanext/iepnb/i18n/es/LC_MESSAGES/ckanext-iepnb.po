@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-iepnb 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-29 09:31+0200\n"
+"POT-Creation-Date: 2023-06-08 16:02+0200\n"
 "PO-Revision-Date: 2023-03-29 09:45+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -19,134 +19,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ckanext/iepnb/dge_helpers.py:303 ckanext/iepnb/dge_helpers.py:566
-#: ckanext/iepnb/dge_helpers.py:882
-msgid "Unnamed resource"
-msgstr ""
+#: ckanext/iepnb/templates/footer.html:11
+msgid "Contacto"
+msgstr "Contacto"
 
-#: ckanext/iepnb/dge_helpers.py:497
-msgid "Annual"
-msgstr ""
+#: ckanext/iepnb/templates/footer.html:14
+msgid "Accesibilidad"
+msgstr "Accesibilidad"
 
-#: ckanext/iepnb/dge_helpers.py:497
-msgid "Biennial"
-msgstr ""
+#: ckanext/iepnb/templates/footer.html:17
+msgid "Política de privacidad"
+msgstr "Política de privacidad"
 
-#: ckanext/iepnb/dge_helpers.py:497
-msgid "Triennial"
-msgstr ""
+#: ckanext/iepnb/templates/footer.html:20
+msgid "Política de cookies"
+msgstr "Política de cookies"
 
-#: ckanext/iepnb/dge_helpers.py:498
-msgid "Monthly"
-msgstr ""
+#: ckanext/iepnb/templates/footer.html:23
+msgid "Aviso legal"
+msgstr "Aviso legal"
 
-#: ckanext/iepnb/dge_helpers.py:498
-msgid "Bimonthly"
-msgstr ""
+#: ckanext/iepnb/templates/footer.html:32
+msgid "logo financiación UE"
+msgstr "logo financiación UE"
 
-#: ckanext/iepnb/dge_helpers.py:498
-msgid "Quarterly"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:498
-msgid "Three times a year"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:498
-msgid "Semiannual"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:499 ckanext/iepnb/dge_helpers.py:500
-msgid "Weekly"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:499
-msgid "Biweekly"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:500
-msgid "Daily"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:500
-msgid "Three times a week"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:500
-msgid "Semiweekly"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:500
-msgid "Three times a month"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:500
-msgid "Semimonthly"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:501
-msgid "Twice a day"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:502
-msgid "Continuous"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:505
-msgid "Every"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:508
-msgid "Every {time_value} years"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:512
-msgid "Every {time_value} months"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:516
-msgid "Every {time_value} weeks"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:520
-msgid "Every {time_value} days"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:674
-msgid "State Administration"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:675
-msgid "Regional Administration"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:676
-msgid "Local Administration"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:677
-msgid "Universities"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:678
-msgid "Other Institutions"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:679
-msgid "Legal Administration"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:680
-msgid "Private Entity"
-msgstr ""
-
-#: ckanext/iepnb/dge_helpers.py:1019
-msgid "display_name"
-msgstr ""
-
-#: ckanext/iepnb/templates/header.html:47
-msgid "Log in"
-msgstr ""
+#: ckanext/iepnb/templates/header.html:95
+msgid "Catálogo de datos"
+msgstr "Catálogo de datos"
 
 #: ckanext/iepnb/templates/page.html:18
 msgid "Breadcrumb"
@@ -155,6 +54,21 @@ msgstr "Migas de pan"
 #: ckanext/iepnb/templates/home/columna_derecha.html:4
 msgid "E.g. environment"
 msgstr "Ej.: ambiente"
+
+#: ckanext/iepnb/templates/home/columna_derecha.html:12
+#, python-format
+msgid ""
+"El catálogo de datos abiertos del <a "
+"href=\"https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-"
+"nacionales/inventario-espanol-patrimonio-natural-biodiv\" style=\"color: "
+"#333333;\"><strong>Inventario Español del patrimonio Natural y la "
+"Biodiversidad</strong></a></strong> consta de una aplicación con "
+"tecnología CKAN que se utiliza para distribuir mapas, datos y metadatos "
+"espaciales y un <a href=\"%(base_url)s/csw\" style=\"color: "
+"#333333;\"><strong>catálogo CSW</strong></a> (estándar OGC) para la "
+"publicación y descubrimiento de metadatos sobre recursos espaciales en la"
+" web."
+msgstr ""
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:20
 msgid "Search"
@@ -168,6 +82,18 @@ msgstr "Buscar conjuntos de datos"
 msgid "Popular tags"
 msgstr "Etiquetas populares"
 
+#: ckanext/iepnb/templates/home/columna_derecha.html:36
+msgid "medio ambiente"
+msgstr "medio ambiente"
+
+#: ckanext/iepnb/templates/home/columna_derecha.html:38
+msgid "biota"
+msgstr "biota"
+
+#: ckanext/iepnb/templates/home/columna_derecha.html:40
+msgid "iepnb"
+msgstr "iepnb"
+
 #: ckanext/iepnb/templates/home/columna_izquierda.html:5
 #, python-format
 msgid "Dashboard (%(num)d new item)"
@@ -180,45 +106,80 @@ msgid "Sysadmin settings"
 msgstr "Ajustes del administrador"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:11
-msgid "admin"
-msgstr "admin"
+#, fuzzy
+#| msgid "Administration level"
+msgid "Administrador"
+msgstr "Nivel administrativo"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:13
 msgid "View profile"
 msgstr "Ver perfil"
 
-#: ckanext/iepnb/templates/home/columna_izquierda.html:21
-#: ckanext/iepnb/templates/home/columna_izquierda.html:23
+#: ckanext/iepnb/templates/home/columna_izquierda.html:15
+msgid "Tus datos"
+msgstr "Tus datos"
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:19
+msgid "Panel de control"
+msgstr ""
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:22
+#: ckanext/iepnb/templates/home/columna_izquierda.html:53
+msgid "harvest"
+msgstr ""
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:24
+msgid "Harvest"
+msgstr ""
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:27
+#: ckanext/iepnb/templates/home/columna_izquierda.html:29
 msgid "Profile settings"
 msgstr "Ajuste de perfil"
 
-#: ckanext/iepnb/templates/home/columna_izquierda.html:25
-#: ckanext/iepnb/templates/home/columna_izquierda.html:27
+#: ckanext/iepnb/templates/home/columna_izquierda.html:32
+msgid "Sparql point"
+msgstr "Punto Sparql"
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:34
+msgid "Punto Sparql"
+msgstr "Punto Sparql"
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:37
+#: ckanext/iepnb/templates/home/columna_izquierda.html:39
 msgid "Log out"
 msgstr "Salir"
 
-#: ckanext/iepnb/templates/home/columna_izquierda.html:40
+#: ckanext/iepnb/templates/home/columna_izquierda.html:49
+msgid "Estadísticas"
+msgstr ""
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:53
+msgid "Statistics Menu"
+msgstr ""
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:55
 msgid "Dataset"
 msgstr "Conjunto de datos"
 
-#: ckanext/iepnb/templates/home/columna_izquierda.html:40
+#: ckanext/iepnb/templates/home/columna_izquierda.html:55
 msgid "Datasets"
 msgstr "Conjuntos de datos"
 
-#: ckanext/iepnb/templates/home/columna_izquierda.html:41
+#: ckanext/iepnb/templates/home/columna_izquierda.html:56
 msgid "Organization"
 msgstr "Organización"
 
-#: ckanext/iepnb/templates/home/columna_izquierda.html:41
+#: ckanext/iepnb/templates/home/columna_izquierda.html:56
 #: ckanext/iepnb/templates/package/base.html:16
 msgid "Organizations"
 msgstr "Organizaciones"
 
-#: ckanext/iepnb/templates/home/columna_izquierda.html:42
+#: ckanext/iepnb/templates/home/columna_izquierda.html:57
 msgid "Group"
 msgstr "Grupo"
 
-#: ckanext/iepnb/templates/home/columna_izquierda.html:42
+#: ckanext/iepnb/templates/home/columna_izquierda.html:57
 msgid "Groups"
 msgstr "Grupos"
 
@@ -231,61 +192,145 @@ msgstr "Bienvenido"
 msgid "Home"
 msgstr "Inicio"
 
-#: ckanext/iepnb/templates/organization/read.html:5
-#: ckanext/iepnb/templates/package/search.html:6
-#: ckanext/iepnb/templates/package/search_iepnb.html:6
-msgid "Search configuration"
-msgstr "Configuración de búsqueda"
-
 #: ckanext/iepnb/templates/package/base.html:24
 msgid "Create Dataset"
 msgstr "Crear conjunto de dato"
 
-#: ckanext/iepnb/templates/snippets/facet_list.html:85
-#: ckanext/iepnb/templates/snippets/iepnb_facet_list.html:98
-msgid "Show More {facet_type}"
-msgstr "Mostrar más {facet_type}"
+#~ msgid "Unnamed resource"
+#~ msgstr "Recursos sin nombre"
 
-#: ckanext/iepnb/templates/snippets/facet_list.html:88
-#: ckanext/iepnb/templates/snippets/iepnb_facet_list.html:101
-msgid "Show Only Popular {facet_type}"
-msgstr "Solo {facet_type} populares"
+#~ msgid "Annual"
+#~ msgstr "Anual"
 
-#: ckanext/iepnb/templates/snippets/facet_list.html:92
-#: ckanext/iepnb/templates/snippets/iepnb_facet_list.html:105
-msgid "There are no {facet_type} that match this search"
-msgstr "Sin {facet_type} en esta búsqueda"
+#~ msgid "Biennial"
+#~ msgstr "Bienal"
 
-#: ckanext/iepnb/templates/snippets/iepnb_facet_search_operator.html:53
-msgid "Search type"
-msgstr "Tipo de búsqueda"
+#~ msgid "Triennial"
+#~ msgstr "Trienal"
 
-#: ckanext/iepnb/templates/snippets/iepnb_facet_search_operator.html:56
-msgid "OR"
-msgstr "O"
+#~ msgid "Monthly"
+#~ msgstr "Mensual"
 
-#: ckanext/iepnb/templates/snippets/iepnb_facet_search_operator.html:57
-msgid "AND"
-msgstr "Y"
+#~ msgid "Bimonthly"
+#~ msgstr "Bimensual"
 
-msgid "Resource DCAT theme"
-msgstr "Tema DCAT del recurso"
+#~ msgid "Quarterly"
+#~ msgstr "Cuatrimestral"
 
-msgid "Resource DCAT type"
-msgstr "Tipo DCAT del recurso"
+#~ msgid "Three times a year"
+#~ msgstr "Cuatrimestral"
 
-msgid "Publisher identifier"
-msgstr "Identificador del publicador"
+#~ msgid "Semiannual"
+#~ msgstr "Semianual"
 
-msgid "Administration level"
-msgstr "Nivel administrativo"
+#~ msgid "Weekly"
+#~ msgstr "Semanal"
 
-msgid "Update frequency"
-msgstr "Frecuencia de actualización"
+#~ msgid "Biweekly"
+#~ msgstr "Bisemanal"
 
-msgid "Tag"
-msgstr "Etiqueta"
+#~ msgid "Daily"
+#~ msgstr "Diario"
 
-msgid "Tag uri"
-msgstr "URI de etiqueta"
+#~ msgid "Three times a week"
+#~ msgstr "Tres veces por semana"
+
+#~ msgid "Semiweekly"
+#~ msgstr "Semisemanal"
+
+#~ msgid "Three times a month"
+#~ msgstr "Tres veces al mes"
+
+#~ msgid "Semimonthly"
+#~ msgstr "Semimensual"
+
+#~ msgid "Twice a day"
+#~ msgstr "Dos veces al día"
+
+#~ msgid "Continuous"
+#~ msgstr "Continuo"
+
+#~ msgid "Every"
+#~ msgstr "Cada"
+
+#~ msgid "Every {time_value} years"
+#~ msgstr "Cada {time_value} años"
+
+#~ msgid "Every {time_value} months"
+#~ msgstr "Cada {time_value} meses"
+
+#~ msgid "Every {time_value} weeks"
+#~ msgstr "Cada {time_value} semanas"
+
+#~ msgid "Every {time_value} days"
+#~ msgstr "Cada {time_value} días"
+
+#~ msgid "State Administration"
+#~ msgstr "Administración Estatal"
+
+#~ msgid "Regional Administration"
+#~ msgstr "Administración regional"
+
+#~ msgid "Local Administration"
+#~ msgstr "Administración local"
+
+#~ msgid "Universities"
+#~ msgstr "Universidades"
+
+#~ msgid "Other Institutions"
+#~ msgstr "Otras Instituciones"
+
+#~ msgid "Legal Administration"
+#~ msgstr "Administración legal"
+
+#~ msgid "Private Entity"
+#~ msgstr "Entidad privada"
+
+#~ msgid "display_name"
+#~ msgstr ""
+
+#~ msgid "Log in"
+#~ msgstr ""
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "Search configuration"
+#~ msgstr "Configuración de búsqueda"
+
+#~ msgid "Show More {facet_type}"
+#~ msgstr "Mostrar más {facet_type}"
+
+#~ msgid "Show Only Popular {facet_type}"
+#~ msgstr "Solo {facet_type} populares"
+
+#~ msgid "There are no {facet_type} that match this search"
+#~ msgstr "Sin {facet_type} en esta búsqueda"
+
+#~ msgid "Search type"
+#~ msgstr "Tipo de búsqueda"
+
+#~ msgid "OR"
+#~ msgstr "O"
+
+#~ msgid "AND"
+#~ msgstr "Y"
+
+#~ msgid "Resource DCAT theme"
+#~ msgstr "Tema DCAT del recurso"
+
+#~ msgid "Resource DCAT type"
+#~ msgstr "Tipo DCAT del recurso"
+
+#~ msgid "Publisher identifier"
+#~ msgstr "Identificador del publicador"
+
+#~ msgid "Update frequency"
+#~ msgstr "Frecuencia de actualización"
+
+#~ msgid "Tag"
+#~ msgstr "Etiqueta"
+
+#~ msgid "Tag uri"
+#~ msgstr "URI de etiqueta"
 

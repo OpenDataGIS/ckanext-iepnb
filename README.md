@@ -48,11 +48,13 @@ To install ckanext-iepnb:
    config file (by default the config file is located at
    `/etc/ckan/default/ckan.ini`).
    
-
+4. In order to let the English profile work, is absolutely mandatory to make the directory 
+   `/ckan/ckan/public/base/i18n` writable by the ckan user. ¡CKAN WILL NOT START IF
+   YOU DON'T DO SO!
 		
-4. Add iepnb specific configuration to the CKAN config file
+5. Add iepnb specific configuration to the CKAN config file
 
-5. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
+6. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
 
      `sudo service apache2 reload`
      

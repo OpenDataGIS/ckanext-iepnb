@@ -6,6 +6,7 @@ from ckanext.iepnb.utils import get_facets_dict, get_logo_ministerio_attrs, get_
 from ckanext.scheming.helpers import scheming_choices_label
 from urllib.request import urlopen
 import ckan.logic as logic
+from babel import Locale
 import logging
 from six.moves.urllib.parse import urlencode
 
@@ -80,25 +81,38 @@ def iepnb_popular_tags():
 def iepnb_menu(lang = ''):
     """Busca el texto json con la descripción del menú en iepnb.server
     """
+    tmp_lang = lang or config.locale_default
     if not iepnb_config.menu:
-        menu_url=iepnb_config.server_menu
-        if lang == '' or lang =='es':
+
+        iepnb_config.menu={}
+
+    if not iepnb_config.menu.get(tmp_lang, None):
+
+        menu_url = iepnb_config.server_menu
+        if tmp_lang == '' or tmp_lang =='es':
             menu_url += iepnb_config.path_menu
         else:
-            menu_url += ('/'+lang+path_menu)
-            
-        logger.debug(u'menu_url: {0}'.format(menu_url))
-            
+            menu_url += ('/'+lang+iepnb_config.path_menu)
+
+        logger.debug(u'menu_url ({0}): {0}'.format(tmp_lang, menu_url))
+
         menu_page=urlopen(menu_url, context=iepnb_config.gcontext)
         logger.debug(u'menu_url open')
         menu_text_bytes = menu_page.read()
         logger.debug(u'menu_url received')
-        iepnb_config.menu = menu_text_bytes.decode("utf-8")
+        iepnb_config.menu[tmp_lang] = menu_text_bytes.decode("utf-8")
     
-    
-    return iepnb_config.menu
+    return iepnb_config.menu[tmp_lang]
     #return 'https://iepnb-des.tragsatec.es'
+
+@helper
+def iepnb_locale_name(lang=''):
+    l = Locale.parse(lang)
+    logger.debug("Locale para {0}: {1}".format(lang,l))
+    logger.debug("Respuesta: {0}".format(l.get_display_name(lang)))
+    return l.get_display_name(lang)
     
+
 @helper      
 def iepnb_to_url_segment(cadena):
     """Obsolete: convierte un literal de nombre de página en un segmento de url según Drupal

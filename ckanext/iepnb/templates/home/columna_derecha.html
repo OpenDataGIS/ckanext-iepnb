@@ -2,13 +2,15 @@
 {% set tags = h.get_facet_items_dict('tags', c.search_facets, limit=h.iepnb_popular_tags()) %}
 {% set len_tags = tags|length %}
 {% set placeholder = _('E.g. environment') %}
+{% set base_url = h.iepnb_home() %}
 
   {% block primary_content %}
       <div class="columna_derecha">
           <div class="bloque_columna_derecha">
             <div class="contenedor_introduccion">
               <div class="resaltado">
-                <p class="parrafo_catalogo_datos">El catálogo de datos abiertos del <a href="https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-espanol-patrimonio-natural-biodiv" style="color: #333333;"><strong>Inventario Español del patrimonio Natural y la Biodiversidad</strong></a></strong> consta de una aplicación con tecnología CKAN que se utiliza para distribuir mapas, datos y metadatos espaciales y un <a href="{{ h.iepnb_home() }}/csw" style="color: #333333;"><strong>catálogo CSW</strong></a> (estándar OGC) para la publicación y descubrimiento de metadatos sobre recursos espaciales en la web.</p>
+              {%- set iepnb_url = "https://www.miteco.gob.es/" + request.environ.CKAN_LANG + "/biodiversidad/temas/inventarios-nacionales/inventario-espanol-patrimonio-natural-biodiv" %}
+                 <p class="parrafo_catalogo_datos">{% trans %}El catálogo de datos abiertos del <a href="{{ iepnb_url }}" style="color: #333333;"><strong>Inventario Español del Patrimonio Natural y la Biodiversidad</strong></a></strong> consta de una aplicación con tecnología CKAN que se utiliza para distribuir mapas, datos y metadatos espaciales y un <a href="{{ base_url }}/csw" style="color: #333333;"><strong>catálogo CSW</strong></a> (estándar OGC) para la publicación y descubrimiento de metadatos sobre recursos espaciales en la web.{% endtrans %}</p>
               </div>
             </div>
             <div class="contenedor_buscador_datos">
@@ -16,7 +18,7 @@
                 <div class="w-form">
                   <form id="wf-form-Etiqueta-Form" name="wf-form-Etiqueta-Form" data-name="Etiqueta Form" method="get" aria-label="Etiqueta Form" action="{% url_for 'dataset.search' %}">
                     <div class="titular_linea_verde">
-                      <h1 class="catalogo_datos_con_linea">{{ _('Search') }}</h1>
+                      <h1 class="catalogo_datos_con_linea">{% trans %}Search{% endtrans %}</h1>
                     </div>
                     <div class="contenedor_input_principal">
                       <input aria-label="{% block header_site_search_label %}{{ _('Search datasets') }}{% endblock %}" type="text" class="input_principal" autofocus="true" maxlength="256" name="Etiqueta-2" data-name="Etiqueta 2" placeholder="{{placeholder}}" id="Etiqueta-2" required="">
@@ -26,20 +28,20 @@
                 </div>
               </div>
               <div class="columna_etiquetas layout__region--second">
-                <p class="titulo_etiquetas">{{ _('Popular tags') }}</p>
+                <p class="titulo_etiquetas">{% trans %}Popular tags{% endtrans %}</p>
                 <div class="contenedor_etiquetas">
-  {% for tag in tags %}
+  {%- for tag in tags %}
                   <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
-  {% endfor %}
-  {% if (h.iepnb_popular_tags()-len_tags)>0 %}
-                  <a class="tag" href="{% url_for 'dataset.search', tags='medio ambiente' %}">medio ambiente</a>
-    {% if (h.iepnb_popular_tags()-len_tags)>1 %}                
-                  <a class="tag" href="{% url_for 'dataset.search', tags='biota' %}">biota</a>
-      {% if (h.iepnb_popular_tags()-len_tags)>2 %}
-                  <a class="tag" href="{% url_for 'dataset.search', tags='iepnb' %}">iepnb</a>
-      {% endif %}
-    {% endif %}
-  {% endif %}
+  {%- endfor %}
+  {%- if (h.iepnb_popular_tags()-len_tags)>0 %}
+                  <a class="tag" href="{% url_for 'dataset.search', tags='medio ambiente' %}">{% trans %}medio ambiente{% endtrans %}</a>
+    {%- if (h.iepnb_popular_tags()-len_tags)>1 %}                
+                  <a class="tag" href="{% url_for 'dataset.search', tags='biota' %}">{% trans %}biota{% endtrans %}</a>
+      {%- if (h.iepnb_popular_tags()-len_tags)>2 %}
+                  <a class="tag" href="{% url_for 'dataset.search', tags='iepnb' %}">{% trans %}iepnb{% endtrans %}</a>
+      {%- endif %}
+    {%- endif %}
+  {%- endif %}
                 </div>
               </div>
             </div>
@@ -47,73 +49,17 @@
             <!-- <div class="container"> --> 
               <div class="row row2">
                 <div class="col-md-6 col2">
-        {% block featured_organization %}
-          {% snippet 'home/snippets/featured_organization.html' %}
-        {% endblock %}
+        {%- block featured_organization %}
+          {%- snippet 'home/snippets/featured_organization.html' %}
+        {%- endblock %}
                 </div>
                 <div class="col-md-6 col1">
-        {% block featured_group %}
-          {% snippet 'home/snippets/featured_group.html' %}
-        {% endblock %}
+        {%- block featured_group %}
+          {%- snippet 'home/snippets/featured_group.html' %}
+        {%- endblock %}
                 </div>
               </div>
-            <!-- </div> -->
-          </div> 
- {#           <div class="contenedor_grupos_organizaciones"><!-- Inicio bloque organizaciones/grupos -->
-              <div class="contenedor_iepnb">
-                <div class="contenedor_verde_izq">
-                  <div class="contenedor_texto_e_img">
-                    <div class="texto-y-listado">
-                      <div class="textos_cuadro_y_visor-2">
-                        <a href="https://iepnb-v3.webflow.io/" target="_blank" class="w-inline-block">
-                          <img src="https://uploads-ssl.webflow.com/636d0ce1a62e060cdcaf2706/636d0d9fa115952fa265a1e9_logo.png" loading="lazy" width="150" sizes="(max-width: 479px) 103.22917175292969px, (max-width: 767px) 51.614585876464844px, (max-width: 991px) 9vw, 11vw" srcset="https://uploads-ssl.webflow.com/636d0ce1a62e060cdcaf2706/636d0d9fa115952fa265a1e9_logo-p-500.png 500w, https://uploads-ssl.webflow.com/636d0ce1a62e060cdcaf2706/636d0d9fa115952fa265a1e9_logo-p-800.png 800w, https://uploads-ssl.webflow.com/636d0ce1a62e060cdcaf2706/636d0d9fa115952fa265a1e9_logo-p-1080.png 1080w, https://uploads-ssl.webflow.com/636d0ce1a62e060cdcaf2706/636d0d9fa115952fa265a1e9_logo.png 1330w" alt="Logotipo Inventario del Español del Patrimonio Natural y la Biodiversidad" class="image-5">
-                        </a>
-                        <p class="parrafo_catalogo_datos">Inventario Español del Patrimonio Natural y la Biodiversidad.</p>
-                      </div>
-                    </div>
-                    <div class="contenedor_img_organizaciones_grupos">
-                      <div class="opaca">
-                      </div>
-                      <div class="contenedor_img">
-                        <img src="https://uploads-ssl.webflow.com/636d0ce1a62e060cdcaf2706/63ce3c1fd2b9131f32a1a3d4_ecosistemas_400x400.jpg" loading="lazy" alt="Imagen de un riachuelo de España">
-                      </div>
-                    </div>
-                  </div>
-                  <ul role="list" class="list">
-                    <li class="list-item"><strong>Servicio WMS&nbsp;(Web Map Service) Zona de Especial Protección para las Aves_ZEPA.<br></strong>Este servicio permite la visualización y consulta...</li>
-                    <li><strong>Distribución de especies.<br></strong>Cartografía de distribución de especies silvestre terrestres y marinas...</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="contenedor_iekos">
-                <div class="contenedor_amarillo_dcha">
-                  <div class="contenedor_texto_e_img">
-                    <div class="texto-y-listado">
-                      <div class="textos_cuadro_y_visor-2">
-                        <a href="https://geoservicios.iepnb.es/geoserver" target="_blank" class="w-inline-block">
-                          <img src="https://uploads-ssl.webflow.com/636d0ce1a62e060cdcaf2706/63ce432c82f357f8d9d4d890_eikos.svg" loading="lazy" width="220" alt="EIKOS Sistema de seguimiento de ecosistemas" class="image-6">
-                        </a>
-                        <p class="parrafo_catalogo_datos">Sistema de seguimiento de ecosistemas.</p>
-                      </div>
-                    </div>
-                    <div class="contenedor_img_organizaciones_grupos">
-                      <div class="opaca2"></div>
-                      <div class="contenedor_img">
-                        <img src="https://uploads-ssl.webflow.com/636d0ce1a62e060cdcaf2706/63ce402cb45e86316dc81e22_satelite.jpg" loading="lazy" alt="Imagen de un satélite en el espacio">
-                      </div>
-                    </div>
-                  </div>
-                  <ul role="list" class="list">
-                    <li class="list-item"><strong>rn2000_text.<br></strong>Los datos espaciales se han generado a partir del Banco de Datos de la Naturaleza bajo la responsabilidad del...</li><li><strong>rn2000.<br></strong>Los datos espaciales se han generado a partir del Banco de Datos de la Naturaleza bajo la responsabilidad del...</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Inicio home/layout -->
-    {% snippet "/home/layout{0}.html".format(homepage_style) %}
-            <!-- Fin home/layout -->
-      #}          
+             </div> 
           </div>
-        
       </div>
   {% endblock %}

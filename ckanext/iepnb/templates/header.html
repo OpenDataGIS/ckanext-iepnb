@@ -1,9 +1,11 @@
 {% ckan_extends %}
 
-{% block header_wrapper %}{% block header_account %}{%- endblock %}
-{%- block header_debug %} {% if g.debug and not g.debug_supress_header %}
+{%- block header_wrapper %}
+{%- set current_lang = request.environ.CKAN_LANG %}
+{%- block header_account %}{%- endblock %}
+{%- block header_debug %} {%- if g.debug and not g.debug_supress_header %}
         <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
-{%- endif %} {% endblock %}
+{%- endif %} {%- endblock %}
 	  <div class="header border-bottom border-lg-3 border-primary iepnb">
 		<div class="container">
 		  <nav class="navbar navbar-expand-lg justify-content-between navbar-light sticky-top ">
@@ -24,13 +26,18 @@
     {#- inicio emulación navigation/links--language-block.html.twig' -#}
               <div class="dropdown language-switch">
                 <button class="dropdown-toggle language-switch__button language-switch__flag--es" type="button" id="dropdownLanguagesSwitch" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="language-switch__label">Español</span>
+                  <span class="language-switch__label">{{ h.iepnb_locale_name(current_lang) }}</span>
                 </button>
                 <ul class="links dropdown-menu" aria-labelledby="dropdownLanguagesSwitch">
+              {%- for locale in h.get_available_locales() %}
+                  <li hreflang="{{locale.short_name}}" data-drupal-link-system-path="node/55" class="language-switch__item {% if locale.short_name == current_lang %}is-active{% endif %}"><a href="{% url_for h.current_url(), locale=locale.short_name %}" class="language-link" hreflang="{{locale.short_name}}" data-drupal-link-system-path="{% url_for h.current_url(), locale=locale.short_name %}">
+                    {{ locale.display_name or locale.english_name }}</a></li>
+              {%- endfor %}
+{#
                   <li hreflang="en" data-drupal-link-system-path="node/55" class="language-switch__item"><a href="/en/node/55" class="language-link" hreflang="en" data-drupal-link-system-path="node/55">English</a></li>
                   <li hreflang="es" data-drupal-link-system-path="node/55" class="language-switch__item is-active"><a href="/acerca-de" class="language-link is-active" hreflang="es" data-drupal-link-system-path="node/55">Español</a></li>
                   <li hreflang="ca" data-drupal-link-system-path="node/55" class="language-switch__item"><a href="/ca/node/55" class="language-link" hreflang="ca" data-drupal-link-system-path="node/55">Catalan</a></li>
-                </ul>
+#}                </ul>
               </div>
     {#- fin emulación navigation/links--language-block.html.twig' -#}
 		    </div>  
