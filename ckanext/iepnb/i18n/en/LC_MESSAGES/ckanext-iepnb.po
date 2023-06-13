@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-iepnb 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-06-09 16:04+0200\n"
+"POT-Creation-Date: 2023-06-12 17:03+0200\n"
 "PO-Revision-Date: 2023-06-09 16:01+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -25,7 +25,7 @@ msgstr "Contact"
 
 #: ckanext/iepnb/templates/footer.html:14
 msgid "Accesibilidad"
-msgstr "Accesibility
+msgstr "Accesibility"
 
 #: ckanext/iepnb/templates/footer.html:17
 msgid "Política de privacidad"
@@ -43,49 +43,51 @@ msgstr "Legal disclaimer"
 msgid "logo financiación UE"
 msgstr "UE funding logo"
 
-#: ckanext/iepnb/templates/header.html:102
+#: ckanext/iepnb/templates/header.html:98
 msgid "Catálogo de datos"
 msgstr "Data Catalog"
 
 #: ckanext/iepnb/templates/page.html:18
-msgid "Breadcrumb"
-msgstr ""
+msgid "Migas de pan"
+msgstr "Breadcrumb"
 
+# | msgid "medio ambiente"
 #: ckanext/iepnb/templates/home/columna_derecha.html:4
-msgid "E.g. environment"
-msgstr ""
+#, fuzzy
+msgid "Ej.: ambiente"
+msgstr "E.g. environment"
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:13
 #, python-format
 msgid ""
 "El catálogo de datos abiertos del <a href=\"%(iepnb_url)s\" "
 "style=\"color: #333333;\"><strong>Inventario Español del Patrimonio "
-"Natural y la Biodiversidad</strong></a></strong> consta de una aplicación"
-" con tecnología CKAN que se utiliza para distribuir mapas, datos y "
-"metadatos espaciales y un <a href=\"%(base_url)s/csw\" style=\"color: "
+"Natural y la Biodiversidad</strong></a> consta de una aplicación con "
+"tecnología CKAN que se utiliza para distribuir mapas, datos y metadatos "
+"espaciales y un <a href=\"%(base_url)s/csw\" style=\"color: "
 "#333333;\"><strong>catálogo CSW</strong></a> (estándar OGC) para la "
 "publicación y descubrimiento de metadatos sobre recursos espaciales en la"
 " web."
 msgstr ""
 "The open data catalog of the <a href=\"%(iepnb_url)s\" style=\"color: "
 "#333333;\"><strong>Biodiversitity and Natural Heritage Spanish "
-"Inventory</strong></a></strong> consists of an application with CKAN "
-"technology used to distribute maps, data and spatial metadata, "
-"and a <a href=\"%(base_url)s/csw\" style=\"color: "
-"#333333;\"><strong>CSW catalog</strong></a> (OGC standard) for the "
-"publication and discovery of metadata about spatial resources on the web."
+"Inventory</strong></a> consists of an application with CKAN technology "
+"used to distribute maps, data and spatial metadata, and a <a "
+"href=\"%(base_url)s/csw\" style=\"color: #333333;\"><strong>CSW "
+"catalog</strong></a> (OGC standard) for the publication and discovery of "
+"metadata about spatial resources on the web."
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:21
-msgid "Search"
-msgstr ""
+msgid "Buscar"
+msgstr "Search"
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:24
-msgid "Search datasets"
-msgstr ""
+msgid "Buscar conjuntos de datos"
+msgstr "Search datasets"
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:31
-msgid "Popular tags"
-msgstr ""
+msgid "Etiquetas populares"
+msgstr "Popular tags"
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:37
 msgid "medio ambiente"
@@ -99,24 +101,28 @@ msgstr ""
 msgid "iepnb"
 msgstr ""
 
+# | msgid "Dashboard (%(num)d new item)"
+# | msgid_plural "Dashboard (%(num)d new items)"
 #: ckanext/iepnb/templates/home/columna_izquierda.html:5
-#, python-format
-msgid "Dashboard (%(num)d new item)"
-msgid_plural "Dashboard (%(num)d new items)"
-msgstr[0] ""
-msgstr[1] ""
+#, fuzzy, python-format
+msgid "Pizarra (%(num)d nuevo item"
+msgid_plural "Pizarra (%(num)d nuevos items)"
+msgstr[0] "Dashboard (%(num)d new item)"
+msgstr[1] "Dashboard (%(num)d new items)"
 
+# | msgid "Administrador"
 #: ckanext/iepnb/templates/home/columna_izquierda.html:9
-msgid "Sysadmin settings"
-msgstr ""
+#, fuzzy
+msgid "Ajustes del administrador"
+msgstr "Sysadmin settings"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:11
 msgid "Administrador"
 msgstr "Administrator"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:13
-msgid "View profile"
-msgstr ""
+msgid "Ver perfil"
+msgstr "View profile"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:15
 msgid "Tus datos"
@@ -127,7 +133,6 @@ msgid "Panel de control"
 msgstr "Control panel"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:22
-#: ckanext/iepnb/templates/home/columna_izquierda.html:53
 msgid "harvest"
 msgstr ""
 
@@ -137,66 +142,72 @@ msgstr ""
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:27
 #: ckanext/iepnb/templates/home/columna_izquierda.html:29
-msgid "Profile settings"
-msgstr ""
+msgid "Ajustes de perfil"
+msgstr "Profile settings"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:32
-msgid "Sparql point"
-msgstr ""
-
 #: ckanext/iepnb/templates/home/columna_izquierda.html:34
 msgid "Punto Sparql"
 msgstr "Sparql point"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:37
 #: ckanext/iepnb/templates/home/columna_izquierda.html:39
-msgid "Log out"
-msgstr ""
+msgid "Cerrar sesión"
+msgstr "Log out"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:49
 msgid "Estadísticas"
 msgstr "Stats"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:53
-msgid "Statistics Menu"
-msgstr ""
+msgid "Menu de estadísticas"
+msgstr "Statistics Menu"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:55
-msgid "Dataset"
-msgstr ""
+msgid "Conjunto de datos"
+msgstr "Dataset"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:55
-msgid "Datasets"
-msgstr ""
+msgid "Conjuntos de datos"
+msgstr "Datasets"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:56
-msgid "Organization"
-msgstr ""
+msgid "Organización"
+msgstr "Organization"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:56
-#: ckanext/iepnb/templates/package/base.html:16
-msgid "Organizations"
-msgstr ""
+msgid "Organizaciones"
+msgstr "Organizations"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:57
-msgid "Group"
-msgstr ""
+msgid "Grupo"
+msgstr "Group"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:57
-msgid "Groups"
-msgstr ""
+msgid "Grupos"
+msgstr "Groups"
 
 #: ckanext/iepnb/templates/home/index.html:4
-msgid "Welcome"
-msgstr ""
+msgid "Bienvenido"
+msgstr "Welcome"
+
+#: ckanext/iepnb/templates/home/index.html:28
+msgid "Inicio"
+msgstr "Home"
 
 #: ckanext/iepnb/templates/home/index.html:28
 #: ckanext/iepnb/templates/snippets/home_breadcrumb_item.html:7
 msgid "Home"
 msgstr ""
 
-#: ckanext/iepnb/templates/package/base.html:24
-msgid "Create Dataset"
+#: ckanext/iepnb/templates/package/base.html:16
+msgid "Organizations"
 msgstr ""
 
+#: ckanext/iepnb/templates/package/base.html:24
+msgid "Crear conjunto de datos"
+msgstr "Create Dataset"
+
+msgid "Nuestros datos"
+msgstr "Our data"
 

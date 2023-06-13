@@ -2,9 +2,11 @@ from ckan.common import json, config, is_flask_request, c, request
 from ckan.lib.plugins import DefaultTranslation
 from ckan.lib import helpers as ckan_helpers
 import ckanext.iepnb.config as iepnb_config
-from ckanext.iepnb.utils import get_facets_dict, get_logo_ministerio_attrs, get_footer_iepnb, plugin_defined
+from ckanext.iepnb.utils import *
 from ckanext.scheming.helpers import scheming_choices_label
 from urllib.request import urlopen
+from urllib.error import HTTPError
+from html.parser import HTMLParser
 import ckan.logic as logic
 from babel import Locale
 import logging
@@ -81,7 +83,7 @@ def iepnb_popular_tags():
 def iepnb_menu(lang = ''):
     """Busca el texto json con la descripción del menú en iepnb.server
     """
-    tmp_lang = lang or config.locale_default
+    tmp_lang = lang or iepnb_config.locale_default
     if not iepnb_config.menu:
 
         iepnb_config.menu={}
@@ -96,7 +98,14 @@ def iepnb_menu(lang = ''):
 
         logger.debug(u'menu_url ({0}): {0}'.format(tmp_lang, menu_url))
 
-        menu_page=urlopen(menu_url, context=iepnb_config.gcontext)
+        try:
+            menu_page=urlopen(menu_url, context=iepnb_config.gcontext)
+        except HTTPError as err:
+            logger.warning("No se puede acceder a {0}: {1}".format(menu_url, err.reason))
+            if tmp_lang != '' and tmp_lang != 'es':
+                return iepnb_menu()
+            else:
+                logger.error("No se puede recuperar el menú por defecto")
         logger.debug(u'menu_url open')
         menu_text_bytes = menu_page.read()
         logger.debug(u'menu_url received')
@@ -296,8 +305,38 @@ def iepnb_tag_img_ministerio():
     return tag
 
 @helper
-def iepnb_get_footer():
-    return get_footer_iepnb()
+def iepnb_get_footer(lang=''):
+    tmp_lang = lang or iepnb_config.locale_default
+    if not iepnb_config.footer_iepnb.get(tmp_lang, None):
+        url = iepnb_config.server_menu
+        page = None
+        if lang:
+            url += ('/'+lang)
+        try:
+            page = urlopen(url, context=iepnb_config.gcontext)
+        except HTTPError as err:
+            logger.warning("No se puede acceder a {0}: {1}".format(url, err.reason))
+            if tmp_lang != '' and tmp_lang != 'es':
+                return iepnb_get_footer()
+            else:
+                logger.error("No se puede recuperar el pie de página por defecto")
+        if page:
+            text_bytes=page.read()
+            text=text_bytes.decode("utf-8")
+            ClassParser=type("ClassParser", (HTMLParser,), {
+                "handle_starttag":   iepnb_handle_starttag,
+                "handle_endtag":     iepnb_handle_endtag,
+                "handle_data":       iepnb_handle_data,
+                "footer":            None,
+                "header":            None,
+                "header_counter":    0,
+                "footer_counter":    False
+                })
+            parser=ClassParser()
+            parser.feed(text)
+            iepnb_config.footer_iepnb[tmp_lang] = parser.footer
+
+    return iepnb_config.footer_iepnb.get(tmp_lang,'')
 
 @helper
 def iepnb_plugin_defined(_plugin):

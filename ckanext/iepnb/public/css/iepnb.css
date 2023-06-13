@@ -123,6 +123,10 @@ footer .nav-item.active a:before {
 	padding: 0.5rem;
 }
 
+.header .language-switch__item {
+	text-transform: capitalize;
+}
+
 footer .nav-link {
     display: block;
     padding: 0.5rem 1rem;

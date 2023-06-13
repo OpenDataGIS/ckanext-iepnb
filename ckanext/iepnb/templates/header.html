@@ -33,11 +33,7 @@
                   <li hreflang="{{locale.short_name}}" data-drupal-link-system-path="node/55" class="language-switch__item {% if locale.short_name == current_lang %}is-active{% endif %}"><a href="{% url_for h.current_url(), locale=locale.short_name %}" class="language-link" hreflang="{{locale.short_name}}" data-drupal-link-system-path="{% url_for h.current_url(), locale=locale.short_name %}">
                     {{ locale.display_name or locale.english_name }}</a></li>
               {%- endfor %}
-{#
-                  <li hreflang="en" data-drupal-link-system-path="node/55" class="language-switch__item"><a href="/en/node/55" class="language-link" hreflang="en" data-drupal-link-system-path="node/55">English</a></li>
-                  <li hreflang="es" data-drupal-link-system-path="node/55" class="language-switch__item is-active"><a href="/acerca-de" class="language-link is-active" hreflang="es" data-drupal-link-system-path="node/55">Español</a></li>
-                  <li hreflang="ca" data-drupal-link-system-path="node/55" class="language-switch__item"><a href="/ca/node/55" class="language-link" hreflang="ca" data-drupal-link-system-path="node/55">Catalan</a></li>
-#}                </ul>
+              </ul>
               </div>
     {#- fin emulación navigation/links--language-block.html.twig' -#}
 		    </div>  

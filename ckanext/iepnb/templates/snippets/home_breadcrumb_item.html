@@ -4,8 +4,8 @@
 {% if h.lang() != "" and h.lang() != h.iepnb_locale_default() %}
   {% set ns.lang = '/' + h.lang() %}
 {% endif %}
-<li><a href = "{{ns.lang}}/" aria-label="{{ _('Home') }}"><span> {{ _('Home') }}</span></a></li>
+<li><a href = "{{ns.lang}}/" aria-label="{{ _('Inicio') }}"><span> {{ _('Inicio') }}</span></a></li>
 {% set breadcrumbs = h.iepnb_breadcrumbs(h.lang()) %}
 {% for elemento in h.iepnb_decode_json(breadcrumbs) %}
-<li><a href="{{ns.lang}}{{ elemento.relative }}" aria-label="{{ elemento.description }}"><span> {{ elemento.title }}</span></a></li>
+<li><a href="{{ns.lang}}{{ elemento.relative }}" aria-label="{{ _(elemento.description) }}"><span> {{ _(elemento.title) }}</span></a></li>
 {% endfor %}

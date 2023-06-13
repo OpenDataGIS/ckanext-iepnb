@@ -50,26 +50,6 @@ def get_logo_ministerio_attrs():
 
     return iepnb_config.attrs_logo_ministerio
 
-def get_footer_iepnb():
-    if not iepnb_config.footer_iepnb:
-        page=urlopen(iepnb_config.server_menu, context=iepnb_config.gcontext)
-        text_bytes=page.read()
-        text=text_bytes.decode("utf-8")
-        ClassParser=type("ClassParser", (HTMLParser,), {
-            "handle_starttag":   iepnb_handle_starttag,
-            "handle_endtag":     iepnb_handle_endtag,
-            "handle_data":       iepnb_handle_data,
-            "footer":            None,
-            "header":            None,
-            "header_counter":    0,
-            "footer_counter":    False
-            })
-        parser=ClassParser()
-        parser.feed(text)
-        iepnb_config.footer_iepnb=parser.footer
-
-    return iepnb_config.footer_iepnb
-
 
 def iepnb_handle_starttag(obj, tag, attrs):
     if obj.header_counter or (tag=="div" and "header" in " ".join([x[1] for x in attrs if x[0]=="class"])):
