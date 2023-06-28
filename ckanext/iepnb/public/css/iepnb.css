@@ -864,6 +864,19 @@ button.image {
 	line-height: var(--bs-body-line-height);
 }
 .header .nav-item > a, .nav-aside li a {
-	margin: unset;
+	margin-top: unset;
+	margin-bottom: unset;
+	margin-right: unset;
+	
+}
+.header .nav-item:not(.menu-icon-102)> a, .nav-aside li a {
+	margin-left: unset;
 }
 
+.header .language-switch__label {
+	text-transform: capitalize;
+}
+
+footer, footer .nav-item > a {
+	line-height: var(--bs-body-line-height);
+}

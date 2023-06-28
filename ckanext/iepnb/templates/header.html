@@ -70,8 +70,12 @@
           {%- if entrada["relative"]=="/nuestros-datos" -%}
             {% set class_menu_active=" active" %}
           {%- endif -%}
-            
-                  <li class="menu-icon menu-icon-102 nav-item {{class_menu_active}}{{class_dropdown_li}}">
+          {%- if entrada["uri"]=="node/88" -%}
+            {% set class_li_item="menu-icon-102" %}
+          {%- else -%}
+            {% set class_li_item="menu-icon-58" %}
+          {%- endif -%}
+                  <li class="menu-icon {{class_li_item}} nav-item {{class_menu_active}}{{class_dropdown_li}}">
                     <a href='{{ entrada["relative"] }}' title='{{ entrada["title"] }}' class="nav-link{{class_dropdown_a}}"{{extra_dropdown_a}} data-drupal-link-system-path='{{ entrada["uri"] }}'>{{ entrada["title"] }}</a>
                     {% if entrada.below %}
                     <div class="dropdown-menu" aria-expanded="false">

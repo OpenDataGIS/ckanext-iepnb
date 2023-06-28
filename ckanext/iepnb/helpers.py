@@ -310,7 +310,7 @@ def iepnb_get_footer(lang=''):
     if not iepnb_config.footer_iepnb.get(tmp_lang, None):
         url = iepnb_config.server_menu
         page = None
-        if lang:
+        if lang != iepnb_config.locale_default:
             url += ('/'+lang)
         try:
             page = urlopen(url, context=iepnb_config.gcontext)
