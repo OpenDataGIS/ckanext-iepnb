@@ -189,6 +189,15 @@ If ckanext-iepnb should be available on PyPI you can follow these steps to publi
 	  git tag 0.0.1
 	  git push --tags
 	```
+## Issues
+
+Ckan has a problem translating js messages while instaled in a sub-directory 
+instead in the root of the web site. A report has issued to developers: 
+"Translation of the text in the .js file does not work #5509", comment by 
+dsanjurjo on jun 28, 2023.
+
+As a workaround, in a proxy-reverse enviroment you could redirect /api/i18n 
+calls to /catalogo/api/i18n in the ckan server.
 
 ## License
 
