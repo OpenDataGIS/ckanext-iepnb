@@ -301,6 +301,8 @@ def iepnb_tag_img_ministerio():
             if x[1]:
                 tag = tag + '="' + x[1]+'"'
         tag = tag+'>'
+    else:
+        tag=iepnb_config.default_logo_ministerio.format(ckan_helpers.url_for_static("/img/Logotipo_Minteco.png"))
 
     return tag
 
