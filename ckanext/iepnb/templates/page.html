@@ -15,7 +15,7 @@
 			<div data-drupal-messages-fallback class="hidden"></div>
     {# fin emulación core/modules/system/templates/block--system-messages-block.html.twig #}
           {% block toolbar %}
-            <!-- <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}"> -->
+            <!-- <div class="toolbar" role="navigation" aria-label="{{ _('Migas de pan') }}"> -->
               {% block breadcrumb %}
               <!--  Inicio bloque breadcrumb -->
               <div class="layout layout--onecol">
@@ -124,7 +124,8 @@
         </div> <!-- /container py-4 -->
       </div> <!-- /content -->
   {%- block footer %}<!-- Bloque footer @ page -->
-    {% include "footer.html" %}
+    {{ h.iepnb_get_footer(request.environ.CKAN_LANG)|safe }}
+    {#% include "footer.html" %#}
     <!-- Fin bloque footer @ page -->
   {% endblock -%}
 	

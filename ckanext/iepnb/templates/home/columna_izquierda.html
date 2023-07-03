@@ -1,51 +1,88 @@
 {% set stats = h.get_site_statistics() %}
-      <div class="columna-izquierda">
-{% if c.userobj %}
+<div class="columna-izquierda">
+  {% if c.userobj %}
   {% set new_activities = 33 %} {# h.new_activities() #}
-  {% set notifications_tooltip = ngettext('Dashboard (%(num)d new item)', 'Dashboard (%(num)d new items)', new_activities) %}
-        <div class="menu_lateral">
-          <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar_menu_lateral w-nav">
-            <nav role="navigation" class="navbar_menu2 w-nav-menu">
-              <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Sysadmin settings') }}" class="menu_area_privada w-inline-block">
-                <img src="{{ h.url_for_static('img/icono_administrador.svg') }}" loading="lazy" alt="Administrador" class="image-4">
-                <p class="text_menu_area_privada">{{ _('Administrador') }}</p>
-              </a>
-              <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" class="menu_area_privada w-inline-block" title="{{ _('View profile') }}">
-                <img src="{{ h.url_for_static('img/icono_datos.svg') }}" loading="lazy" alt="Tus datos" class="image-4">
-                <p class="text_menu_area_privada">{{ _('Tus datos') }}</p>
-              </a>
-              <a href="{{ h.url_for('dashboard.index') }}" class="menu_area_privada w-inline-block" title="{{ notifications_tooltip }}">
-                <img src="{{ h.url_for_static('img/icono_panel_de_control.svg') }}" loading="lazy" alt="Panel de control" class="image-4">
-                <p class="text_menu_area_privada">{{ _('Panel de control') }}</p>
-              </a>
-              
-              <a href="{{ h.url_for('/harvest') }}" class="menu_area_privada w-inline-block" title="{{ _('harvest') }}">
-                <img src="{{ h.url_for_static('img/icono_harvest.svg') }}" loading="lazy" alt="Harvest" class="image-4">
-                <p class="text_menu_area_privada">{{ _('Harvest') }}</p>
-              </a>
-              
-              <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Profile settings') }}" class="menu_area_privada w-inline-block">
-                <img src="{{ h.url_for_static('img/icono_perfil.svg') }}" loading="lazy" alt="Ajustes de perfil" class="image-4">
-                <p class="text_menu_area_privada">{{ _('Profile settings') }}</p>
-              </a>
-              <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}" class="menu_area_privada w-inline-block">
-                <img src="{{ h.url_for_static('img/icono_salir.svg') }}" loading="lazy" alt="Cerrar sesión" class="image-4">
-                <p class="text_menu_area_privada">{{ _('Log out') }}</p>
-              </a>
-            </nav>
-            <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-1"></div>
-          </div>
-        </div>
-        <div class="espaciador"></div>
-{% endif %}
-        <div class="estadisticas">
-          <div class="titular_linea_verde">
-            <h1 class="catalogo_datos_con_linea">{{ _('Estadísticas') }}</h1>
-          </div>
-          <div class="contenedor_links">
-            <a href="{{ h.url_for('dataset.search') }}" class="link_menu_lateral w-inline-block"><p class="paragraph"><span class="text-span-2">{{ h.SI_number_span(stats.dataset_count) }}</span> {{ _('Dataset') if stats.dataset_count == 1 else _('Datasets') }}</p></a>
-            <a href="{{ h.url_for(controller='organization', action='index') }}" class="link_menu_lateral w-inline-block"><p class="paragraph"><span class="text-span-3">{{ h.SI_number_span(stats.organization_count) }}</span> {{ _('Organization') if stats.organization_count == 1 else _('Organizations') }}</p></a>
-            <a href="{{ h.url_for(controller='group', action='index') }}" class="link_menu_lateral w-inline-block"><p class="paragraph"><span class="text-span-4">{{ h.SI_number_span(stats.group_count) }}</span> {{ _('Group') if stats.group_count == 1 else _('Groups') }}</p></a>
-          </div>
-        </div>
-      </div><!-- End layout__region layout__region--first -->
+  {% set notifications_tooltip = ngettext('Pizarra (%(num)d nuevo item', 'Pizarra (%(num)d nuevos items)',
+  new_activities) %}
+  <div class="menu_lateral">
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
+      role="banner" class="navbar_menu_lateral w-nav">
+      <nav role="navigation" class="navbar_menu2 w-nav-menu">
+        <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Ajustes del administrador') }}"
+          class="menu_area_privada w-inline-block">
+          <img src="{{ h.url_for_static('img/icono_administrador.svg') }}" loading="lazy" alt="Administrador"
+            class="image-4">
+          <p class="text_menu_area_privada">{{ _('Administrador') }}</p>
+        </a>
+        <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" class="menu_area_privada w-inline-block"
+          title="{{ _('Ver perfil') }}">
+          <img src="{{ h.url_for_static('img/icono_datos.svg') }}" loading="lazy" alt="Tus datos" class="image-4">
+          <p class="text_menu_area_privada">{{ _('Tus datos') }}</p>
+        </a>
+        <a href="{{ h.url_for('dashboard.index') }}" class="menu_area_privada w-inline-block"
+          title="{{ _(notifications_tooltip) }}">
+          <img src="{{ h.url_for_static('img/icono_panel_de_control.svg') }}" loading="lazy" alt="Panel de control"
+            class="image-4">
+          <p class="text_menu_area_privada">{{ _('Panel de control') }}</p>
+        </a>
+
+        <a href="{{ h.url_for('/harvest') }}" class="menu_area_privada w-inline-block" title="{{ _('harvest') }}">
+          <img src="{{ h.url_for_static('img/icono_harvest.svg') }}" loading="lazy" alt="Harvest" class="image-4">
+          <p class="text_menu_area_privada">{{ _('Harvest') }}</p>
+        </a>
+
+        <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Ajustes de perfil') }}"
+          class="menu_area_privada w-inline-block">
+          <img src="{{ h.url_for_static('img/icono_perfil.svg') }}" loading="lazy" alt="Ajustes de perfil"
+            class="image-4">
+          <p class="text_menu_area_privada">{{ _('Ajustes de perfil') }}</p>
+        </a>
+        <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Cerrar sesión') }}"
+          class="menu_area_privada w-inline-block">
+          <img src="{{ h.url_for_static('img/icono_salir.svg') }}" loading="lazy" alt="Cerrar sesión" class="image-4">
+          <p class="text_menu_area_privada">{{ _('Cerrar sesión') }}</p>
+        </a>
+      </nav>
+      <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-1"></div>
+    </div>
+  </div>
+  <div class="espaciador_ckan"></div>
+  {% endif %}
+  <div class="estadisticas">
+    <div class="titular_linea_verde">
+      <h1 class="catalogo_datos_con_linea">{{ _('Estadísticas') }}</h1>
+    </div>
+    <div class="contenedor_links">
+      {% if c.userobj and h.iepnb_plugin_defined("stats") %}
+      <a href="{{ h.url_for('/stats') }}" class="link_menu_lateral w-inline-block"
+        title="{{ _('Menu de estadísticas') }}">
+        <p class="paragraph">{{ _('Menu de estadísticas') }}</p>
+      </a>
+      {% endif %}
+      <a href="{{ h.url_for('dataset.search') }}" class="link_menu_lateral w-inline-block">
+        <p class="paragraph"><span class="text-span-2">{{ h.SI_number_span(stats.dataset_count) }}</span> {{ _('Conjunto
+          de datos') if stats.dataset_count == 1 else _('Conjuntos de datos') }}</p>
+      </a>
+      <a href="{{ h.url_for(controller='organization', action='index') }}" class="link_menu_lateral w-inline-block">
+        <p class="paragraph"><span class="text-span-3">{{ h.SI_number_span(stats.organization_count) }}</span> {{
+          _('Organización') if stats.organization_count == 1 else _('Organizaciones') }}</p>
+      </a>
+      <a href="{{ h.url_for(controller='group', action='index') }}" class="link_menu_lateral w-inline-block">
+        <p class="paragraph"><span class="text-span-4">{{ h.SI_number_span(stats.group_count) }}</span> {{ _('Grupo') if
+          stats.group_count == 1 else _('Grupos') }}</p>
+      </a>
+    </div>
+    <div class="titular_linea_verde">
+      <h1 class="catalogo_datos_con_linea">{{ _('Datos Abiertos Enlazados') }}</h1>
+    </div>
+    <div class="contenedor_links">
+      {% if h.iepnb_plugin_defined("sparql_interface") %}
+      <a href="{{ h.url_for('/sparql') }}" title="{{ _('Punto SPARQL') }}" class="menu_area_publica w-inline-block">
+        <img src="{{ h.url_for_static('img/icono_rdf.svg') }}" loading="lazy" alt="{{ _('Punto SPARQL') }}"
+          class="image-4">
+        <p class="text_menu_area_publica">{{ _('Punto SPARQL') }}</p>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div><!-- End layout__region layout__region--first -->

@@ -48,11 +48,13 @@ To install ckanext-iepnb:
    config file (by default the config file is located at
    `/etc/ckan/default/ckan.ini`).
    
-
+4. In order to let the English profile work, is absolutely mandatory to make the directory 
+   `/ckan/ckan/public/base/i18n` writable by the ckan user. ¡CKAN WILL NOT START IF
+   YOU DON'T DO SO!
 		
-4. Add iepnb specific configuration to the CKAN config file
+5. Add iepnb specific configuration to the CKAN config file
 
-5. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
+6. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
 
      `sudo service apache2 reload`
      
@@ -62,23 +64,37 @@ To install ckanext-iepnb:
 
 At CKAN config .ini file (in `/etc/ckan/default` dir), into the [app:main] section, add:
 
-```
-	#Server to download menu and breadcrumbs. Demo assets server: https://github.com/OpenDataGIS/ckanext-iepnb_assets
-	iepnb.server = https://some_server
+```ini
+#Server to download menu and breadcrumbs. Demo assets server: https://github.com/OpenDataGIS/ckanext-iepnb_assets
+iepnb.server = https://some_server
 
-	#default breadcrumbs
-	iepnb.breadcrumbs = [{"title":"Some literal","description":"Some description", "relative":"relative_path_from_iepnb.server"},...]
+#default breadcrumbs
+iepnb.breadcrumbs = [{"title":"Some literal","description":"Some description", "relative":"relative_path_from_iepnb.server"},...]
 
-	#relative path to download menu in iepnb.server. Demo path_menu in ckanext-iepnb_assets: /main.json
-	iepnb.path_menu = /api/menu_items/main         
+#relative path to download menu in iepnb.server. Demo path_menu in ckanext-iepnb_assets: /main.json
+iepnb.path_menu = /api/menu_items/main         
 
-	#number of popular tags to show at index page
-	iepnb.popular_tags = 3
+#number of popular tags to show at index page
+iepnb.popular_tags = 3
 
-	#relative path to download breadcrumbs definition. Will take precedence over iepnb.headcrumbs if defined
-	iepnb.path_breadcrumbs = No_Default_Value
+#relative path to download breadcrumbs definition. Will take precedence over iepnb.headcrumbs if defined
+iepnb.path_breadcrumbs = No_Default_Value
 	
-```	
+```
+
+And in order to replace the default ckan favicon with the , change the appropriate key:
+
+```ini
+ckan.favicon=/base/images/iepnb.ico
+```
+
+###Stats configuration
+
+Having stats on is a bit tricky. First of all you must have the plugin activated at the `ckan.plugins` setting in the config .ini file. usually you have it out-of-the-box, so it's not a big deal. Since you have it enabled, you'll get a "Stats menu" option under the "Stats" section in the main page when logged as a ckan user.
+
+Ok. That was the easy part. Unfortunately, even thoug stats plugin is part of the ckan core, it is a little outdated in ckan 2.9, and it doesn't work. In order to have stats enabled you must edit `index.html` template in `ckanext/stats/templates/ckanext/stats`, and change all the references to the "c" object to access its properties directly. So for example you must replace `c.largest_groups` by just `largest_groups` (without the 'c.' part).
+
+This is just a patch for ckan versions shipped with an outdated 'stats' plugin, so you must first test if the plugin works (just accessing the main menu option and checking the stats), and only then apply the proposed patch (if the plugin doesn't works).
 
 ## Developer installation
 
@@ -91,6 +107,39 @@ cd ckanext-iepnb
 python setup.py develop
 pip install -r dev-requirements.txt
 ```
+
+## Icons management
+
+This extension made automatic use of icons for fields defined in the schema file and using uris as values.
+
+To be this extension able to use the icons they must be stored acording these rules:
+
+* Icons for items must be in a subdirectory of public/images/icons, named after the field name.
+* For each item, its icon must be in a directory inside the named before, this named as the second-to-last fragment in the value´s path, and the file named as the last fragment of this value.
+* All names in lowercase letters
+* Icons can have svg, png, jpg or gif extensions.
+
+Examples:
+
+field_name: theme
+
+* value: http://inspire.ec.europa.eu/theme/mf1
+  * icon -> public/images/icons/theme/theme/mf1.svg (the repeated 'theme' is not a mistake)
+
+field_name: spatial
+
+* value: http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon
+  * icon -> public/images/icons/autonomia/aragon.svg
+  
+* value: http://datos.gob.es/recurso/sector-publico/territorio/Pais/España
+  * icon -> public/images/icons/pais/españa (note the lowercases and keep an eye on non-ascii-128 character translations between systems)
+
+To take advantage of the automatic use of icons, two display_snippets are provided in templates/scheming/display_snipets:
+
+* select_icon.html: to be used with one-select fields
+* multiple_choice_icon.html: to be used with multiple-select fields
+
+You can use these snippets configuring the display_snippet property in your scheming file as appropiate.  
 
 ## Tests
 

@@ -1,5 +1,6 @@
 import ckanext.iepnb.config as iepnb_config
 import ckanext.iepnb.helpers as iepnb_helpers
+#from ckanext.iepnb.utils import get_public_dirs
 #import ckanext.iepnb.dge_helpers as helpers
 import ckan.model as model
 import ckan.plugins as plugins
@@ -50,6 +51,8 @@ class IepnbPlugin(plugins.SingletonPlugin, DefaultTranslation):
         
         iepnb_config.path_breadcrumbs = config.get('iepnb.path_breadcrumbs', '')
         iepnb_config.gcontext = ssl.SSLContext()
+        
+        iepnb_config.stats = ('stats' in config.get('ckan.plugins','').split())
         
     def get_helpers(self):
         logger.debug('Getting helpers...')

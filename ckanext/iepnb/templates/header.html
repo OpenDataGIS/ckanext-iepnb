@@ -1,24 +1,56 @@
 {% ckan_extends %}
 
-{% block header_wrapper %}{% block header_account %}{%- endblock %}
-{%- block header_debug %} {% if g.debug and not g.debug_supress_header %}
+{%- block header_wrapper %}
+{%- set current_lang = request.environ.CKAN_LANG %}
+{%- block header_account %}{%- endblock %}
+{%- block header_debug %} {%- if g.debug and not g.debug_supress_header %}
         <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
-{%- endif %} {% endblock %}
+{%- endif %} {%- endblock %}
 	  <div class="header border-bottom border-lg-3 border-primary iepnb">
 		<div class="container">
 		  <nav class="navbar navbar-expand-lg justify-content-between navbar-light sticky-top ">
 {#- inicio emulación region/region.html.twig -#}
-{#- inicio emulación block/block--system-branding-block.html.twig #}
-            <div class="settings-tray-editable block--type-image block block--image block--logomiteco block-block-content block-block-contenta5130b59-2e93-48f5-b2a0-0ed596a906af" data-drupal-settingstray="editable">
-              <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item">
-                <img src="{{h.iepnb_home()}}/sites/default/files/2023-03/logo_miteco.png" width="233" height="54" alt="logo MITECO" loading="lazy" typeof="foaf:Image" class="img-fluid">
+  {#- inicio emulación block/block--system-branding-block.html.twig #}
+            <div class="wrapper-logo-brand">
+              <div class="logoGobierno">
+                {{ h.iepnb_tag_img_ministerio()|safe }}
+                <!-- img src="{{h.iepnb_home()}}/sites/default/files/2023-03/logo_miteco.png" width="233" height="54" alt="logo MITECO" loading="lazy" typeof="foaf:Image" class="img-fluid" -->
               </div>
+              <a href="{{h.iepnb_home()}}/" class="navbar-brand d-flex align-items-center " aria-label="Inventario español del Patrimonio Natural y la Biodiversidad">
+                <img src="{{h.iepnb_home()}}/themes/custom/iepnb/logo.png" width="120" " alt="Inventario español del Patrimonio Natural y la Biodiversidad logo" class="mr-2" />
+              </a>
             </div>
-            <a href="{{h.iepnb_home()}}/" class="navbar-brand d-flex align-items-center " aria-label="Inventario español del Patrimonio Natural y la Biodiversidad">
-              <img src="{{h.iepnb_home()}}/themes/custom/iepnb/logo.png" width="120" " alt="Inventario español del Patrimonio Natural y la Biodiversidad logo" class="mr-2" />
-            </a>
-{#- fin emulación block/block--system-branding-block.html.twig -#}
-{#- fin emulación region/region.html.twig #}
+  {#- fin emulación block/block--system-branding-block.html.twig -#}
+  {#- inicio emulación block/block.html.twig #}
+            <div class="language-switcher-language-url settings-tray-editable block block--alternadordeidioma block-language block-language-blocklanguage-interface" role="navigation" data-drupal-settingstray="editable">	
+    {#- inicio emulación navigation/links--language-block.html.twig' -#}
+              <div class="dropdown language-switch">
+                <button class="dropdown-toggle language-switch__button language-switch__flag--es" type="button" id="dropdownLanguagesSwitch" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="language-switch__label">{{ h.iepnb_locale_name(current_lang) }}</span>
+                </button>
+                <ul class="links dropdown-menu" aria-labelledby="dropdownLanguagesSwitch">
+              {%- for locale in h.get_available_locales() %}
+                  <li hreflang="{{locale.short_name}}" data-drupal-link-system-path="node/55" class="language-switch__item {% if locale.short_name == current_lang %}is-active{% endif %}"><a href="{% url_for h.current_url(), locale=locale.short_name %}" class="language-link" hreflang="{{locale.short_name}}" data-drupal-link-system-path="{% url_for h.current_url(), locale=locale.short_name %}">
+                    {{ locale.display_name or locale.english_name }}</a></li>
+              {%- endfor %}
+              </ul>
+              </div>
+    {#- fin emulación navigation/links--language-block.html.twig' -#}
+		    </div>  
+  {#- fin emulación block/block.html.twig #}
+  {#- inicio emulación block/block--system-menu-block.html.twig' #}
+            <div class="settings-tray-editable block block--menudecuentadeusuario" data-drupal-settingstray="editable">
+    {#- inicio emulación menu/menu--account.html.twig'  #}
+      {% if not c.user %}
+                {#% link_for 'login', named_route='user.login', class_='login-menu content-login-navbar-menu w-inline-block' %#}
+                <a href="{{h.url_for('user.login')}}" class='login-menu content-login-navbar-menu w-inline-block' type='button' title='login'>
+                  <span>login</span>
+                </a>
+      {% endif %}
+    {#- fin emulación menu/menu--account.html.twig'  #}
+            </div>
+  {#- fin emulación block/block--system-menu-block.html.twig'  -#}
+{#- fin emulación region/region.html.twig -#} 
             <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,19 +59,23 @@
 {#- inicio emulación block/block--system-menu-block.html.twig #}
               <div class="settings-tray-editable block block--navegacionprincipal" data-drupal-settingstray="editable">
 {#- inicio emulación menu/menu--main.html.twig #}
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" aria-labelledby="submenu">
         {% set barra_menu=h.iepnb_menu(h.lang()) %}
         {%- for entrada in h.iepnb_decode_json(barra_menu) %}
           {% if entrada.below %}
             {% set class_dropdown_li=" dropdown" %}
-            {% set class_dropdown_a=" dropdown-bs-toggle" %}
+            {% set class_dropdown_a=" dropdown-toggle" %}
             {% set extra_dropdown_a=' data-bs-toggle="dropdown_" aria-haspopup="true"'|safe %}
           {% endif %}
           {%- if entrada["relative"]=="/nuestros-datos" -%}
             {% set class_menu_active=" active" %}
           {%- endif -%}
-            
-                  <li class="menu-icon menu-icon-15 nav-item {{class_menu_active}}{{class_dropdown_li}}">
+          {%- if entrada["uri"]=="node/88" -%}
+            {% set class_li_item="menu-icon-102" %}
+          {%- else -%}
+            {% set class_li_item="menu-icon-58" %}
+          {%- endif -%}
+                  <li class="menu-icon {{class_li_item}} nav-item {{class_menu_active}}{{class_dropdown_li}}">
                     <a href='{{ entrada["relative"] }}' title='{{ entrada["title"] }}' class="nav-link{{class_dropdown_a}}"{{extra_dropdown_a}} data-drupal-link-system-path='{{ entrada["uri"] }}'>{{ entrada["title"] }}</a>
                     {% if entrada.below %}
                     <div class="dropdown-menu" aria-expanded="false">
@@ -57,22 +93,12 @@
       {#- fin emulación menu/menu--main.html.twig #}
               </div>
 {#- fin emulación block/block--system-menu-block.html.twig -#}
-{#- inicio emulación block/block--system-menu-block.html.twig' #}
-              <div class="settings-tray-editable block block--menudecuentadeusuario" data-drupal-settingstray="editable">
-      {#- inicio emulación menu/menu--account.html.twig'  #}
-      {% if not c.user %}
-                {% link_for _('Log in'), named_route='user.login', class_='btn btn-main m-2' %}
-      {% endif %}
-      {#- fin emulación menu/menu--account.html.twig'  #}
-              </div>
-{#- fin emulación block/block--system-menu-block.html.twig'  -#}
 {#- fin emulación region/region.html.twig'  #}
               </div>
             </nav>
           </div>
         </div>
-        {%- set banner_fondo = h.url_for_static('/img/cabecera_catalogo.jpg') %}
-        <div style="height:200px; background-repeat: no-repeat;background-size: cover;background-image:url({{banner_fondo}}); background-position:0% 75%;" class="layout__region layout__region--content contenedor-titulo">
+        <div style="height:200px; background-repeat: no-repeat;background-size: cover;background-image:url({{ h.url_for_static('/img/cabecera_catalogo.jpg')}}); background-position:0% 75%;" class="layout__region layout__region--content contenedor-titulo">
           <h1>{{_('Catálogo de datos')}}</h1>
 	      <div class="linea-titulo">
           </div>
