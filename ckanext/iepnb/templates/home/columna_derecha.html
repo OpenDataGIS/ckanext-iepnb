@@ -32,16 +32,16 @@
                 <div class="contenedor_etiquetas">
   {%- for tag in tags %}
                   <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
-  {%- endfor %}
-  {%- if (h.iepnb_popular_tags()-len_tags)>0 %}
-                  <a class="tag" href="{% url_for 'dataset.search', tags='medio ambiente' %}">{% trans %}medio ambiente{% endtrans %}</a>
-    {%- if (h.iepnb_popular_tags()-len_tags)>1 %}                
-                  <a class="tag" href="{% url_for 'dataset.search', tags='biota' %}">{% trans %}biota{% endtrans %}</a>
-      {%- if (h.iepnb_popular_tags()-len_tags)>2 %}
-                  <a class="tag" href="{% url_for 'dataset.search', tags='iepnb' %}">{% trans %}iepnb{% endtrans %}</a>
-      {%- endif %}
-    {%- endif %}
-  {%- endif %}
+                  {%- endfor %}
+                  {%- if (h.iepnb_popular_tags()-len_tags)>0 %}
+                                  <a class="tag" href="{% url_for 'dataset.search', tags='medio ambiente' %}">{% trans %}medio ambiente{% endtrans %}</a>
+                    {%- if (h.iepnb_popular_tags()-len_tags)>1 %}                
+                                  <a class="tag" href="{% url_for 'dataset.search', tags='biota' %}">{% trans %}biota{% endtrans %}</a>
+                      {%- if (h.iepnb_popular_tags()-len_tags)>2 %}
+                                  <a class="tag" href="{% url_for 'dataset.search', tags='iepnb' %}">{% trans %}iepnb{% endtrans %}</a>
+                      {%- endif %}
+                    {%- endif %}
+                  {%- endif %}
                 </div>
               </div>
             </div>
