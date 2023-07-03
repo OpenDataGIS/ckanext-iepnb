@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: ckanext-iepnb 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-06-12 17:03+0200\n"
-"PO-Revision-Date: 2023-06-09 16:52+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ca\n"
+"PO-Revision-Date: 2023-07-03 10:06+0200\n"
+"Last-Translator: \n"
 "Language-Team: ca <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ckanext/iepnb/templates/footer.html:11
 msgid "Contacto"
@@ -62,18 +63,17 @@ msgid ""
 "style=\"color: #333333;\"><strong>Inventario Español del Patrimonio "
 "Natural y la Biodiversidad</strong></a> consta de una aplicación con "
 "tecnología CKAN que se utiliza para distribuir mapas, datos y metadatos "
-"espaciales y un <a href=\"%(base_url)s/csw\" style=\"color: "
-"#333333;\"><strong>catálogo CSW</strong></a> (estándar OGC) para la "
-"publicación y descubrimiento de metadatos sobre recursos espaciales en la"
-" web."
+"espaciales y un <a href=\"%(base_url)s/csw\" style=\"color: #333333;"
+"\"><strong>catálogo CSW</strong></a> (estándar OGC) para la publicación "
+"y descubrimiento de metadatos sobre recursos espaciales en la web."
 msgstr ""
-"El catàleg de dades obertes de l'<a href=\"%(iepnb_url)s\" style=\"color:"
-" #333333;\"><strong>Inventari Espanyol del Patrimoni Natural i la "
-"Biodiversitat</strong></a> consta d'una aplicació amb tecnologia CKAN que"
-" s'utilitza per distribuir mapes, dades i metadades espacials i un "
-"catàleg <a href=\"%(base_url)s/csw\" style=\"color: "
-"#333333;\"><strong>CSW</strong></a> (estàndard OGC) per a la publicació i"
-" el descobriment de metadades sobre recursos espacials a la web."
+"El catàleg de dades obertes de l'<a href=\"%(iepnb_url)s\" "
+"style=\"color: #333333;\"><strong>Inventari Espanyol del Patrimoni "
+"Natural i la Biodiversitat</strong></a> consta d'una aplicació amb "
+"tecnologia CKAN que s'utilitza per distribuir mapes, dades i metadades "
+"espacials i un catàleg <a href=\"%(base_url)s/csw\" style=\"color: "
+"#333333;\"><strong>CSW</strong></a> (estàndard OGC) per a la publicació "
+"i el descobriment de metadades sobre recursos espacials a la web."
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:21
 msgid "Buscar"
@@ -100,7 +100,7 @@ msgid "iepnb"
 msgstr ""
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:5
-#, fuzzy, python-format
+#, python-format
 #| msgid "Dashboard (%(num)d new item)"
 #| msgid_plural "Dashboard (%(num)d new items)"
 msgid "Pizarra (%(num)d nuevo item"
@@ -143,7 +143,7 @@ msgstr ""
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:32
 #: ckanext/iepnb/templates/home/columna_izquierda.html:34
-msgid "Punto Sparql"
+msgid "Punto SPARQL"
 msgstr ""
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:37
@@ -183,6 +183,10 @@ msgstr ""
 msgid "Grupos"
 msgstr ""
 
+#: ckanext/iepnb/templates/home/columna_izquierda.html:86
+msgid "Datos Abiertos Enlazados"
+msgstr ""
+
 #: ckanext/iepnb/templates/home/index.html:4
 msgid "Bienvenido"
 msgstr ""
@@ -203,58 +207,3 @@ msgstr ""
 #: ckanext/iepnb/templates/package/base.html:24
 msgid "Crear conjunto de datos"
 msgstr ""
-
-#~ msgid "Breadcrumb"
-#~ msgstr ""
-
-#~ msgid "E.g. environment"
-#~ msgstr ""
-
-#~ msgid "Search"
-#~ msgstr ""
-
-#~ msgid "Search datasets"
-#~ msgstr ""
-
-#~ msgid "Popular tags"
-#~ msgstr ""
-
-#~ msgid "Sysadmin settings"
-#~ msgstr ""
-
-#~ msgid "View profile"
-#~ msgstr ""
-
-#~ msgid "Profile settings"
-#~ msgstr ""
-
-#~ msgid "Sparql point"
-#~ msgstr ""
-
-#~ msgid "Log out"
-#~ msgstr ""
-
-#~ msgid "Statistics Menu"
-#~ msgstr ""
-
-#~ msgid "Dataset"
-#~ msgstr ""
-
-#~ msgid "Datasets"
-#~ msgstr ""
-
-#~ msgid "Organization"
-#~ msgstr ""
-
-#~ msgid "Group"
-#~ msgstr ""
-
-#~ msgid "Groups"
-#~ msgstr ""
-
-#~ msgid "Welcome"
-#~ msgstr ""
-
-#~ msgid "Create Dataset"
-#~ msgstr ""
-
