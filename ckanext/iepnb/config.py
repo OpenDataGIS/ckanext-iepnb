@@ -44,6 +44,9 @@ schema_info = {}
 icons_dir = 'images/icons'
 
 attrs_logo_ministerio = None
+
+default_logo_ministerio='<img class="imagenMinisterio" src="{0}" alt="Logotipo del Ministerio para la transición ecológica y el reto demográfico">'
+
 footer_iepnb = {}
 
 menu = None
