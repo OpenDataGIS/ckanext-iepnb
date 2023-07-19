@@ -42,3 +42,6 @@ coverage.xml
 docs/_build/
 /.project
 /.pydevproject
+
+# Eclipse
+.settings
