@@ -61,7 +61,7 @@ def iepnb_breadcrumbs(lang = ''):
 
 @helper        
 def iepnb_home():
-    """Devuelve el servidor donde está instalado ckan, configurado en ckan.site_url
+    """Devuelve el servidor donde está instalado iepnb, configurado en iepnb.server
     """
     return iepnb_config.server_menu
 
