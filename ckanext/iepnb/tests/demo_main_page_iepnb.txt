@@ -1,0 +1,3336 @@
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'html' -->
+<!-- FILE NAME SUGGESTIONS:
+   * html--front.html.twig
+   * html--home.html.twig
+   x html.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/radix/templates/layout/html.html.twig' -->
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="https://des.iepnb.es/sites/default/files/favicon-gota.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Home | Inventario español del Patrimonio Natural y la Biodiversidad</title>
+    <link rel="stylesheet" media="all" href="/core/modules/system/css/components/ajax-progress.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/autocomplete-loading.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/progress.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/sticky-header.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tabledrag.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tree-child.module.css?ryefke" />
+<link rel="stylesheet" media="all" href="/libraries/aos/dist/aos.css?ryefke" />
+<link rel="stylesheet" media="all" href="/libraries/highcharts/code/css/highcharts.css?ryefke" />
+<link rel="stylesheet" media="all" href="/modules/custom/iepnb_menu_ajax/css/menu.css?ryefke" />
+<link rel="stylesheet" media="all" href="/modules/contrib/leaflet/js/leaflet/dist/leaflet.css?ryefke" />
+<link rel="stylesheet" media="all" href="/core/modules/layout_discovery/layouts/onecol/onecol.css?ryefke" />
+<link rel="stylesheet" media="all" href="/modules/contrib/paragraphs/css/paragraphs.unpublished.css?ryefke" />
+<link rel="stylesheet" media="all" href="/themes/custom/iepnb/build/components/block/block.css?ryefke" />
+<link rel="stylesheet" media="all" href="/themes/custom/iepnb/build/components/navbar/navbar.css?ryefke" />
+<link rel="stylesheet" media="all" href="/themes/custom/iepnb/node_modules/bootstrap-icons/font/bootstrap-icons.css?ryefke" />
+<link rel="stylesheet" media="all" href="/themes/custom/iepnb/build/css/main.style.css?ryefke" />
+<link rel="stylesheet" media="all" href="/themes/custom/iepnb/build/css/karen.css?ryefke" />
+<link rel="stylesheet" media="all" href="/themes/custom/iepnb/build/css/ja.css?ryefke" />
+<link rel="stylesheet" media="all" href="/themes/custom/iepnb/build/css/ja_menu.css?ryefke" />
+<link rel="stylesheet" media="all" href="/themes/custom/iepnb/build/css/ja_login_regis_pass.css?ryefke" />
+<link rel="stylesheet" media="all" href="/themes/custom/iepnb/build/css/tjr.css?ryefke" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;800&amp;display=swap" />
+<link rel="stylesheet" media="all" href="/libraries/ana/ana.css?ryefke" />
+<link rel="stylesheet" media="all" href="/libraries/accessible-slick/slick/slick.min.css?ryefke" />
+<link rel="stylesheet" media="all" href="/libraries/accessible-slick/slick/slick-theme.min.css?ryefke" />
+<link rel="stylesheet" media="all" href="/libraries/accessible-slick/slick/accessible-slick-theme.min.css?ryefke" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"home","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"es","themeUrl":"themes\/custom\/iepnb"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"iepnb\/block,iepnb\/home,iepnb\/navbar,iepnb\/style,iepnb_aos\/aos,iepnb_graphs\/graficas,iepnb_menu_ajax\/menu,iepnb_viewfinder\/visor,layout_discovery\/onecol,paragraphs\/drupal.paragraphs.unpublished,radix\/navbar,system\/base","theme":"iepnb","theme_token":null},"ajaxTrustedUrl":[],"user":{"uid":0,"permissionsHash":"fce63a49fbec1bed91018aa85fb6286ae71c97df3f936429b658b3fd2d862ac1"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.6.3"></script>
+<script src="/core/misc/polyfills/nodelist.foreach.js?v=9.5.4"></script>
+<script src="/core/misc/polyfills/element.matches.js?v=9.5.4"></script>
+<script src="/core/misc/polyfills/object.assign.js?v=9.5.4"></script>
+<script src="/core/assets/vendor/css-escape/css.escape.js?v=1.5.1"></script>
+<script src="/core/assets/vendor/es6-promise/es6-promise.auto.min.js?v=4.2.8"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=9.5.4"></script>
+<script src="/sites/default/files/languages/es_FXM8BLCoEnY00Kte2bXJ1YU1ZrwQB__U_AqHcosWWTk.js?ryefke"></script>
+<script src="/core/misc/drupal.js?v=9.5.4"></script>
+<script src="/core/misc/drupal.init.js?v=9.5.4"></script>
+<script src="/core/assets/vendor/tabbable/index.umd.min.js?v=5.3.3"></script>
+<script src="/core/misc/progress.js?v=9.5.4"></script>
+<script src="/core/misc/jquery.once.bc.js?v=9.5.4"></script>
+<script src="/core/assets/vendor/loadjs/loadjs.min.js?v=4.2.0"></script>
+<script src="/core/misc/ajax.js?v=9.5.4"></script>
+<script src="/libraries/highcharts/code/highcharts.js?v=2"></script>
+<script src="/libraries/highcharts/code/modules/no-data-to-display.js?v=2"></script>
+<script src="/modules/custom/iepnb_graphs/js/graph_highcharts.js?v=2"></script>
+<script src="/modules/custom/iepnb_menu_ajax/js/menu.js?v=2"></script>
+<script src="/modules/custom/iepnb_menu_ajax/js/ja.js?v=2"></script>
+<script src="/modules/contrib/leaflet/js/leaflet/dist/leaflet.js?v=1.4.0"></script>
+<script src="/modules/contrib/leaflet/js/leaflet.drupal.js?v=9.5.4"></script>
+<script src="/modules/custom/iepnb_viewfinder/js/leaflet.wms.js?v=2"></script>
+<script src="/modules/custom/iepnb_viewfinder/js/visor.js?v=2"></script>
+
+  </head>
+  <body>
+        <a href="#main-content" class="visually-hidden focusable">
+      Pasar al contenido principal
+    </a>
+    
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'off_canvas_page_wrapper' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/off-canvas-page-wrapper.html.twig' -->
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'page' -->
+<!-- FILE NAME SUGGESTIONS:
+   * page--path--home.html.twig
+   * page--front.html.twig
+   x page--home.html.twig
+   * page.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/page/page--home.html.twig' -->
+
+
+<div class="page">
+
+	<div class="header border-bottom border-lg-3 border-primary">
+		<div class="container">
+
+			
+
+
+
+<nav class="navbar navbar-expand-lg justify-content-between navbar-light sticky-top ">
+  																	
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--logo.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/region/region.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--iepnb-branding.html.twig
+   x block--system-branding-block.html.twig
+   * block--system.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--system-branding-block.html.twig' -->
+
+
+
+	
+		
+
+	  
+<div class="wrapper-logo-brand">
+  <div class="logoGobierno">
+    <img class="imagenMinisterio"src="/sites/default/files/2023-04/64351c7630215d49e51c67d7_1024px-Logotipo_del_Ministerio_para_la_TransiciB3n_EcolB3gica_y_el_Reto_DemogrA1fico.svg-p-500.png"alt="Logotipo del Ministerio para la transición ecológica y el reto demográfico">
+  </div>
+  <a href="/" class="navbar-brand d-flex align-items-center " aria-label="Inventario español del Patrimonio Natural y la Biodiversidad">
+              <img src="/themes/custom/iepnb/logo.png" width="120" " alt="Inventario español del Patrimonio Natural y la Biodiversidad logo" class="mr-2" />
+
+      </a>
+</div>
+
+
+	
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--system-branding-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menudecuentadeusuario.html.twig
+   * block--system-menu-block--account.html.twig
+   x block--system-menu-block.html.twig
+   * block--system.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--system-menu-block.html.twig' -->
+
+
+  <div class="settings-tray-editable block block--menudecuentadeusuario" data-drupal-settingstray="editable">
+
+  
+    
+
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__account' -->
+<!-- FILE NAME SUGGESTIONS:
+   x menu--account.html.twig
+   x menu--account.html.twig
+   * menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/menu/menu--account.html.twig' -->
+
+
+								
+				<a href="/user/login"  type="button" title="login"  class="login-menu content-login-navbar-menu w-inline-block"><span>login</span></a>			
+						
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/menu/menu--account.html.twig' -->
+
+
+  
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--system-menu-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--alternadordeidioma.html.twig
+   * block--language-block--language-interface.html.twig
+   * block--language-block.html.twig
+   * block--language.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block.html.twig' -->
+
+
+	<div class="language-switcher-language-url settings-tray-editable block block--alternadordeidioma block-language block-language-blocklanguage-interface" role="navigation" data-drupal-settingstray="editable">
+	
+	
+		
+
+			
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'links__language_block' -->
+<!-- FILE NAME SUGGESTIONS:
+   x links--language-block.html.twig
+   x links--language-block.html.twig
+   * links.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/navigation/links--language-block.html.twig' -->
+<div class="dropdown language-switch">
+    <button class="dropdown-toggle language-switch__button language-switch__flag--es" type="button" id="dropdownLanguagesSwitch" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="language-switch__label">Español</span>
+    </button>
+
+    
+  
+
+
+  <ul class="links dropdown-menu" aria-labelledby="dropdownLanguagesSwitch">
+                        <li hreflang="en" data-drupal-link-system-path="&lt;front&gt;" class="language-switch__item"><a href="/en" class="language-link" hreflang="en" data-drupal-link-system-path="&lt;front&gt;">English</a></li>
+                    <li hreflang="es" data-drupal-link-system-path="&lt;front&gt;" class="language-switch__item is-active"><a href="/" class="language-link is-active" hreflang="es" data-drupal-link-system-path="&lt;front&gt;">Español</a></li>
+                    <li hreflang="ca" data-drupal-link-system-path="&lt;front&gt;" class="language-switch__item"><a href="/ca" class="language-link" hreflang="ca" data-drupal-link-system-path="&lt;front&gt;">Catalan</a></li>
+                  </ul>
+
+
+</div>
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/navigation/links--language-block.html.twig' -->
+
+
+	
+		</div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/region/region.html.twig' -->
+
+
+															
+  <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+
+    											
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--navbar.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/region/region.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--navegacionprincipal.html.twig
+   * block--system-menu-block--main.html.twig
+   x block--system-menu-block.html.twig
+   * block--system.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--system-menu-block.html.twig' -->
+
+
+  <div class="settings-tray-editable block block--navegacionprincipal" data-drupal-settingstray="editable">
+
+  
+    
+
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__main' -->
+<!-- FILE NAME SUGGESTIONS:
+   x menu--main.html.twig
+   x menu--main.html.twig
+   * menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/menu/menu--main.html.twig' -->
+
+  
+
+
+<ul id="menu-principal"  class="nav navbar-nav">
+                                          <li class="menu-icon menu-icon-15 nav-item dropdown">
+
+    
+		
+								
+		
+          
+
+		  <button id="acerca-de-" class="menu-link--button nav-link dropdown-toggle" aria-expanded="false" aria-controls="acerca-de-submenu" data-bs-toggle="dropdown_" aria-haspopup="true" data-drupal-link="/acerca-de">Acerca de ...</button>
+
+                        
+              
+<ul id="acerca-de-submenu" class="menu menu--level-2 dropdown-menu">
+              <a href="/acerca-de/quienes-somos" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/16">¿Quiénes somos?</a>
+              <a href="/acerca-de/quien-es-quien" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/51">¿Quién es quién?</a>
+              <a href="/acerca-de/normativa-de-referencia" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/52">Normativa de referencia</a>
+              <a href="/acerca-de/entidades-colaboradoras" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/53">Entidades Colaboradoras</a>
+  </ul>
+                              </li>
+                                      <li class="menu-icon menu-icon-58 nav-item dropdown">
+
+    
+		
+								
+		
+          
+
+		  <button id="reas-temticas" class="menu-link--button nav-link dropdown-toggle" aria-expanded="false" aria-controls="reas-temticas-submenu" data-bs-toggle="dropdown_" aria-haspopup="true" data-drupal-link="/areas-tematicas">Áreas temáticas</button>
+
+                        
+              
+<ul id="reas-temticas-submenu" class="menu menu--level-2 dropdown-menu">
+              <a href="/areas-tematicas/especies-silvestres" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/57">Especies silvestres</a>
+              <a href="/areas-tematicas/ecosistemas" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/58">Ecosistemas</a>
+              <a href="/areas-tematicas/espacios" class="dropdown-item menu__link--button" data-drupal-link-system-path="areas-tematicas/espacios">Espacios protegidos</a>
+              <a href="/areas-tematicas/forestal" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/59">Forestal</a>
+              <a href="/areas-tematicas/suelos" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/31">Suelos</a>
+              <a href="/areas-tematicas/recursos-geneticos" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/32">Recursos genéticos</a>
+  </ul>
+                              </li>
+                                      <li class="menu-icon menu-icon-64 nav-item dropdown">
+
+    
+		
+								
+		
+          
+
+		  <button id="recursos" class="menu-link--button nav-link dropdown-toggle" aria-expanded="false" aria-controls="recursos-submenu" data-bs-toggle="dropdown_" aria-haspopup="true" data-drupal-link="/recursos">Recursos</button>
+
+                        
+              
+<ul id="recursos-submenu" class="menu menu--level-2 dropdown-menu">
+              <a href="/recursos/modelos-de-datos" title="modelos de datos" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/62">Modelos de datos</a>
+              <a href="/recursos/listas-controladas" title="listas controladas" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/63">Listas controladas</a>
+              <a href="/recursos/metodologias" title="metodologias" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/64">Metodologías</a>
+              <a href="/recursos/servicios-interoperables" title="servicios interoperables" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/65">Servicios interoperables</a>
+              <a href="/recursos/plantillas-ingesta-de-datos" title="plantillas ingesta de datos" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/66">Plantillas de Ingesta de datos</a>
+              <a href="/recursos/documentacion-de-interes" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/195">Documentación de interés</a>
+  </ul>
+                              </li>
+                                      <li class="menu-icon menu-icon-6 nav-item dropdown">
+
+    
+		
+								
+		
+          
+
+		  <button id="nuestros-datos" class="menu-link--button nav-link dropdown-toggle" aria-expanded="false" aria-controls="nuestros-datos-submenu" data-bs-toggle="dropdown_" aria-haspopup="true" data-drupal-link="/nuestros-datos">Nuestros datos</button>
+
+                        
+              
+<ul id="nuestros-datos-submenu" class="menu menu--level-2 dropdown-menu">
+              <a href="/catalogo" title="Catálogo de datos" class="dropdown-item menu__link--button">Catálogo de datos</a>
+              <a href="/nuestros-datos/informes" title="Informes" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/21">Informes</a>
+              <a href="/nuestros-datos/proyectos" title="Proyectos" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/46">Proyectos</a>
+              <a href="/nuestros-datos/indicadores" title="Indicadores" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/20">Indicadores</a>
+  </ul>
+                              </li>
+                                      <li class="menu-icon menu-icon-4 nav-item dropdown">
+
+    
+		
+								
+		
+          
+
+		  <button id="visores" class="menu-link--button nav-link dropdown-toggle" aria-expanded="false" aria-controls="visores-submenu" data-bs-toggle="dropdown_" aria-haspopup="true" data-drupal-link="/visores">Visores</button>
+
+                        
+              
+<ul id="visores-submenu" class="menu menu--level-2 dropdown-menu">
+              <a href="/visores/explora-tu-area" title="Explora tu área" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/25">Explora tu área</a>
+              <a href="/visores/geoportales" title="Geoportales" class="dropdown-item menu__link--button" data-drupal-link-system-path="node/24">Geoportales</a>
+  </ul>
+                              </li>
+                                      <li class="menu-icon menu-icon-7 nav-item">
+
+    
+		
+								
+		
+                    <div class="other-button"><a href="/actualidad" class="nav-link" data-drupal-link-system-path="node/49">Actualidad</a></div>            
+            
+                  </li>
+                                      <li class="menu-icon menu-icon-102 nav-item">
+
+    
+		
+								
+		
+                    <div class="other-button"><a href="/ayuda" class="nav-link" data-drupal-link-system-path="node/88">Ayuda</a></div>            
+            
+                  </li>
+            </ul>
+  
+
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/menu/menu--main.html.twig' -->
+
+
+  
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--system-menu-block.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/region/region.html.twig' -->
+
+
+									  </div>
+
+</nav>
+
+		</div>
+	</div>
+
+
+			<div class="content">
+			
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--content.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/region/region.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--iepnb-messages.html.twig
+   x block--system-messages-block.html.twig
+   * block--system.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/block--system-messages-block.html.twig' -->
+<div data-drupal-messages-fallback class="hidden"></div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/block--system-messages-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--iepnb-content.html.twig
+   x block--system-main-block.html.twig
+   * block--system.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--system-main-block.html.twig' -->
+
+
+	<div class="block block--iepnb-content block-system block-system-main-block">
+	
+	
+		
+
+			
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'home' -->
+<!-- FILE NAME SUGGESTIONS:
+   x home.html.twig
+   x home.html.twig
+-->
+<!-- BEGIN OUTPUT from 'modules/custom/iepnb_layouts/templates/home.html.twig' -->
+<div class="home-wrapper">
+	<div class="home">
+
+		<div class="slider">
+			<div class="container-fluid p-0 slider__wrapper">
+
+				<div class="slider__image">
+					
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block-content--hero-slider--full.html.twig
+   x block--block-content--hero-slider.html.twig
+   * block--block-content--c8b75dd9-5af6-4801-b123-4b1408d6c786.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--hero-slider.html.twig' -->
+
+<div class="block--type-hero-slider block block-block-content block-block-contentc8b75dd9-5af6-4801-b123-4b1408d6c786 container-fluid p-0 slider__wrapper">	
+  
+  
+  	
+	<div class="image-slider slider cabecera">  
+		          <div>
+            <div class="image">
+				<img style="width: 100%;" src="https://des.iepnb.es/sites/default/files/2022-11/636d0d6ab8612119dc0c0d40_img1_v2.jpg" alt="Imagen de paisaje de fondo"/>
+				<div class="contenedor_texto_slide"  style="position: absolute;top: 0;">
+					<h1 class="head_cabecera_home-2"><p>Inventario Español del Patrimonio Natural y la Biodiversidad</p>
+</h1>
+					<div class="contenedor_boton_cabecera">
+						<a class="boton_linea_verde" href="internal:/" aria-label="">Leer más</a>
+					</div>
+				</div>
+            </div>
+          </div>
+		          <div>
+            <div class="image">
+				<img style="width: 100%;" src="https://des.iepnb.es/sites/default/files/2022-11/636d0d6ab86121747d0c0d46_img2_ok_0.jpg" alt="Imagen de paisaje de fondo"/>
+				<div class="contenedor_texto_slide"  style="position: absolute;top: 0;">
+					<h1 class="head_cabecera_home-2"><p>Ampliación en 350 millones de euros del programa DUS 5.000</p>
+</h1>
+					<div class="contenedor_boton_cabecera">
+						<a class="boton_linea_verde" href="internal:/" aria-label="">Leer más</a>
+					</div>
+				</div>
+            </div>
+          </div>
+		          <div>
+            <div class="image">
+				<img style="width: 100%;" src="https://des.iepnb.es/sites/default/files/2022-11/636e14b2f2c48f212f61420c_pantano_guadalest_alicante_0.jpg" alt="Imagen de paisaje de fondo"/>
+				<div class="contenedor_texto_slide"  style="position: absolute;top: 0;">
+					<h1 class="head_cabecera_home-2"><p>En marcha el Plan Estratégico de Humedales que impulsa la conservación y recuperación de estos ecosistemas clave</p>
+</h1>
+					<div class="contenedor_boton_cabecera">
+						<a class="boton_linea_verde" href="internal:/" aria-label="">Leer más</a>
+					</div>
+				</div>
+            </div>
+          </div>
+			</div>
+  </div>
+
+
+     
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--hero-slider.html.twig' -->
+
+
+				</div>
+
+
+
+			</div>
+		</div>
+
+
+		<div class="section2">
+			<div class="container-fluid p-5">
+				<div class="section2__wrapper  ">
+					
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--block-content--highlight--home-seccion-three.html.twig
+   * block--block-content--highlight.html.twig
+   * block--block-content--ecc0a944-147e-4bfc-abe7-137116fd99a1.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-three.html.twig' -->
+
+
+  <div class="block--type-highlight">
+
+
+	<div class="content contenedor_section_2" data-aos-offset="250" data-aos-easing="ease-in-sine">
+				<div class="content__image">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--home-seccion-three.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-right.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-right.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-right">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-right.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-right.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-right.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-right">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-right.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="imagen de escritorio con documentos y gráficas" class="image-leaf image-leaf--top-right" src="https://des.iepnb.es/sites/default/files/2022-11/636e0b5d71bc7364be867c58_catalogo.jpg" /><div class="leaf-outline leaf-outline--top-right"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+</div>
+
+<div class="contenedor_texto_boton">
+  
+            <h2>Catálogo de datos</h2>
+        
+
+		<div class="content__link">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--home-seccion-three.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="/catalogo">SABER MÁS</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+</div>
+	</div>
+</div>
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-three.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--block-content--highlight--home-seccion-three.html.twig
+   * block--block-content--highlight.html.twig
+   * block--block-content--c5a03330-2805-470c-a997-e02634123367.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-three.html.twig' -->
+
+
+  <div class="block--type-highlight">
+
+
+	<div class="content contenedor_section_2" data-aos-offset="250" data-aos-easing="ease-in-sine">
+				<div class="content__image">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--home-seccion-three.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="informes" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-11/636e3a4171bc7345dd8a001e_informes.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+</div>
+
+<div class="contenedor_texto_boton">
+  
+            <h2>Informes</h2>
+        
+
+		<div class="content__link">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--home-seccion-three.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="/nuestros-datos/informes">SABER MÁS</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+</div>
+	</div>
+</div>
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-three.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--block-content--highlight--home-seccion-three.html.twig
+   * block--block-content--highlight.html.twig
+   * block--block-content--9373f8d3-b666-4863-8600-54328b3dec4e.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-three.html.twig' -->
+
+
+  <div class="block--type-highlight">
+
+
+	<div class="content contenedor_section_2" data-aos-offset="250" data-aos-easing="ease-in-sine">
+				<div class="content__image">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--home-seccion-three.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-right.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-right.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-right">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-right.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-right.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-right.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-right">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-right.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="Proyectos" class="image-leaf image-leaf--top-right" src="https://des.iepnb.es/sites/default/files/2022-11/636d0d6ab86121bee70c0d3e_proyectos.jpg" /><div class="leaf-outline leaf-outline--top-right"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+</div>
+
+<div class="contenedor_texto_boton">
+  
+            <h2>Proyectos</h2>
+        
+
+		<div class="content__link">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--home-seccion-three.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button-transparent.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button-transparent.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button-transparent d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button-transparent.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--transparent" href="/nuestros-datos/proyectos">SABER MÁS</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+</div>
+	</div>
+</div>
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-three.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--block-content--highlight--home-seccion-three.html.twig
+   * block--block-content--highlight.html.twig
+   * block--block-content--867c25b1-0369-4edd-8f56-5c0ae4ce49cd.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-three.html.twig' -->
+
+
+  <div class="block--type-highlight">
+
+
+	<div class="content contenedor_section_2" data-aos-offset="250" data-aos-easing="ease-in-sine">
+				<div class="content__image">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--home-seccion-three.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="indicadores" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-11/636e3a4d154a52714028bb76_indicadores.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+</div>
+
+<div class="contenedor_texto_boton">
+  
+            <h2>Indicadores</h2>
+        
+
+		<div class="content__link">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--home-seccion-three.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button-transparent.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button-transparent.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button-transparent d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button-transparent.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--transparent" href="/nuestros-datos/indicadores">SABER MÁS</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+</div>
+	</div>
+</div>
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-three.html.twig' -->
+
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="section4">
+			<div class="contenedor_titular_slider">
+            <h2 class="heading_2 ">Inventarios
+            </h2>
+            </div>
+			<div class="container-fluid p-5 slider__wrapper">
+				<div  class="slider-inventarios">
+					
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block-content--multiple-slider--full.html.twig
+   x block--block-content--multiple-slider.html.twig
+   * block--block-content--72e4fac0-4dcc-4c6d-9314-6364fda1b761.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--multiple-slider.html.twig' -->
+
+
+
+<div  class="block--type-multiple-slider block block-block-content block-block-content72e4fac0-4dcc-4c6d-9314-6364fda1b761 slider-multiple responsive">	
+  
+  
+  
+					<div class="contenedor">
+				
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--full.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="águila" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-07/62a328c723ec5b8983eb1f9f_habitat_terrestre.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--full.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="https://www.miteco.gob.es/es/biodiversidad/temas/conservacion-de-especies/especies-proteccion-especial/ce-proteccion-listado.aspx">Inventario Español de Especies</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+			</div>				
+					<div class="contenedor">
+				
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--full.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="Habita marina" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-07/62a328c723ec5b8212eb1fa2_habitat_marino.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--full.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-nacional-erosion-suelos/default.aspx">Inventario Español de Hábitats</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+			</div>				
+					<div class="contenedor">
+				
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--full.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="Zonas húmedas" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-07/62a328c723ec5b04a3eb1f9c_zonas_humedas.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--full.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-nacional-de-zonas-humedas/index_invent_zonas_humedas.aspx">Inventario Español de Zonas Húmedas</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+			</div>				
+					<div class="contenedor">
+				
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--full.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="arboles" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-07/62a328c723ec5b2739eb1fa5_forestal.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--full.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-forestal-nacional/default.aspx">Inventario Forestal Nacional</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+			</div>				
+					<div class="contenedor">
+				
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--full.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="Inventario Nacional de Erosión de Suelos" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-11/636e06ae71bc7390b7862bb2_erosion-p-500%20%282%29.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--full.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-nacional-erosion-suelos/default.aspx">Inventario Nacional de Erosión de Suelos</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+			</div>				
+					<div class="contenedor">
+				
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--full.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="Inventario Daños Forestales" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-11/636e06974a3e3c96df74cec3_danios_forestales-p-500.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--full.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/redes-europeas-seguimiento-bosques/default.aspx">Inventario Daños Forestales</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+			</div>				
+					<div class="contenedor">
+				
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--full.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="Inventario Español de Parques Zoológicos" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-11/636e06a293894c24f82faaa6_zoo-p-500.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--full.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="https://www.miteco.gob.es/es/biodiversidad/temas/recursos-geneticos/conservacion-exsitu/ce-exsitu-zoos-IEPZ.aspx">Inventario Español de Parques Zoológicos</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+			</div>				
+					<div class="contenedor">
+				
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--full.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--image-leaf-top-left.html.twig
+   * paragraph--image.html.twig
+   * paragraph--image-leaf-top-left.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--image-leaf-top-left">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--image-leaf-top-left.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--image-leaf-top-left.html.twig
+   * media--image.html.twig
+   * media--image-leaf-top-left.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-image-leaf-top-left">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--image-leaf-top-left.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item"><img alt="Inventario Español de los Conocimientos Tradicionales relativos a la Biodiversidad" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-11/636e070793894c6cfc2fafa8_biodiversidad-p-500.jpg" /><div class="leaf-outline leaf-outline--top-left"></div></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--full.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--green" href="https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-espanol-de-los-conocimientos-tradicionales/inventario_esp_conocimientos_tradicionales.aspx">Inventario Español de los Conocimientos Tradicionales relativos a la Biodiversidad</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+			</div>				
+		
+  </div>
+
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--multiple-slider.html.twig' -->
+
+
+				</div>
+			</div>
+		</div>
+		<div class="section1">
+			<div class="container-fluid p-0">
+				<div class="section1__wrapper">	
+					<div class="content__left"  style="z-index:0">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--block-content--highlight--home-seccion-one.html.twig
+   * block--block-content--highlight.html.twig
+   * block--block-content--a158d7c1-804e-4297-95f6-4b12ee468b45.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-one.html.twig' -->
+
+
+  <div class="block--type-highlight">
+
+  
+    
+
+	<div class="content">
+   <div class="contenido_texto_s1">
+		<h2 class="content__title">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-title--highlight--home-seccion-one.html.twig
+   * field--block-content--field-title--highlight.html.twig
+   * field--block-content--field-title.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-title.html.twig
+   * field--string.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item">Explora tu área</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+</h2>
+		<div class="content__body">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--body--highlight--home-seccion-one.html.twig
+   * field--block-content--body--highlight.html.twig
+   * field--block-content--body.html.twig
+   * field--block-content--highlight.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Accede a la información geográfica y datos asociados que ofrece una serie de indicadores numéricos y gráficos proporcionando información clave para la toma de decisiones.</p></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+</div>
+		<div class="content__link">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--home-seccion-one.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button-transparent.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button-transparent.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button-transparent d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button-transparent.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--transparent" href="https://www.miteco.gob.es/es/cartografia-y-sig/default.aspx">Acceder</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+</div>
+  </div>
+		<div class="content__image">
+			
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--home-seccion-one.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--home-yellow.html.twig
+   * paragraph--image.html.twig
+   * paragraph--home-yellow.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--home-yellow">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--home-yellow.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--home-yellow.html.twig
+   * media--image.html.twig
+   * media--home-yellow.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-home-yellow">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--home-yellow.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field__label visually-hidden">Image</div>
+              <div class="field__item"><img alt="ImagenPeninsulaLupa" class="image-leaf image-leaf--bottom-right" src="https://des.iepnb.es/sites/default/files/2023-06/64351c7630215d7e2a1c67f9_GOTA-explora-area.jpg" /><div class="leaf leaf--yellow leaf--top-left"></div></div>
+          </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+		</div>
+	</div>
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-one.html.twig' -->
+
+</div>
+					<div class="content__right" style="z-index:0">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--block-content--highlight--home-seccion-one.html.twig
+   * block--block-content--highlight.html.twig
+   * block--block-content--4024dc8b-f294-4edd-8531-6647dc96099a.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-one.html.twig' -->
+
+
+  <div class="block--type-highlight">
+
+  
+    
+
+	<div class="content">
+   <div class="contenido_texto_s1">
+		<h2 class="content__title">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-title--highlight--home-seccion-one.html.twig
+   * field--block-content--field-title--highlight.html.twig
+   * field--block-content--field-title.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-title.html.twig
+   * field--string.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item">Geoportales</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+</h2>
+		<div class="content__body">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--body--highlight--home-seccion-one.html.twig
+   * field--block-content--body--highlight.html.twig
+   * field--block-content--body.html.twig
+   * field--block-content--highlight.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Accede a servicios de visualización, consulta y análisis de información geográfica y cartográfica relacionada con temas de la Biodiversidad, Bosques y Desertificación.</p></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+</div>
+		<div class="content__link">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-link--highlight--home-seccion-one.html.twig
+   x field--block-content--field-link--highlight.html.twig
+   * field--block-content--field-link.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-link.html.twig
+   * field--entity-reference-revisions.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+
+      <div>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--link--w-button-transparent.html.twig
+   x paragraph--link.html.twig
+   * paragraph--w-button-transparent.html.twig
+   * paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+  <div class="paragraph paragraph--type--link paragraph--view-mode--w-button-transparent d-inline-block py-2">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-link--link--w-button-transparent.html.twig
+   * field--paragraph--field-link--link.html.twig
+   x field--paragraph--field-link.html.twig
+   * field--paragraph--link.html.twig
+   * field--field-link.html.twig
+   * field--link.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+						<a class="w-button-outline w-button-outline--transparent" href="https://tragsatec.maps.arcgis.com/apps/dashboards/90f863e5af304513b9215466fe8d0a14">Acceder</a>
+			
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--paragraph--field-link.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph--link.html.twig' -->
+
+
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field--block-content--field-link--highlight.html.twig' -->
+
+</div>
+  </div>
+		<div class="content__image">
+			
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--field-ph-image--highlight--home-seccion-one.html.twig
+   * field--block-content--field-ph-image--highlight.html.twig
+   * field--block-content--field-ph-image.html.twig
+   * field--block-content--highlight.html.twig
+   * field--field-ph-image.html.twig
+   * field--entity-reference-revisions.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+      <div class="field field--name-field-ph-image field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'paragraph' -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraph--image--home-green.html.twig
+   * paragraph--image.html.twig
+   * paragraph--home-green.html.twig
+   x paragraph.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+  <div class="paragraph paragraph--type--image paragraph--view-mode--home-green">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--paragraph--field-media-image--image--home-green.html.twig
+   * field--paragraph--field-media-image--image.html.twig
+   * field--paragraph--field-media-image.html.twig
+   * field--paragraph--image.html.twig
+   * field--field-media-image.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-field-media-image field--type-entity-reference field--label-hidden field__item">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--home-green.html.twig
+   * media--image.html.twig
+   * media--home-green.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+<div class="media media--type-image media--view-mode-home-green">
+  
+  
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image--home-green.html.twig
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field__label visually-hidden">Image</div>
+              <div class="field__item"><img alt="geoportales" class="image-leaf image-leaf--top-left" src="https://des.iepnb.es/sites/default/files/2022-11/62a328c723ec5b50c7eb1f97_visor.jpg" /><div class="leaf leaf--green leaf--bottom-right"></div></div>
+          </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/content/media.html.twig' -->
+
+</div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/paragraphs/paragraph.html.twig' -->
+
+</div>
+          </div>
+  
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+
+		</div>
+	</div>
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--block-content--highlight--home-seccion-one.html.twig' -->
+
+</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- END OUTPUT from 'modules/custom/iepnb_layouts/templates/home.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'layout__onecol' -->
+<!-- FILE NAME SUGGESTIONS:
+   x layout--onecol.html.twig
+   x layout--onecol.html.twig
+   * layout.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/layout_discovery/layouts/onecol/layout--onecol.html.twig' -->
+  <div class="layout layout--onecol">
+    <div >
+      
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'core/modules/layout_discovery/layouts/onecol/layout--onecol.html.twig' -->
+
+
+	
+		</div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--system-main-block.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/region/region.html.twig' -->
+
+
+		</div>
+	
+			<footer class="footer py-4">
+			<div class="container">
+				<div class="d-flex justify-content-md-between flex-column flex-lg-row align-items-md-center">
+					
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--footer.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/region/region.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--iepnb-footer.html.twig
+   * block--system-menu-block--footer.html.twig
+   x block--system-menu-block.html.twig
+   * block--system.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block--system-menu-block.html.twig' -->
+
+
+  <div class="settings-tray-editable block block--iepnb-footer" data-drupal-settingstray="editable">
+
+  
+    
+
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__footer' -->
+<!-- FILE NAME SUGGESTIONS:
+   x menu--footer.html.twig
+   x menu--footer.html.twig
+   * menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/menu/menu--footer.html.twig' -->
+
+  
+
+
+  <ul class="nav">
+                                          <li class="nav-item">
+                      <a href="/contact" class="nav-link" data-drupal-link-system-path="contact">Contacto</a>
+                  </li>
+                                      <li class="menu-icon menu-icon-8 nav-item active">
+                      <a href="/" class="nav-link is-active" data-drupal-link-system-path="&lt;front&gt;"> Accesibilidad</a>
+                  </li>
+                                      <li class="menu-icon menu-icon-9 nav-item active">
+                      <a href="/" class="nav-link is-active" data-drupal-link-system-path="&lt;front&gt;">Política de privacidad</a>
+                  </li>
+                                      <li class="menu-icon menu-icon-10 nav-item active">
+                      <a href="/" class="nav-link is-active" data-drupal-link-system-path="&lt;front&gt;">Política de cookies</a>
+                  </li>
+                                      <li class="menu-icon menu-icon-11 nav-item active">
+                      <a href="/" class="nav-link is-active" data-drupal-link-system-path="&lt;front&gt;">Aviso legal</a>
+                  </li>
+            </ul>
+
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/menu/menu--footer.html.twig' -->
+
+
+  
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block--system-menu-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block-content--basic--full.html.twig
+   * block--block-content--basic.html.twig
+   * block--imgsfooter.html.twig
+   * block--block-content--f2fd1ccd-ef20-4fc2-b9ac-249d80908bcb.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/block/block.html.twig' -->
+
+
+	<div class="settings-tray-editable block--type-basic block block--basic block--imgsfooter block-block-content block-block-contentf2fd1ccd-ef20-4fc2-b9ac-249d80908bcb" data-drupal-settingstray="editable">
+	
+	
+						<h2>imgsFooter</h2>
+				
+
+			
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--body--basic--full.html.twig
+   * field--block-content--body--basic.html.twig
+   * field--block-content--body.html.twig
+   * field--block-content--basic.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><img alt="ministerio" data-entity-type="file" data-entity-uuid="728860a6-4349-415b-8103-ae952c9af59c" src="https://des.iepnb.es/sites/default/files/inline-images/62a328c723ec5b008eeb1fb7_logo_ministerio_bn.png" width="336" height="69" loading="lazy" /><img alt="plan de recuperacion" data-entity-type="file" data-entity-uuid="56a6b102-77cf-4231-a78e-c87143c15823" src="https://des.iepnb.es/sites/default/files/inline-images/64351c7630215d24581c67d9_Logo20dosC3%25ADneas_BLANCO-p-500.png" width="500" height="95" loading="lazy" /><img alt="ueFinanciado" data-entity-type="file" data-entity-uuid="7dbac78f-df75-432e-8900-fa8e518e55df" src="https://des.iepnb.es/sites/default/files/inline-images/64351c7630215dc3c51c67d8_ES20por20UniB3n20Outline-p-500.png" width="500" height="134" loading="lazy" /></p></div>
+      
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/field/field.html.twig' -->
+
+
+	
+		</div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/block/block.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/region/region.html.twig' -->
+
+
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<!-- END OUTPUT from 'themes/custom/iepnb/templates/page/page--home.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/off-canvas-page-wrapper.html.twig' -->
+
+
+    
+    <script src="/libraries/aos/dist/aos.js?ryefke"></script>
+<script src="/modules/custom/iepnb_aos/./js/iepnb_aos.js?ryefke"></script>
+<script src="/themes/custom/iepnb/build/js/main.script.js?v=9.5.4"></script>
+<script src="/themes/custom/iepnb/build/js/facet.js?v=9.5.4"></script>
+<script src="/themes/custom/iepnb/build/js/menu.js?v=9.5.4"></script>
+<script src="/themes/custom/iepnb/build/components/block/block.js?ryefke"></script>
+<script src="/libraries/accessible-slick/slick/slick.min.js?v=9.5.4"></script>
+<script src="/themes/custom/iepnb/build/js/slider.js?v=9.5.4"></script>
+
+  </body>
+</html>
+
+<!-- END OUTPUT from 'themes/contrib/radix/templates/layout/html.html.twig' -->

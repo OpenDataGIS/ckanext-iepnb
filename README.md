@@ -137,6 +137,11 @@ pip install -r dev-requirements.txt
 
 ## Tests
 
+Be sure that ckan user has write rights at the root dir of the extension. If 
+that is not the case and for security reasons you can't do it, create a 
+.pytest_cache dir at the root dir of the extension an make it writable by the 
+ckan user.
+
 To run the tests, do:
 
 `pytest --ckan-ini=test.ini` (not implemented yet) 
