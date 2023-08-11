@@ -1,0 +1,21 @@
+{% set current_url = h.full_current_url() %}
+{% block social %}
+  <section class="module module-narrow social">
+    {% block social_title %}
+      <h2 class="module-heading"><i class="fa fa-newspaper-o"></i> {{ _('Publicador') }}</h2>
+    {% endblock %}
+    {% block social_nav %}
+      <ul class="nav nav-simple">
+        <li class="nav-item">
+           <a href="{{ h.url_for('dataset.search', publisher_name=pkg.publisher_name) }}" target="_blank"> {{ pkg.publisher_name }}</a>
+           {% if pkg.publisher_url %}
+              <a href="{{ pkg.publisher_url }}" target="_blank" class="fa fa-external-link"> {{ pkg.publisher_url }}</a>
+           {% endif %}
+           {% if pkg.publisher_url %}
+              <a class="fa fa-envelope-o" href="mailto:{{ pkg.publisher_email }}" target="_blank" > {{ pkg.publisher_email }}</a>
+           {% endif %}
+           </li>
+      </ul>
+    {% endblock %}
+  </section>
+{% endblock %}
