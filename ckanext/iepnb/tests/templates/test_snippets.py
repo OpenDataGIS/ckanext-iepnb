@@ -29,6 +29,14 @@ class TestPublisherInfo(object):
         )
         assert '<a class="fa fa-envelope-o" href="mailto:WillyECoyote@acme.com" target="_blank"> WillyECoyote@acme.com</a>' in html
 
+    def test_publisher_no_name(self, monkeypatch):
+
+        monkeypatch.setitem(request.environ, 'CKAN_CURRENT_URL', '/dataset/somedataset')
+        html = render_snippet(
+            "snippets/publisher_info.html", pkg={"publisher_email":"WillyECoyote@acme.com"}
+        )
+        assert 'Publicador' not in html
+
     def test_publisher_no_url_visible(self, monkeypatch):
 
         monkeypatch.setitem(request.environ, 'CKAN_CURRENT_URL', '/dataset/somedataset')
