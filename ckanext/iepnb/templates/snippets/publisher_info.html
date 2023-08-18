@@ -1,4 +1,4 @@
-{% set current_url = h.full_current_url() %}
+{#% set current_url = h.full_current_url() %#}
 {% block social %}
   <section class="module module-narrow social">
     {% block social_title %}
@@ -11,8 +11,8 @@
            {% if pkg.publisher_url %}
               <a href="{{ pkg.publisher_url }}" target="_blank" class="fa fa-external-link"> {{ pkg.publisher_url }}</a>
            {% endif %}
-           {% if pkg.publisher_url %}
-              <a class="fa fa-envelope-o" href="mailto:{{ pkg.publisher_email }}" target="_blank" > {{ pkg.publisher_email }}</a>
+           {% if pkg.publisher_email %}
+              <a class="fa fa-envelope-o" href="mailto:{{ pkg.publisher_email }}" target="_blank"> {{ pkg.publisher_email }}</a>
            {% endif %}
            </li>
       </ul>
