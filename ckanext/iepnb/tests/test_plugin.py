@@ -47,7 +47,22 @@ To temporary patch the CKAN configuration for the duration of a test you can use
     def test_some_action():
         pass
 """
-import ckanext.iepnb.plugin as plugin
+import pytest
+from pyutilib.component.core import ExtensionPoint
+from ckan.tests import factories
+import ckanext.iepnb.plugin as iepnb_plugin
+import ckanext.iepnb.config as iepnb_config
+from ckan.common import config
+import ckan.plugins as plugins
+import ckan.plugins.toolkit as toolkit
 
 def test_plugin():
-    pass
+    pluginObject = iepnb_plugin.IepnbPlugin()
+
+    pluginObject.update_config(toolkit.config)
+
+    assert len(ExtensionPoint(plugins.IConfigurer)(pluginObject.name)) == 1
+    assert len(ExtensionPoint(plugins.ITemplateHelpers)(pluginObject.name)) == 1
+    assert len(ExtensionPoint(plugins.ITranslation)(pluginObject.name)) == 1
+
+

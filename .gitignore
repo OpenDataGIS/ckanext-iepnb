@@ -45,3 +45,4 @@ docs/_build/
 
 # Eclipse
 .settings
+/.pytest_cache/

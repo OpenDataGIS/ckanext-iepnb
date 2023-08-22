@@ -52,48 +52,72 @@ def get_logo_ministerio_attrs():
 
 
 def iepnb_handle_starttag(obj, tag, attrs):
-    if obj.header_counter or (tag=="div" and "header" in " ".join([x[1] for x in attrs if x[0]=="class"])):
-        if not obj.header_counter:
-            obj.header=""
+    '''Starts saving a header (defined as a 'div' block with a 'header' class) in 
+    obj.header and a footer (defined as a 'footer' block) in obj.footer with their
+    attributes, and starts their counters to keep filling these obj attributes
+    with the block contents.
+    If there is a footer inside the header, it keeps account of each, but keeping
+    also the footer inside the header.
 
-        if tag=="div":
+    TO-DO: handle:
+        -header inside header
+        -repeated header
+        -footer inside footer
+        -repeated footer
+        -header inside footer
+        -footer inside header
+        
+    '''
+    
+    if obj.header_counter or (tag == "div" and "header" in " ".join([x[1] for x in attrs if x[0] == "class"])):
+        if not obj.header_counter:
+            obj.header = ""
+
+        if tag == "div":
             obj.header_counter=obj.header_counter+1
 
-        obj.header=obj.header+'<'+tag
+        obj.header = obj.header+'<'+tag
         for x in attrs:
-            obj.header=obj.header+" "+x[0]
+            obj.header = obj.header+" "+x[0]
             if x[1]:
-                obj.header=obj.header+'="'+x[1]+'"'
+                obj.header = obj.header+'="'+x[1]+'"'
         obj.header=obj.header+">"
 
-    if tag=="footer" or obj.footer_counter:
+    if tag == "footer" or obj.footer_counter:
         if not obj.footer_counter:
-            obj.footer_counter=True
-            obj.footer=""
+            obj.footer_counter = True
+            obj.footer = ""
 
         obj.footer=obj.footer+"<"+tag
         for x in attrs:
-            obj.footer=obj.footer+" "+x[0]
+            obj.footer = obj.footer+" "+x[0]
             if x[1]:
-                contenido=x[1]
-                if tag=="footer" and x[0]=="class":
-                    contenido=contenido+" iepnb"
-                obj.footer=obj.footer+'="'+contenido+'"'
+                contenido = x[1]
+                if tag == "footer" and x[0] == "class":
+                    contenido = contenido+" iepnb"
+                obj.footer = obj.footer+'="'+contenido+'"'
 
-        obj.footer=obj.footer+">"
+        obj.footer = obj.footer+">"
 
 def iepnb_handle_endtag(obj,tag):
+    '''keeps filling obj.header and obj.footer and check if this tag closes any
+    of these blocks.
+    '''
+
     if obj.header_counter:
-        if tag=='div':
+        if tag == 'div':
             obj.header_counter=obj.header_counter-1
-        obj.header=obj.header+'</'+tag+">"
+        obj.header = obj.header+'</'+tag+">"
 
     if obj.footer_counter:
-        if tag=='footer':
+        if tag == 'footer':
             obj.footer_counter=False
-        obj.footer=obj.footer+'</'+tag+">"
+        obj.footer = obj.footer+'</'+tag+">"
 
 def iepnb_handle_data(obj,data):
+    '''keeps filling obj.header and obj.footer while they are open (their
+    counters are equivalent to true (true or a number greater than 0).
+    '''
     if obj.header_counter:
         obj.header=obj.header+data
 

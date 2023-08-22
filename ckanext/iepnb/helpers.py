@@ -46,14 +46,11 @@ def iepnb_breadcrumbs(lang = ''):
         return iepnb_config.breadcrumbs
     else:
         breadcrumbs_url = iepnb_config.server_menu
-        if lang == '' or lang =='es':
-            breadcrumbs_url += path_breadcrumbs
-        else:
-            breadcrumbs_url += ('/'+lang+path_breadcrumbs)
+        tmp_lang = lang or iepnb_config.locale_default
+
+        breadcrumbs_url += ('/'+tmp_lang+iepnb_config.path_breadcrumbs)
             
-        logger.debug(u'breadcrumbs_url {0}'.format(iepnb_config.menu_url))
-        
-        breadcrumbs_page=urlopen(breadcrumbs_url, context=gcontext)
+        breadcrumbs_page = urlopen(breadcrumbs_url, context=iepnb_config.gcontext)
         breadcrumbs_text_bytes = breadcrumbs_page.read()
         breadcrumbs_text = breadcrumbs_text_bytes.decode("utf-8")
         
@@ -91,7 +88,7 @@ def iepnb_menu(lang = ''):
     if not iepnb_config.menu.get(tmp_lang, None):
 
         menu_url = iepnb_config.server_menu
-        if tmp_lang == '' or tmp_lang =='es':
+        if tmp_lang == '' or tmp_lang ==iepnb_config.locale_default:
             menu_url += iepnb_config.path_menu
         else:
             menu_url += ('/'+lang+iepnb_config.path_menu)
@@ -102,7 +99,7 @@ def iepnb_menu(lang = ''):
             menu_page=urlopen(menu_url, context=iepnb_config.gcontext)
         except HTTPError as err:
             logger.warning("No se puede acceder a {0}: {1}".format(menu_url, err.reason))
-            if tmp_lang != '' and tmp_lang != 'es':
+            if tmp_lang != '' and tmp_lang != iepnb_config.locale_default:
                 return iepnb_menu()
             else:
                 logger.error("No se puede recuperar el menú por defecto")
@@ -115,11 +112,8 @@ def iepnb_menu(lang = ''):
     #return 'https://iepnb-des.tragsatec.es'
 
 @helper
-def iepnb_locale_name(lang=''):
-    l = Locale.parse(lang)
-    logger.debug("Locale para {0}: {1}".format(lang,l))
-    logger.debug("Respuesta: {0}".format(l.get_display_name(lang)))
-    return l.get_display_name(lang)
+def iepnb_locale_name(lang):
+    return Locale.parse(lang).get_display_name(lang)
     
 
 @helper      
@@ -142,7 +136,7 @@ def iepnb_to_url_segment(cadena):
 
 @helper
 def iepnb_organization_name(item):
-    '''Returns the name of the organization from its id
+    '''Returns the name of the organization from its id -> TO DELETE
     '''
     respuesta=item['display_name']
     try:
@@ -156,33 +150,15 @@ def iepnb_organization_name(item):
     return respuesta
 
 @helper
-def iepnb_get_facet_label(facet):    
+def iepnb_get_facet_label(facet):
+    '''-> TO DELETE
+    '''
     return get_facets_dict[facet]
     
 @helper
 def iepnb_get_facet_items_dict(
         facet, search_facets=None, limit=None, exclude_active=False, scheming_choices=None):
-    '''Return the list of unselected facet items for the given facet, sorted
-    by count.
-
-    Returns the list of unselected facet contraints or facet items (e.g. tag
-    names like "russian" or "tolstoy") for the given search facet (e.g.
-    "tags"), sorted by facet item count (i.e. the number of search results that
-    match each facet item).
-
-    Reads the complete list of facet items for the given facet from
-    c.search_facets, and filters out the facet items that the user has already
-    selected.
-    
-    List of facet items are ordered acording the faccet_sort parameter
-
-    Arguments:
-    facet -- the name of the facet to filter.
-    search_facets -- dict with search facets(c.search_facets in Pylons)
-    limit -- the max. number of facet items to return.
-    exclude_active -- only return unselected facets.
-    scheming_choices -- scheming choices to use to get label from value.
-
+    '''-> TO DELETE
     '''
     
     logger.debug("Returning facets for: {0}".format(facet))
@@ -237,12 +213,7 @@ def iepnb_get_facet_items_dict(
 
 @helper
 def iepnb_new_order_url(name,orden):
-    '''Returns a url with the order parameter for the given facet and concept to use
-    Based in the actual order it rotates ciclically from no order->direct order->inverse order over the given concept
-    Arguments:
-    name -- the name of the facet to order.
-    orden -- the concept (name or count) that will be used to order
-    
+    '''-> TO DELETE
     '''
     old_order = None
     param = "_%s_sort" % name
@@ -310,15 +281,15 @@ def iepnb_tag_img_ministerio():
 def iepnb_get_footer(lang=''):
     tmp_lang = lang or iepnb_config.locale_default
     if not iepnb_config.footer_iepnb.get(tmp_lang, None):
-        url = iepnb_config.server_menu
+        url = iepnb_config.server_menu + "/"
         page = None
         if lang != iepnb_config.locale_default:
-            url += ('/'+lang)
+            url += lang
         try:
             page = urlopen(url, context=iepnb_config.gcontext)
         except HTTPError as err:
             logger.warning("No se puede acceder a {0}: {1}".format(url, err.reason))
-            if tmp_lang != '' and tmp_lang != 'es':
+            if tmp_lang != '' and tmp_lang != iepnb_config.locale_default:
                 return iepnb_get_footer()
             else:
                 logger.error("No se puede recuperar el pie de página por defecto")

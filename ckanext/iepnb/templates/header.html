@@ -21,6 +21,18 @@
               </a>
             </div>
   {#- fin emulación block/block--system-branding-block.html.twig -#}
+  {#- inicio emulación block/block--system-menu-block.html.twig' #}
+            <div class="settings-tray-editable block block--menudecuentadeusuario" data-drupal-settingstray="editable">
+    {#- inicio emulación menu/menu--account.html.twig'  #}
+      {% if not c.user %}
+                {#% link_for 'login', named_route='user.login', class_='login-menu content-login-navbar-menu w-inline-block' %#}
+                <a href="{{h.url_for('user.login')}}" class='login-menu content-login-navbar-menu w-inline-block' type='button' title='login'>
+                  <span>login</span>
+                </a>
+      {% endif %}
+    {#- fin emulación menu/menu--account.html.twig'  #}
+            </div>
+  {#- fin emulación block/block--system-menu-block.html.twig'  -#}
   {#- inicio emulación block/block.html.twig #}
             <div class="language-switcher-language-url settings-tray-editable block block--alternadordeidioma block-language block-language-blocklanguage-interface" role="navigation" data-drupal-settingstray="editable">	
     {#- inicio emulación navigation/links--language-block.html.twig' -#}
@@ -38,18 +50,6 @@
     {#- fin emulación navigation/links--language-block.html.twig' -#}
 		    </div>  
   {#- fin emulación block/block.html.twig #}
-  {#- inicio emulación block/block--system-menu-block.html.twig' #}
-            <div class="settings-tray-editable block block--menudecuentadeusuario" data-drupal-settingstray="editable">
-    {#- inicio emulación menu/menu--account.html.twig'  #}
-      {% if not c.user %}
-                {#% link_for 'login', named_route='user.login', class_='login-menu content-login-navbar-menu w-inline-block' %#}
-                <a href="{{h.url_for('user.login')}}" class='login-menu content-login-navbar-menu w-inline-block' type='button' title='login'>
-                  <span>login</span>
-                </a>
-      {% endif %}
-    {#- fin emulación menu/menu--account.html.twig'  #}
-            </div>
-  {#- fin emulación block/block--system-menu-block.html.twig'  -#}
 {#- fin emulación region/region.html.twig -#} 
             <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
