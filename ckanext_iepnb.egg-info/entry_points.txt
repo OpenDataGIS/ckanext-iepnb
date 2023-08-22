@@ -1,7 +1,0 @@
-
-        [ckan.plugins]
-        iepnb=ckanext.iepnb.plugin:IepnbPlugin
-
-        [babel.extractors]
-        ckan = ckan.lib.extract:extract_ckan
-    
