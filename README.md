@@ -23,6 +23,17 @@ Suggested values:
 * "not yet" - there is an intention to get it working
 * "no"
 
+This extension need the dcat extension:
+  '''
+  pip install -e git+https://github.com/ckan/ckanext-dcat.git#egg=ckanext-dcat
+  pip install -r ckanext-dcat/requirements.txt
+  '''
+  
+And modify ckan.ini accordingly:
+ '''ini
+ ckan.plugins = […] dcat dcat_rdf_harvester dcat_json_harvester dcat_json_interface
+ '''
+
 ## Improvements
 
 As ckan-iepnb tries a merge between ckan and iepnb styles, it could be fine if 
@@ -52,7 +63,7 @@ To install ckanext-iepnb:
 
 1. Activate your CKAN virtual environment, for example:
 
-     `. /usr/lib/ckan/default/bin/activate`
+    `. /usr/lib/ckan/default/bin/activate`
 
 2. Clone the source and install it on the virtualenv
 
@@ -149,8 +160,9 @@ Be sure that ckan user has write rights in the root dir of the extension
 reasons you can't do it, create a .pytest_cache dir at the root dir of the
 extension and make it writable by the ckan user.
 
-To run the tests, do:
+To run the tests, at ckan-iepnb root dir do:
 
+`pip install -r dev-requirements.txt`
 `pytest --ckan-ini=test.ini`
 
 To have a more verbose test, you can do:
