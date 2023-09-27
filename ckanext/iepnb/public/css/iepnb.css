@@ -580,6 +580,10 @@ button.image {
 	flex-shrink: 1;
 }
 
+.block--iepnb-content .dropdown-toggle::after {
+	display: none;
+}
+
 
 .fade:not(.show) {
   opacity: unset;
