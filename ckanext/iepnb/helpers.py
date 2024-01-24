@@ -30,7 +30,9 @@ def helper(fn):
 def iepnb_decode_json(cadena):
     """Convierte un texto json en un objeto phyton
     """
-    objeto=json.loads(cadena)
+    objeto="{}"
+    if cadena:
+        objeto=json.loads(cadena)
     #objeto=cadena    
     return objeto
 
@@ -40,20 +42,44 @@ def iepnb_breadcrumbs(lang = ''):
     Si puede, lo obtiene dinámicamente del servidor iepnb.home, con la ruta path_breadcrumbs.
     Si la ruta no está definida, toma por defecto el valor indicado en iepnb.breadcrumbs
     """
+    respuesta = iepnb_config.default_breadcrumbs
+    logger.debug("Preparada la respuesta "+__name__)
     
-    if iepnb_config.path_breadcrumbs == '':
-        return iepnb_config.breadcrumbs
-    else:
+    if iepnb_config.path_breadcrumbs:
+        logger.debug("path_breadcrumbs: " + iepnb_config.path_breadcrumbs)
         breadcrumbs_url = iepnb_config.server_menu
         tmp_lang = lang or iepnb_config.locale_default
-
-        breadcrumbs_url += ('/'+tmp_lang+iepnb_config.path_breadcrumbs)
-            
-        breadcrumbs_page = urlopen(breadcrumbs_url, context=iepnb_config.gcontext)
-        breadcrumbs_text_bytes = breadcrumbs_page.read()
-        breadcrumbs_text = breadcrumbs_text_bytes.decode("utf-8")
+        if not tmp_lang in iepnb_config.breadcrumbs:
+            tmp_lang = iepnb_config.locale_default
         
-        return breadcrumbs_text
+        logger.debug("tmp_lang "+tmp_lang)    
+        if not iepnb_config.breadcrumbs[tmp_lang]:
+
+            logger.debug("No está definido breadcrumbs["+tmp_lang+"]")
+            if tmp_lang == '' or tmp_lang ==iepnb_config.locale_default:
+                breadcrumbs_url += iepnb_config.path_breadcrumbs
+            else:
+                breadcrumbs_url += ('/'+tmp_lang+iepnb_config.path_breadcrumbs)
+
+            breadcrumbs_page = None    
+            try:
+                breadcrumbs_page = urlopen(breadcrumbs_url, context=iepnb_config.gcontext)
+            except HTTPError as err:
+                logger.warning("No se puede acceder a {0}: {1}".format(breadcrumbs_url, err.reason))
+                if tmp_lang != '' and tmp_lang != iepnb_config.locale_default:
+                    respuesta = iepnb_breadcrumbs()+"Sin acceso"
+                else:
+                    logger.error("No se puede recuperar el menú por defecto")
+                    respuesta = iepnb_config.default_breadcrumbs+"Error html"
+            if breadcrumbs_page:
+                breadcrumbs_text_bytes = breadcrumbs_page.read()
+                respuesta = breadcrumbs_text_bytes.decode("utf-8")
+                iepnb_config.breadcrumbs[tmp_lang] = respuesta
+        else:
+            logger.debug("Está definido breadcrumbs["+tmp_lang+"]: " + iepnb_config.breadcrumbs[tmp_lang])
+    else:
+        logger.debug("No hay definido path_breadcrumbs")
+    return respuesta
 
 @helper        
 def iepnb_home():
@@ -80,11 +106,11 @@ def iepnb_menu(lang = ''):
     """Busca el texto json con la descripción del menú en iepnb.server
     """
     tmp_lang = lang or iepnb_config.locale_default
-    if not iepnb_config.menu:
+    
+    if not tmp_lang in iepnb_config.menu:
+        tmp_lang = iepnb_config.locale_default
 
-        iepnb_config.menu={}
-
-    if not iepnb_config.menu.get(tmp_lang, None):
+    if not iepnb_config.menu[tmp_lang]:
 
         menu_url = iepnb_config.server_menu
         if tmp_lang == '' or tmp_lang ==iepnb_config.locale_default:
@@ -93,6 +119,8 @@ def iepnb_menu(lang = ''):
             menu_url += ('/'+lang+iepnb_config.path_menu)
 
         logger.debug(u'menu_url ({0}): {0}'.format(tmp_lang, menu_url))
+        
+        menu_page = None
 
         try:
             menu_page=urlopen(menu_url, context=iepnb_config.gcontext)
@@ -102,10 +130,14 @@ def iepnb_menu(lang = ''):
                 return iepnb_menu()
             else:
                 logger.error("No se puede recuperar el menú por defecto")
-        logger.debug(u'menu_url open')
-        menu_text_bytes = menu_page.read()
-        logger.debug(u'menu_url received')
-        iepnb_config.menu[tmp_lang] = menu_text_bytes.decode("utf-8")
+
+        if menu_page:
+            logger.debug(u'menu_url open')
+            menu_text_bytes = menu_page.read()
+            logger.debug(u'menu_url received')
+            iepnb_config.menu[tmp_lang] = menu_text_bytes.decode("utf-8")
+        else:
+            iepnb_config.menu[tmp_lang] = ""
     
     return iepnb_config.menu[tmp_lang]
     #return 'https://iepnb-des.tragsatec.es'
@@ -166,6 +198,10 @@ def iepnb_tag_img_ministerio():
 @helper
 def iepnb_get_footer(lang=''):
     tmp_lang = lang or iepnb_config.locale_default
+    
+    if not tmp_lang in iepnb_config.footer_iepnb:
+        tmp_lang = iepnb_config.locale_default
+
     if not iepnb_config.footer_iepnb.get(tmp_lang, None):
         url = iepnb_config.server_menu + "/"
         page = None
