@@ -847,6 +847,12 @@ button.image {
     user-select: none;
 }
 
+#iepnb_ckan .btn::after,
+#iepnb_ckan .modal .btn::after {
+	content:unset;
+}
+
+
 #iepnb_ckan .btn-lg, 
 #iepnb_ckan .btn-group-lg > .btn {
     padding: 10px 16px;
