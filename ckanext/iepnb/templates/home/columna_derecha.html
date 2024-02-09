@@ -21,7 +21,7 @@
                       <h1 class="catalogo_datos_con_linea">{% trans %}Buscar{% endtrans %}</h1>
                     </div>
                     <div class="contenedor_input_principal">
-                      <input aria-label="{% block header_site_search_label %}{{ _('Buscar conjuntos de datos') }}{% endblock %}" type="text" class="input_principal" autofocus="true" maxlength="256" name="Etiqueta-2" data-name="Etiqueta 2" placeholder="{{placeholder}}" id="Etiqueta-2" required="">
+                      <input aria-label="{% block header_site_search_label %}{{ _('Buscar conjuntos de datos') }}{% endblock %}" type="text" class="input_principal" autofocus="true" maxlength="256" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}">
                        <button class="image"><img src="{{ h.url_for_static('img/icon_tab_lupa.svg') }}" loading="lazy" alt="Icono buscar" class="image-3"></button>
                      </div>
                    </form>
