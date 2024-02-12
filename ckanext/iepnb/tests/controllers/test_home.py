@@ -73,17 +73,12 @@ class TestHome(object):
         
         self.footer = "<footer>FAKE FOOTER</footer>"
         monkeypatch.setattr("ckan.plugins.toolkit.h.iepnb_breadcrumbs", lambda x: breadcrumbs)
-        
         monkeypatch.setattr("ckan.plugins.toolkit.h.iepnb_tag_img_ministerio", lambda: '<img src="/fake_img.png"/>')
-        
-        monkeypatch.setattr("ckanext.iepnb.helpers.iepnb_tag_img_ministerio", lambda: '<img src="/fake_img.png"/>')
         monkeypatch.setattr("ckan.plugins.toolkit.h.iepnb_menu", lambda x: menu)
-        
         monkeypatch.setattr("ckan.plugins.toolkit.h.iepnb_get_footer", lambda x: self.footer)
         
-        
-    def test_home_renders(self, monkeypatch, app):
-        self.init(monkeypatch)
+    def test_home_renders(self, app):
+
         response = app.get(url_for("home.index"))
         assert "Catálogo de datos" in response.body
 
