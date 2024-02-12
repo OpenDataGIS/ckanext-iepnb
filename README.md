@@ -23,17 +23,6 @@ Suggested values:
 * "not yet" - there is an intention to get it working
 * "no"
 
-This extension need the dcat extension:
-  '''
-  pip install -e git+https://github.com/ckan/ckanext-dcat.git#egg=ckanext-dcat
-  pip install -r ckanext-dcat/requirements.txt
-  '''
-  
-And modify ckan.ini accordingly:
- '''ini
- ckan.plugins = […] dcat dcat_rdf_harvester dcat_json_harvester dcat_json_interface
- '''
-
 ## Improvements
 
 As ckan-iepnb tries a merge between ckan and iepnb styles, it could be fine if 
@@ -48,22 +37,13 @@ could be improved further having the styles affecting those blocks in its own
 css files, separated from the styles that affect the main block or the page as 
 a whole.
 
-This extension shows a summary of the publiser of the dataset in the left column.
-It shows the name of the publisher, its web and its email. If information about
-email or web site is missing, the extension omites just the concerning
-data. If the name is missing, the extension omites all the publisher information
-in the left column.
-
-The name of the publisher is a link to find all the datasets that share this
-publisher.
-
 ## Installation
 
 To install ckanext-iepnb:
 
 1. Activate your CKAN virtual environment, for example:
 
-    `. /usr/lib/ckan/default/bin/activate`
+     `. /usr/lib/ckan/default/bin/activate`
 
 2. Clone the source and install it on the virtualenv
 
@@ -87,6 +67,8 @@ To install ckanext-iepnb:
 6. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
 
      `sudo service apache2 reload`
+     
+
 
 ## Config settings
 
@@ -155,24 +137,15 @@ pip install -r dev-requirements.txt
 
 ## Tests
 
-Be sure that ckan user has write rights in the root dir of the extension 
-(perhaps ckanext-iepnb?). If that is not the case and if for security or other 
-reasons you can't do it, create a .pytest_cache dir at the root dir of the
-extension and make it writable by the ckan user.
+Be sure that ckan user has write rights at the root dir of the extension. If 
+that is not the case and for security reasons you can't do it, create a 
+.pytest_cache dir at the root dir of the extension an make it writable by the 
+ckan user.
 
-To run the tests, at ckan-iepnb root dir do:
+To run the tests, do:
 
-`pip install -r dev-requirements.txt`
-`pytest --ckan-ini=test.ini`
+`pytest --ckan-ini=test.ini` (not implemented yet) 
 
-To have a more verbose test, you can do:
-
-`pytest -vv --ckan-ini=test.ini`
-
-This will give you a few deprecation warnings. You can ignore those about
-code outside the extension. Ckan needs a very specific versions of the python
-libs it uses, so please do not mess upgrading libs in order to supress the
-warnings. Just ignore them.
 
 ## Releasing a new version of ckanext-iepnb
 
