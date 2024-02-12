@@ -29,7 +29,7 @@ class IepnbPlugin(plugins.SingletonPlugin, DefaultTranslation):
               
         iepnb_config.server_menu = config.get('iepnb.server', iepnb_config.server_menu)
         iepnb_config.path_menu = config.get('iepnb.path_menu', iepnb_config.path_menu)
-        iepnb_config.breadcrumbs = config.get('iepnb.breadcrumbs', '')
+        iepnb_config.default_breadcrumbs = config.get('iepnb.breadcrumbs', '')
         iepnb_config.proxy = config.get('iepnb.proxy', '')
         iepnb_config.popular_tags = toolkit.asint(config.get('iepnb.popular_tags', 3))
         iepnb_config.locale_default = config.get('ckan.locale_default', iepnb_config.locale_default)
@@ -38,6 +38,17 @@ class IepnbPlugin(plugins.SingletonPlugin, DefaultTranslation):
         iepnb_config.gcontext = ssl.SSLContext()
         
         iepnb_config.stats = ('stats' in config.get('ckan.plugins','').split())
+        
+        languages = config.get('ckan.locales_offered',iepnb_config.locale_default)
+        iepnb_config.menu = {}
+        iepnb_config.footer_iepnb = {}
+        iepnb_config.breadcrumbs = {}
+        for language in languages.split():
+            iepnb_config.menu[language] = None
+            iepnb_config.footer_iepnb[language] = None
+            iepnb_config.breadcrumbs[language] = None
+        
+        
     
     # ITemplateHelper    
     def get_helpers(self):
