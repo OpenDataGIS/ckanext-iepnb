@@ -1,8 +1,8 @@
 proxy = None
 gcontext = None
 
-#migas de pan por defecto definidas en el fichero de configuración con iepnb.breadcrumbs
-breadcrumbs = ""
+#migas de pan por defecto definidas en el fichero de configuración con iepnb.default_breadcrumbs
+default_breadcrumbs = ""
 
 #servidor al que se ha de solicitar el objeto json con el menú y las migas de pan
 server_menu = "https://iepnb-des.tragsatec.es"
@@ -11,7 +11,7 @@ server_menu = "https://iepnb-des.tragsatec.es"
 #se define en el menú ini con epnb.path_menu
 path_menu = "/api/menu_items/main"
 
-#Ruta a la descarga de migas de pan del servidor definida en el fichero de configuración con iepnb.path.breadcrumbs 
+#Ruta a la descarga de migas de pan del servidor definida en el fichero de configuración con iepnb.path.default_breadcrumbs 
 path_breadcrumbs = ""
 
 # número de etiquetas populares para mostrar en la página principal
@@ -47,8 +47,10 @@ attrs_logo_ministerio = None
 
 default_logo_ministerio='<img class="imagenMinisterio" src="{0}" alt="Logotipo del Ministerio para la transición ecológica y el reto demográfico">'
 
-footer_iepnb = {}
+footer_iepnb = None
 
 menu = None
+
+breadcrumbs = None
 
 stats = False
