@@ -584,7 +584,6 @@ button.image {
 	display: none;
 }
 
-
 .fade:not(.show) {
   opacity: unset;
 }
@@ -925,4 +924,9 @@ button.image {
 
 footer, footer .nav-item > a {
 	line-height: var(--bs-body-line-height);
+}
+
+/* Fixes */
+.nav-item button::after {
+    display: none;
 }
