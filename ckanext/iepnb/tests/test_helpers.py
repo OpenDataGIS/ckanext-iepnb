@@ -57,9 +57,8 @@ class TestIepnbBreadcrumbs:
         iepnb_config.server_menu = "http://server_menu"
         iepnb_config.locale_default = "lang" 
         iepnb_config.gcontext = ""
-        iepnb_config.default_breadcrumbs = "default_breadcrumbs"
+        iepnb_config.breadcrumbs = "default_breadcrumbs"
         iepnb_config.path_breadcrumbs = ""
-        iepnb_config.breadcrumbs[iepnb_config.locale_default] = None
     
         fake_urlopen_object = Fake_urlopen()
         urlopen.side_effect = fake_urlopen_object.urlopen
@@ -71,82 +70,72 @@ class TestIepnbBreadcrumbs:
         iepnb_config.server_menu = "http://server_menu"
         iepnb_config.locale_default = "lang" 
         iepnb_config.gcontext = ""
-        iepnb_config.default_breadcrumbs = "default_breadcrumbs"
+        iepnb_config.breadcrumbs = "default_breadcrumbs"
         iepnb_config.path_breadcrumbs = "/path_breadcrumbs"
-        iepnb_config.breadcrumbs={iepnb_config.locale_default: None}
     
         fake_urlopen_object = Fake_urlopen("breadcrumbs")
         urlopen.side_effect = fake_urlopen_object.urlopen
 
         assert iepnb_helpers.iepnb_breadcrumbs() == "breadcrumbs"
-        assert fake_urlopen_object.url =="http://server_menu/path_breadcrumbs"
+        assert fake_urlopen_object.url =="http://server_menu/lang/path_breadcrumbs"
 
     def test_downloads_specified_languaje(self,iepnb_config, urlopen, capsys):
         iepnb_config.server_menu = "http://server_menu"
-        iepnb_config.locale_default = "lang"
-        other_lang = "other_lang"
+        iepnb_config.locale_default = "other_lang" 
         iepnb_config.gcontext = ""
-        iepnb_config.default_breadcrumbs = "default_breadcrumbs"
+        iepnb_config.breadcrumbs = "default_breadcrumbs"
         iepnb_config.path_breadcrumbs = "/path_breadcrumbs"
-        iepnb_config.breadcrumbs={iepnb_config.locale_default: None, other_lang: None}
     
         fake_urlopen_object = Fake_urlopen("breadcrumbs")
         urlopen.side_effect = fake_urlopen_object.urlopen
 
-        assert iepnb_helpers.iepnb_breadcrumbs(other_lang) == "breadcrumbs"
-        assert iepnb_config.breadcrumbs.get(other_lang,None) == "breadcrumbs"
-        assert not iepnb_config.breadcrumbs.get(iepnb_config.locale_default,None)
+        assert iepnb_helpers.iepnb_breadcrumbs(iepnb_config.locale_default) == "breadcrumbs"
         assert fake_urlopen_object.url =="http://server_menu/other_lang/path_breadcrumbs"
 
 @patch("ckanext.iepnb.helpers.urlopen")
 @patch("ckanext.iepnb.helpers.iepnb_config")
 class TestIepnbMenu:
     def test_downloads_menu_for_unspecified_language(self, iepnb_config, urlopen, capsys):
-        default_menu = "menú por defecto"
         iepnb_config.locale_default = "lang" 
-        iepnb_config.menu = {iepnb_config.locale_default:None}
+        iepnb_config.menu = None
         iepnb_config.server_menu = "http://server_menu"
         iepnb_config.path_menu = "/path_menu"
         iepnb_config.gcontext = ""
     
-        fake_urlopen_object = Fake_urlopen(default_menu)
+        fake_urlopen_object = Fake_urlopen("menú por defecto")
         urlopen.side_effect = fake_urlopen_object.urlopen
 
-        assert iepnb_helpers.iepnb_menu() == default_menu
-        assert iepnb_config.menu.get(iepnb_config.locale_default,None) == default_menu
+        assert iepnb_helpers.iepnb_menu() == 'menú por defecto'
+        assert iepnb_config.menu.get(iepnb_config.locale_default,None) == 'menú por defecto'
         assert fake_urlopen_object.url == "http://server_menu/path_menu"
 
     def test_downloads_menu_for_specified_default_language(self, iepnb_config, urlopen, capsys):
-        default_menu = "menú por defecto"
         iepnb_config.locale_default = "lang" 
-        iepnb_config.menu = {iepnb_config.locale_default:None}
+        iepnb_config.menu = None
         iepnb_config.server_menu = "http://server_menu"
         iepnb_config.path_menu = "/path_menu"
         iepnb_config.gcontext = ""
     
-        fake_urlopen_object = Fake_urlopen(default_menu)
+        fake_urlopen_object = Fake_urlopen("menú por defecto")
         urlopen.side_effect = fake_urlopen_object.urlopen
 
-        assert iepnb_helpers.iepnb_menu(iepnb_config.locale_default) == default_menu
-        assert iepnb_config.menu.get(iepnb_config.locale_default,None) == default_menu
+        assert iepnb_helpers.iepnb_menu(iepnb_config.locale_default) == 'menú por defecto'
+        assert iepnb_config.menu.get(iepnb_config.locale_default,None) == 'menú por defecto'
         assert fake_urlopen_object.url == "http://server_menu/path_menu"
 
     def test_downloads_menu_for_other_language(self, iepnb_config, urlopen, capsys):
-        default_menu = "menú por defecto"
-        other_menu = "menú otro lenguaje"
-        other_language = 'other_lang'
         iepnb_config.locale_default = "lang" 
-        iepnb_config.menu = {iepnb_config.locale_default:None, other_language:None}
+        iepnb_config.menu = None
         iepnb_config.server_menu = "http://server_menu"
         iepnb_config.path_menu = "/path_menu"
         iepnb_config.gcontext = ""
     
-        fake_urlopen_object = Fake_urlopen(other_menu)
+        fake_urlopen_object = Fake_urlopen("menú otro lenguaje")
         urlopen.side_effect = fake_urlopen_object.urlopen
 
-        assert iepnb_helpers.iepnb_menu(other_language) == other_menu
-        assert iepnb_config.menu.get(other_language,None) == other_menu
-        assert fake_urlopen_object.url == "http://server_menu/"+other_language+"/path_menu"
+        assert iepnb_helpers.iepnb_menu('other_lang') == "menú otro lenguaje"
+        assert iepnb_config.menu.get('other_lang',None) == "menú otro lenguaje"
+        assert fake_urlopen_object.url == "http://server_menu/other_lang/path_menu"
 
     def test_gets_yet_downloaded_menu_for_unspecified_language(self, iepnb_config, urlopen, capsys):
         iepnb_config.locale_default = "lang" 
