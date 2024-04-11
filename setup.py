@@ -27,7 +27,7 @@ setup(
 
     # Author details
     author='''Daniel Sanjurjo''',
-    author_email='''dsanjurj@tragsa.es''',
+    author_email='''iepnb@tragsa.es''',
 
     # Choose your license
     license='AGPL',

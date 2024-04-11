@@ -23,11 +23,11 @@ setup(
     long_description_content_type="text/markdown",
 
     # The project's main homepage.
-    url='https://github.com/TRAGSATEC/ckanext-iepnb',
+    url='https://github.com/opendatagis/ckanext-iepnb',
 
     # Author details
-    author='''dsanjurj@tragsa.es''',
-    author_email='''dsanjurj@tragsa.es''',
+    author='''iepnb@tragsa.es''',
+    author_email='''iepnb@tragsa.es''',
 
     # Choose your license
     license='AGPL',
@@ -38,14 +38,14 @@ setup(
         # 3 - Alpha
         # 4 - Beta
         # 5 - Production/Stable
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
 
         # Pick your license as you wish (should match "license" above)
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.9',
     ],
 
 
