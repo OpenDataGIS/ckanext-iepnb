@@ -25,7 +25,7 @@
   
   {% set dataset_extent = pkg.spatial %}
   {% if dataset_extent %}
-    {% snippet "spatial/snippets/dataset_map_sidebar.html", extent=dataset_extent %}
+    {% snippet "snippets/dataset_map_sidebar.html", extent=dataset_extent %}
   {% endif %}
 
   {% block package_publisher_info %}

@@ -1,33 +1,29 @@
     {% set endpoints = h.schemingdcat_get_catalog_endpoints() %}
-            
-    <div class="titular_linea_verde">
-        <h1 class="catalogo_datos_con_linea">{{ _('Catalog endpoints') }}</h1>
-    </div>
+                
+    <h2 class="titular_linea_verde featured_element">{{ _('Catalog endpoints') }}</h2>
     <div class="contenedor_links">
         {% if endpoints %}
             {% for endpoint in endpoints %}
+                <div class="home-left-col-container">
                     {% if endpoint.type == 'ogc' %}
-                    
-                    {% if h.is_url(endpoint.endpoint) %}
+                        {% if h.is_url(endpoint.endpoint) %}
                             {% set csw_uri = h.url_for_static_or_external(endpoint.endpoint) %}
-                    {% else %}
+                        {% else %}
                             {% set csw_uri = h.get_site_protocol_and_host()[0] +'://' + h.get_site_protocol_and_host()[1] + '/' + endpoint.endpoint %}
-                    {% endif %}
-                            <a href="{{ csw_uri }}" title="{{ endpoint.display_name }}" class="menu_area_publica w-inline-block">
-                                
-                                <img src="{{ h.url_for_static('img/icono_csw.svg') }}" loading="lazy" alt="{{ _('Punto SPARQL') }}" class="image-5-endpoint">
-                                <img src="{{ h.url_for_static(endpoint.image_display_url) }}" loading="lazy" alt="{{ endpoint.display_name }}" class="image-5-country">
-                                <p class="text_menu_endpoints">{{ endpoint.display_name }}</p> 
-                            </a>
-
+                        {% endif %}
+                        <a href="{{ csw_uri }}" title="{{ endpoint.display_name }}" class="menu_area_publica w-inline-block">
+                            <img src="{{ h.url_for_static('img/icono_csw.svg') }}" loading="lazy" alt="{{ _('Punto SPARQL') }}" class="image-5-endpoint">
+                            <img src="{{ h.url_for_static(endpoint.image_display_url) }}" loading="lazy" alt="{{ endpoint.display_name }}" class="image-5-country">
+                            <p class="text_menu_endpoints">{{ endpoint.display_name }}</p> 
+                        </a>
                     {% elif endpoint.type == 'lod' %}
-                            <a href="{{ h.url_for(endpoint.endpoint, **endpoint.endpoint_data) }}" title="{{ endpoint.display_name }}" class="menu_area_publica w-inline-block">
-                                
-                                <img src="{{ h.url_for_static('img/icono_rdf.svg') }}" loading="lazy" alt="{{ _('Punto SPARQL') }}" class="image-5-endpoint">
-                                <img src="{{ h.url_for_static(endpoint.image_display_url) }}" loading="lazy" alt="{{ endpoint.display_name }}" class="image-5-country">
-                                <p class="text_menu_endpoints">{{ endpoint.display_name }}</p> 
-                            </a>
+                        <a href="{{ h.url_for(endpoint.endpoint, **endpoint.endpoint_data) }}" title="{{ endpoint.display_name }}" class="menu_area_publica w-inline-block">
+                            <img src="{{ h.url_for_static('img/icono_rdf.svg') }}" loading="lazy" alt="{{ _('Punto SPARQL') }}" class="image-5-endpoint">
+                            <img src="{{ h.url_for_static(endpoint.image_display_url) }}" loading="lazy" alt="{{ endpoint.display_name }}" class="image-5-country">
+                            <p class="text_menu_endpoints">{{ endpoint.display_name }}</p> 
+                        </a>
                     {% endif %}
+                </div>
             {% endfor %}
         {% endif %}
     </div>

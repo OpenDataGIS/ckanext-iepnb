@@ -1,0 +1,30 @@
+  <div class="estadisticas">
+    <h2 class="titular_linea_verde featured_element">{{ _('Estadísticas') }}</h2>
+    <div class="contenedor_links">
+      {% if c.userobj and h.iepnb_plugin_defined("stats") %}
+      <div class="home-left-col-container">
+        <a href="{{ h.url_for('/stats') }}" class="menu_area_publica w-inline-block w-inline-block"
+          title="{{ _('Menu de estadísticas') }}">
+          <p class="paragraph">{{ _('Menu de estadísticas') }}</p>
+        </a>
+      </div>
+      {% endif %}
+      <div class="home-left-col-container">
+        <a href="{{ h.url_for('dataset.search') }}" class="menu_area_publica w-inline-block w-inline-block">
+          <p class="paragraph"><span class="text-span-2">{{ h.SI_number_span(stats.dataset_count) }}</span> {{ _('Conjunto
+            de datos') if stats.dataset_count == 1 else _('Conjuntos de datos') }}</p>
+        </a>
+      </div>
+      <div class="home-left-col-container">
+        <a href="{{ h.url_for(controller='organization', action='index') }}" class="menu_area_publica w-inline-block w-inline-block">
+          <p class="paragraph"><span class="text-span-3">{{ h.SI_number_span(stats.organization_count) }}</span> {{
+            _('Organización') if stats.organization_count == 1 else _('Organizaciones') }}</p>
+        </a>
+      </div>
+      <div class="home-left-col-container">
+        <a href="{{ h.url_for(controller='group', action='index') }}" class="menu_area_publica w-inline-block w-inline-block">
+          <p class="paragraph"><span class="text-span-4">{{ h.SI_number_span(stats.group_count) }}</span> {{ _('Grupo') if
+            stats.group_count == 1 else _('Grupos') }}</p>
+        </a>
+      </div>
+  </div>
