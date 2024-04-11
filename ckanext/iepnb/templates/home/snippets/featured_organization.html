@@ -1,7 +1,9 @@
+<h2 class="titular_linea_verde featured_element" >{{ _('Featured organizations') }}</h2>
+
 {% set organizations = h.get_featured_organizations(2) %}
 
 {% for organization in organizations %}
-  <div class="box">
+  <div class="box featured">
     {% snippet 'snippets/organization_item.html', organization=organization, truncate=50, truncate_title=35 %}
   </div>
 {% endfor %}
