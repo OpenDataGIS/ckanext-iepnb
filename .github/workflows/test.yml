@@ -10,7 +10,7 @@ jobs:
       image: openknowledge/ckan-dev:2.9
     services:
       solr:
-        image: ckan/ckan-solr-dev:2.9
+        image: ckan/ckan-solr:2.9-solr9-spatial
       postgres:
         image: ckan/ckan-postgres-dev:2.9
         env:
@@ -41,7 +41,6 @@ jobs:
       run: |
         # Replace default path to CKAN core config file with the one on the container
         sed -i -e 's/use = config:.*/use = config:\/srv\/app\/src\/ckan\/test-core.ini/' test.ini
-
         ckan -c test.ini db init
     - name: Run tests
       run: pytest --ckan-ini=test.ini --cov=ckanext.iepnb --disable-warnings ckanext/iepnb
