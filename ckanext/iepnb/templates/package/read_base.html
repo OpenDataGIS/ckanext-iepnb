@@ -23,6 +23,11 @@
     {% endif %}
   {% endblock %}
   
+  {% set dataset_extent = pkg.spatial %}
+  {% if dataset_extent %}
+    {% snippet "spatial/snippets/dataset_map_sidebar.html", extent=dataset_extent %}
+  {% endif %}
+
   {% block package_publisher_info %}
     {% if pkg.publisher_name %}
       {% snippet "schemingdcat/snippets/publisher_info.html", pkg_dict=pkg, dataset_type=dataset_type %}
@@ -34,7 +39,6 @@
       {% snippet "schemingdcat/snippets/contact_info.html", pkg_dict=pkg, dataset_type=dataset_type %}
     {% endif %}
   {% endblock %}
-
 
   {% block package_related_resources %}
     {% if pkg.reference %}
