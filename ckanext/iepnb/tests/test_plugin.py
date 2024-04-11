@@ -65,4 +65,3 @@ def test_plugin():
     assert len(ExtensionPoint(plugins.ITemplateHelpers)(pluginObject.name)) == 1
     assert len(ExtensionPoint(plugins.ITranslation)(pluginObject.name)) == 1
 
-
