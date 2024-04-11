@@ -1,10 +1,30 @@
-# CKAN-IEPNB - Customization
+<p align="center">
+  <picture>
+    <img src="ckanext/iepnb/public/img/iepnb-logo.png" style="height:100px">
+  </picture>
+</p>
+<h1 align="center">ckanext-iepnb - Theming customisation</h1>
+<p align="center">
+<a href="https://github.com/OpenDataGIS/ckanext-iepnb/actions/workflows/test.yml"><img src="https://github.com/OpenDataGIS/ckanext-iepnb/actions/workflows/test.yml/badge.svg?branch=main&event=pull_request" alt="ckanext-iepnb tests"></a>
 
-ckan-iepnb is a customization of ckan to use it as a iepnb extension, sharing styles, images and other assets with the main site, merging with it in the same server
+<p align="center">
+    <a href="#overview">Overview</a> •
+    <a href="#requirements">Requirements</a> •
+    <a href="#improvements">Improvements</a> •
+    <a href="#installation">Installation</a> •
+    <a href="#config-settings">Config settings</a> •
+    <a href="#developer-installation">Developer installation</a> •
+    <a href="#tests">Tests</a> •
+    <a href="#releasing-a-new-version-of-ckanext-iepnb">Release</a> •
+    <a href="#license">License</a>
+</p>
 
-Honor and praise to the developer of this extension: <a href="mailto:dsanjurj@tragsa.es">**dsanjurj@tragsa.es**</a>
+## Overview
+`ckanext-iepnb` is a customisation of CKAN to be used as an IEPNB extension, sharing styles, images and other assets with the [main site](https://iepnb.es) and merging with it on the same server.
 
-Contact him if **you** do something wrong and mistakenly believe is a code issue
+> [!IMPORTANT]
+>This is a **custom extension** with specific theme for the [IEPNB](https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-espanol-patrimonio-natural-biodiv.html). Use with: [`ckan-docker-iepnb`](https://github.com/OpenDataGIS/ckan-docker-iepnb) 
+
 
 ## Requirements
 
@@ -36,25 +56,25 @@ And modify ckan.ini accordingly:
 
 ## Improvements
 
-As ckan-iepnb tries a merge between ckan and iepnb styles, it could be fine if 
-the values used in css directives were stored in css variables, so ckan-iepnb 
-could recall them to overwrite ckan styles, and changes made by the design 
-team could be visibles without need of rewrite them in the extension.
+As `ckanext-iepnb` tries to merge ckan and iepnb styles, it might be good if the values used in 
+the values used in css directives were stored in css variables, so that `ckanext-iepnb` could recall them to override ckan 
+could invoke them to override ckan styles, and changes made by the design 
+team without having to rewrite them in the extension.
 
 Since header and footer are the block shared between ckan and the rest of the
-iepnb site, perhaps it could be a good improvement to enclose them in a class
-which lets iepnb styles take precedence over ckan ones into those blocks. This
-could be improved further having the styles affecting those blocks in its own
-css files, separated from the styles that affect the main block or the page as 
-a whole.
+iepnb site, perhaps it would be a good improvement to wrap them in a class that lets
+which lets iepnb styles take precedence over ckan styles in those blocks. This
+could be further improved by having the styles that affect those blocks in their own
+css files, separate from the styles that affect the main block or the page as a whole. 
+as a whole.
 
-This extension shows a summary of the publiser of the dataset in the left column.
-It shows the name of the publisher, its web and its email. If information about
-email or web site is missing, the extension omites just the concerning
-data. If the name is missing, the extension omites all the publisher information
+This extension displays a summary of the record's publisher in the left column.
+It shows the name of the publisher, their web and their email. If information about
+is missing, the extension will only display the relevant
+data. If the name is missing, the extension omits all information about the publisher.
 in the left column.
 
-The name of the publisher is a link to find all the datasets that share this
+The name of the publisher is a link to find all records that use that publisher.
 publisher.
 
 ## Installation
@@ -95,7 +115,7 @@ section, add:
 
 ```ini
 #Server to download menu and breadcrumbs. Demo assets server: https://github.com/OpenDataGIS/ckanext-iepnb_assets
-iepnb.server = https://some_server
+iepnb.server = https://iepnb.es
 
 #default breadcrumbs
 iepnb.breadcrumbs = [{"title":"Some literal","description":"Some description", "relative":"relative_path_from_iepnb.server"},...]
@@ -103,13 +123,13 @@ iepnb.breadcrumbs = [{"title":"Some literal","description":"Some description", "
 
 
 #relative path to download menu in iepnb.server. Demo path_menu in ckanext-iepnb_assets: /main.json
-iepnb.path_menu = /api/menu_items/main         
+iepnb.path_menu = /apis/menu_items/main         
 
 #number of popular tags to show at index page
-iepnb.popular_tags = 3
+iepnb.popular_tags = 6
 
 #relative path to download breadcrumbs definition. Will take precedence over iepnb.headcrumbs if defined
-iepnb.path_breadcrumbs = No_Default_Value
+iepnb.path_breadcrumbs = '[{"title":"Nuestros datos","description":"Nuestros datos", "relative":"/nuestros-datos"},{"title":"Catálogo de datos","description":"Catálogo de datos", "relative":"/catalogo"}]'
 	
 ```
 
@@ -147,7 +167,7 @@ To install ckanext-iepnb for development, activate your CKAN virtualenv and
 do:
 
 ```bash
-git clone https://github.com/TRAGSATEC/ckanext-iepnb.git
+git clone https://github.com/OpenDataGIS/ckanext-iepnb.git
 cd ckanext-iepnb
 python setup.py develop
 pip install -r dev-requirements.txt
@@ -160,14 +180,18 @@ Be sure that ckan user has write rights in the root dir of the extension
 reasons you can't do it, create a .pytest_cache dir at the root dir of the
 extension and make it writable by the ckan user.
 
-To run the tests, at ckan-iepnb root dir do:
+To run the tests, at `ckanext-iepnb` root dir do:
 
-`pip install -r dev-requirements.txt`
-`pytest --ckan-ini=test.ini`
+```bash
+pip install -r dev-requirements.txt
+pytest --ckan-ini=test.ini
+```
 
 To have a more verbose test, you can do:
 
-`pytest -vv --ckan-ini=test.ini`
+```bash
+pytest -vv --ckan-ini=test.ini`
+```
 
 This will give you a few deprecation warnings. You can ignore those about
 code outside the extension. Ckan needs a very specific versions of the python

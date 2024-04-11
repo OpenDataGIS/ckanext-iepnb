@@ -7,19 +7,11 @@
   {% block primary_content %}
       <div class="columna_derecha">
           <div class="bloque_columna_derecha">
-            <div class="contenedor_introduccion">
-              <div class="resaltado">
-              {%- set iepnb_url = "https://www.miteco.gob.es/" + request.environ.CKAN_LANG + "/biodiversidad/temas/inventarios-nacionales/inventario-espanol-patrimonio-natural-biodiv" %}
-                <p class="parrafo_catalogo_datos">{% trans %}El catálogo de datos abiertos del <a href="{{ iepnb_url }}" style="color: #333333;"><strong>Inventario Español del Patrimonio Natural y la Biodiversidad</strong></a> consta de una aplicación con tecnología CKAN que se utiliza para distribuir mapas, datos espaciales y metadatos y un <a href="{{ base_url }}/csw" style="color: #333333;"><strong>catálogo CSW</strong></a> (estándar OGC) para la publicación y descubrimiento de metadatos sobre recursos espaciales en la web.{% endtrans %}</p>
-              </div>
-            </div>
             <div class="contenedor_buscador_datos">
               <div class="columna_buscador layout__region--first">
                 <div class="w-form">
                   <form id="wf-form-Etiqueta-Form" name="wf-form-Etiqueta-Form" data-name="Etiqueta Form" method="get" aria-label="Etiqueta Form" action="{% url_for 'dataset.search' %}">
-                    <div class="titular_linea_verde">
-                      <h1 class="catalogo_datos_con_linea">{% trans %}Buscar{% endtrans %}</h1>
-                    </div>
+                    <h2 class="titular_linea_verde featured_element" >{{ _('Buscar') }}</h2>
                     <div class="contenedor_input_principal">
                       <input aria-label="{% block header_site_search_label %}{{ _('Buscar conjuntos de datos') }}{% endblock %}" type="text" class="input_principal" autofocus="true" maxlength="256" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}">
                        <button class="image"><img src="{{ h.url_for_static('img/icon_tab_lupa.svg') }}" loading="lazy" alt="Icono buscar" class="image-3"></button>
@@ -30,7 +22,7 @@
               <div class="columna_etiquetas layout__region--second">
                 <p class="titulo_etiquetas">{% trans %}Etiquetas populares{% endtrans %}</p>
                 <div class="contenedor_etiquetas">
-  {%- for tag in tags %}
+                {%- for tag in tags %}
                   <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
                   {%- endfor %}
                   {%- if (h.iepnb_popular_tags()-len_tags)>0 %}
@@ -45,6 +37,12 @@
                 </div>
               </div>
             </div>
+            <div class="contenedor_introduccion">
+            <div class="resaltado">
+            {%- set iepnb_url = "https://www.miteco.gob.es/" + request.environ.CKAN_LANG + "/biodiversidad/temas/inventarios-nacionales/inventario-espanol-patrimonio-natural-biodiv" %}
+              <p class="parrafo_catalogo_datos">{% trans %}El catálogo de datos abiertos del <a href="{{ iepnb_url }}" style="color: #333333;"><strong>Inventario Español del Patrimonio Natural y la Biodiversidad</strong></a> consta de una aplicación con tecnología CKAN que se utiliza para distribuir mapas, datos espaciales y metadatos y un <a href="{{ base_url }}/csw" style="color: #333333;"><strong>catálogo CSW</strong></a> (estándar OGC) para la publicación y descubrimiento de metadatos sobre recursos espaciales en la web.{% endtrans %}</p>
+            </div>
+          </div>
           <div class="bloque_organizaciones-grupos"> <!-- Inicio bloque organizaciones/grupos -->
             <!-- <div class="container"> --> 
               <div class="row row2">
@@ -62,4 +60,5 @@
              </div> 
           </div>
       </div>
+      
   {% endblock %}

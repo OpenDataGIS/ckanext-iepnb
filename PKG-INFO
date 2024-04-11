@@ -4,7 +4,7 @@ Version: 0.0.1
 Summary: Plantillas iepnb
 Home-page: https://github.com/OpenDataGIS/ckanext-iepnb_theme
 Author: Daniel Sanjurjo
-Author-email: dsanjurj@tragsa.es
+Author-email: iepnb@tragsa.es
 License: AGPL
 Description: [![Tests](https://github.com/OpenDataGIS/ckanext-iepnb_theme/workflows/Tests/badge.svg?branch=main)](https://github.com/OpenDataGIS/ckanext-iepnb_theme/actions)
         

@@ -196,6 +196,10 @@ msgstr ""
 msgid "Crear conjunto de datos"
 msgstr ""
 
-#: ckanext/iepnb/templates/package/base.html:24
-msgid "Crear conjunto de datos"
+#: ckanext/iepnb/templates/home/snippets/featured_organization.html:1
+msgid "Featured organizations"
+msgstr ""
+
+#: ckanext/iepnb/templates/home/snippets/group_organization.html:1
+msgid "Featured groups"
 msgstr ""

@@ -72,16 +72,19 @@
           stats.group_count == 1 else _('Grupos') }}</p>
       </a>
     </div>
+    {% block endpoints %}
+      {% snippet 'home/snippets/endpoints.html' %}
+    {% endblock %}
     <div class="titular_linea_verde">
       <h1 class="catalogo_datos_con_linea">{{ _('Datos Abiertos Enlazados') }}</h1>
     </div>
     <div class="contenedor_links">
       {% if h.iepnb_plugin_defined("sparql_interface") %}
-      <a href="{{ h.url_for('/sparql') }}" title="{{ _('Punto SPARQL') }}" class="menu_area_publica w-inline-block">
-        <img src="{{ h.url_for_static('img/icono_rdf.svg') }}" loading="lazy" alt="{{ _('Punto SPARQL') }}"
-          class="image-4">
-        <p class="text_menu_area_publica">{{ _('Punto SPARQL') }}</p>
-      </a>
+        <a href="{{ h.url_for('/sparql') }}" title="{{ _('Punto SPARQL') }}" class="menu_area_publica w-inline-block">
+            
+            <img src="{{ h.url_for_static('img/icono_rdf.svg') }}" loading="lazy" alt="{{ _('Punto SPARQL') }}" class="image-5-endpoint">
+            <p class="text_menu_endpoints">{{_('Punto SPARQL') }}</p> 
+        </a>
       {% endif %}
     </div>
   </div>
