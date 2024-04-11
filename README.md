@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <img src="ckanext/iepnb/public/img/iepnb-logo.png" style="height:100px">
+    <img src="ckanext/iepnb/public/img/iepnb-logo.png" style="width:250px">
   </picture>
 </p>
 <h1 align="center">ckanext-iepnb - Theming customisation</h1>
@@ -27,7 +27,6 @@
 
 
 ## Requirements
-
 Compatibility with core CKAN versions:
 
 | CKAN version    | Compatible?   |
@@ -36,26 +35,80 @@ Compatibility with core CKAN versions:
 | 2.9             | yes           |
 | 2.10            | not tested    |
 
-Suggested values:
 
-* "yes"
-* "not tested" - I can't think of a reason why it wouldn't work
-* "not yet" - there is an intention to get it working
-* "no"
+`ckanext-iepnb` needs the following extensions:
 
-This extension need the dcat extension:
-  '''
-  pip install -e git+https://github.com/ckan/ckanext-dcat.git#egg=ckanext-dcat
-  pip install -r ckanext-dcat/requirements.txt
-  '''
-  
-And modify ckan.ini accordingly:
- '''ini
- ckan.plugins = […] dcat dcat_rdf_harvester dcat_json_harvester dcat_json_interface
- '''
+* [`mjanez/ckanext-dcat`](https://github.com/mjanez/ckanext-dcat):
+  ````bash
+  pip install -e git+https://github.com/mjanez/ckanext-dcat.git@v1.6.0#egg=ckanext-dcat
+  pip install -r ./src/ckanext-dcat/requirements.txt
+  ````
+
+* [`ckanext-scheming`](https://github.com/ckan/ckanext-scheming):
+  ```bash
+  pip install -e git+https://github.com/ckan/ckanext-scheming.git@release-3.0.0#egg=ckanext-scheming
+  pip install -r ./src/ckanext-schemingdcat/requirements.txt
+  ```
+
+* [`ckanext-spatial`](https://github.com/ckan/ckanext-spatial):
+  ```bash
+  pip install -e git+https://github.com/ckan/ckanext-spatial.git@v2.1.1#egg=ckanext-spatial
+  pip install -r ./src/ckanext-spatial/requirements.txt
+  ```
+
+* [`mjanez/ckanext-schemingdcat`](https://github.com/mjanez/ckanext-schemingdcat):
+  ```bash
+  pip install -e git+https://github.com/mjanez/ckanext-schemingdcat.git@v3.0.0#egg=ckanext_schemingdcat
+  pip install -r ./src/ckanext-schemingdcat/requirements.txt
+  ```
+
+* [`opendatagis/ckanext-sparql_interface`](https://github.com/OpenDataGIS/ckanext-sparql_interface):
+  ```bash
+  pip install -e git+https://github.com/OpenDataGIS/ckanext-sparql_interface.git@2.0.2-iepnb#egg=ckanext-sparql_interface
+  pip install -r ./src/ckanext-sparql_interface/requirements.txt
+  ```
+
+And modify `ckan.ini`, You can use the default values:
+ ```ini
+ ckan.plugins = "... sparql_interface spatial_metadata spatial_query resource_proxy geo_view geojson_view wmts_view shp_view dcat schemingdcat_datasets schemingdcat_groups schemingdcat_organizations iepnb schemingdcat"
+
+# ckanext-dcat (dcat.base_uri = CKAN instance URL)
+ckanext.dcat.base_uri = https://.iepnb.es/catalogo
+ckanext.dcat.rdf.profiles = euro_dcat_ap_2
+ckanext.dcat.default_catalog_endpoint = /catalog.{_format}
+
+ # ckanext-scheming
+scheming.dataset_schemas = "ckanext.schemingdcat:schemas/geodcatap_es/geodcatap_es_dataset.yaml"
+scheming.group_schemas = "ckanext.schemingdcat:schemas/geodcatap_es/geodcatap_es_group.json"
+scheming.organization_schemas = "ckanext.schemingdcat:schemas/geodcatap_es/geodcatap_es_org.json"
+scheming.presets = "ckanext.schemingdcat:schemas/default_presets.json ckanext.fluent:presets.json"
+
+# ckanext-spatial (Solr Backend - solr8-spatial)
+ckanext.spatial.search_backend = solr-bbox
+ckan.spatial.srid = 3857
+ckanext.spatial.common_map.type = custom
+ckanext.spatial.common_map.custom_url = https://rts.larioja.org/mapa-base/rioja/{z}/{x}/{y}.png
+ckanext.spatial.common_map.attribution = "Map tiles by <a href=\"http://openstreetmap.org\">OpenStreetMap</a> (<a href=\"http://creativecommons.org/licenses/by-sa/3.0\">CC BY SA</a>)"
+
+# ckanext-geoview
+ckanext.geoview.geojson.max_file_size = 1024
+ckanext.geoview.ol_viewer.formats = "wms wfs geojson gml kml"
+ckanext.geoview.shp_viewer.srid = 3857
+ckanext.geoview.shp_viewer.encoding = UTF-8
+
+### ckanext-schemingdcat
+schemingdcat.facet_list = "tags groups theme theme_es dcat_type groups spatial_uri owner_org res_format frequency tag_uri conforms_to"
+schemingdcat.organization_custom_facets = True
+schemingdcat.group_custom_facets = True
+schemingdcat.geometadata_base_uri = https://.iepnb.es/csw
+
+# ckanext-sparql_interface
+ckanext.sparql.endpoint_url = https://datos.iepnb.es/sparql
+ckanext.sparql.hide_endpoint_url=False
+
+ ```
 
 ## Improvements
-
 As `ckanext-iepnb` tries to merge ckan and iepnb styles, it might be good if the values used in 
 the values used in css directives were stored in css variables, so that `ckanext-iepnb` could recall them to override ckan 
 could invoke them to override ckan styles, and changes made by the design 

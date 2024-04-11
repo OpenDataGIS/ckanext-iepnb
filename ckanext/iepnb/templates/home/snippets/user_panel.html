@@ -1,0 +1,50 @@
+<div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="navbar_menu_lateral w-nav">
+        <nav role="navigation" class="navbar_menu2 w-nav-menu">
+          <div class="home-left-col-container">
+            <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Ajustes del administrador') }}"
+              class="menu_area_privada w-inline-block">
+              <img src="{{ h.url_for_static('img/icono_administrador.svg') }}" loading="lazy" alt="Administrador"
+                class="image-4">
+              <p class="text_menu_area_privada">{{ _('Administrador') }}</p>
+            </a>
+          </div>
+          <div class="home-left-col-container">
+            <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" class="menu_area_privada w-inline-block"
+              title="{{ _('Ver perfil') }}">
+              <img src="{{ h.url_for_static('img/icono_datos.svg') }}" loading="lazy" alt="Tus datos" class="image-4">
+              <p class="text_menu_area_privada">{{ _('Tus datos') }}</p>
+            </a>
+          </div>
+          <div class="home-left-col-container">
+            <a href="{{ h.url_for('dashboard.index') }}" class="menu_area_privada w-inline-block"
+              title="{{ _(notifications_tooltip) }}">
+              <img src="{{ h.url_for_static('img/icono_panel_de_control.svg') }}" loading="lazy" alt="Panel de control"
+                class="image-4">
+              <p class="text_menu_area_privada">{{ _('Panel de control') }}</p>
+            </a>
+          </div>
+          <div class="home-left-col-container">
+            <a href="{{ h.url_for('/harvest') }}" class="menu_area_privada w-inline-block" title="{{ _('harvest') }}">
+              <img src="{{ h.url_for_static('img/icono_harvest.svg') }}" loading="lazy" alt="Harvest" class="image-4">
+              <p class="text_menu_area_privada">{{ _('Harvest') }}</p>
+            </a>
+          </div>
+          <div class="home-left-col-container">
+            <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Ajustes de perfil') }}"
+              class="menu_area_privada w-inline-block">
+              <img src="{{ h.url_for_static('img/icono_perfil.svg') }}" loading="lazy" alt="Ajustes de perfil"
+                class="image-4">
+              <p class="text_menu_area_privada">{{ _('Ajustes de perfil') }}</p>
+            </a>
+          </div>
+          <div class="home-left-col-container">
+            <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Cerrar sesión') }}"
+              class="menu_area_privada w-inline-block">
+              <img src="{{ h.url_for_static('img/icono_salir.svg') }}" loading="lazy" alt="Cerrar sesión" class="image-4">
+              <p class="text_menu_area_privada">{{ _('Cerrar sesión') }}</p>
+            </a>
+          </div>
+        </nav>
+        <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-1"></div>
+      </div>
