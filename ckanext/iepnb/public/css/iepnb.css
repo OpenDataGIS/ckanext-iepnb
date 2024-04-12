@@ -1148,8 +1148,8 @@ a.tag:hover {
 }
 
 .module-image img {
-    max-width: 75px; /* Asegúrate de que la imagen no sea más alta que el contenedor del título */
-    max-height: 75px;
+    max-width: 70px; 
+    max-height: 70px;
     vertical-align: middle;
 }
 .module-heading-featured {
