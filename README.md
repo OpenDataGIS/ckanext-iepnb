@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <img src="ckanext/iepnb/public/img/iepnb-logo.png" style="width:250px">
+    <img src="ckanext/iepnb/public/img/iepnb-logo.png" style="height:100px">
   </picture>
 </p>
 <h1 align="center">ckanext-iepnb - Theming customisation</h1>
