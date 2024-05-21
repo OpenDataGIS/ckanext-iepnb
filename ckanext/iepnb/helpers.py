@@ -43,7 +43,7 @@ def iepnb_breadcrumbs(lang = ''):
     Si la ruta no está definida, toma por defecto el valor indicado en iepnb.breadcrumbs
     """
     respuesta = iepnb_config.default_breadcrumbs
-    logger.debug("Preparada la respuesta "+__name__)
+    #logger.debug("Preparada la respuesta "+__name__)
     
     if iepnb_config.path_breadcrumbs:
         logger.debug("path_breadcrumbs: " + iepnb_config.path_breadcrumbs)
@@ -96,7 +96,7 @@ def iepnb_locale_default():
 
 @helper    
 def iepnb_popular_tags():
-    """Devuelve el número de etiquetas populares que se mostrarán, según iepnb.populat_tags
+    """Devuelve el número de etiquetas populares que se mostrarán, según iepnb.popular_tags
     """
     
     return iepnb_config.popular_tags
