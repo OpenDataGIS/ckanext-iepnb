@@ -199,3 +199,958 @@ msgstr "Organizaciones destacadas"
 #: ckanext/iepnb/templates/home/snippets/group_organization.html:1
 msgid "Featured groups"
 msgstr "Grupos destacados"
+
+# IEPNB Keywords - Schema field_name: keywords_iepnb
+msgid "accidentes"
+msgstr "accidentes"
+
+msgid "acidificacion"
+msgstr "acidificación"
+
+msgid "acuicultura"
+msgstr "acuicultura"
+
+msgid "adaptabilidad"
+msgstr "adaptabilidad"
+
+msgid "adn"
+msgstr "ADN"
+
+msgid "afecciones"
+msgstr "afecciones"
+
+msgid "agricultura"
+msgstr "agricultura"
+
+msgid "aguas_exteriores"
+msgstr "aguas exteriores"
+
+msgid "aguas_interiores"
+msgstr "aguas interiores"
+
+msgid "aguas_residuales"
+msgstr "aguas residuales"
+
+msgid "aire"
+msgstr "aire"
+
+msgid "alertas"
+msgstr "alertas"
+
+msgid "alimentacion"
+msgstr "alimentación"
+
+msgid "aloctonas"
+msgstr "alóctonas"
+
+msgid "amenazas"
+msgstr "amenazas"
+
+msgid "analisis_espacial"
+msgstr "análisis espacial"
+
+msgid "anidacion"
+msgstr "anidación"
+
+msgid "anillamiento"
+msgstr "anillamiento"
+
+msgid "apicultura"
+msgstr "apicultura"
+
+msgid "areas_de_importancia_ecologica"
+msgstr "áreas de importancia ecológica"
+
+msgid "arrecifes"
+msgstr "arrecifes"
+
+msgid "asentamiento_larval"
+msgstr "asentamiento larval"
+
+msgid "avistamientos"
+msgstr "avistamientos"
+
+msgid "bancos_de_arena"
+msgstr "bancos de arena"
+
+msgid "bentos"
+msgstr "bentos"
+
+msgid "bioeconomia"
+msgstr "bioeconomía"
+
+msgid "biogeografia"
+msgstr "biogeografía"
+
+msgid "bioindicadores"
+msgstr "bioindicadores"
+
+msgid "bioinformatica"
+msgstr "bioinformática"
+
+msgid "biomarcadores"
+msgstr "biomarcadores"
+
+msgid "biomasa"
+msgstr "biomasa"
+
+msgid "cambio_climatico"
+msgstr "cambio climático"
+
+msgid "cañon_submarino"
+msgstr "cañón submarino"
+
+msgid "capturas_accidentales"
+msgstr "capturas accidentales"
+
+msgid "cartografia"
+msgstr "cartografía"
+
+msgid "caza"
+msgstr "caza"
+
+msgid "censo"
+msgstr "censo"
+
+msgid "chimeneas_submarinas"
+msgstr "chimeneas submarinas"
+
+msgid "ciclo_vegetativo"
+msgstr "ciclo vegetativo"
+
+msgid "clima"
+msgstr "clima"
+
+msgid "colision"
+msgstr "colisión"
+
+msgid "columnas_marinas"
+msgstr "columnas marinas"
+
+msgid "comercio_ilegal"
+msgstr "comercio ilegal"
+
+msgid "conducta_alimentaria"
+msgstr "conducta alimentaria"
+
+msgid "conservacion_ex_situ"
+msgstr "conservación ex situ"
+
+msgid "conservacion_in_situ"
+msgstr "conservación in situ"
+
+msgid "contaminacion"
+msgstr "contaminación"
+
+msgid "crecimiento"
+msgstr "crecimiento"
+
+msgid "cria_de_animales"
+msgstr "cría de animales"
+
+msgid "criterios_de_planificacion"
+msgstr "criterios de planificación"
+
+msgid "criterios_de_seleccion"
+msgstr "criterios de selección"
+
+msgid "cuevas"
+msgstr "cuevas"
+
+msgid "cultivos"
+msgstr "cultivos"
+
+msgid "custodia_del_territorio"
+msgstr "custodia del territorio"
+
+msgid "daños"
+msgstr "daños"
+
+msgid "declive"
+msgstr "declive"
+
+msgid "defensa"
+msgstr "defensa"
+
+msgid "degradacion"
+msgstr "degradación"
+
+msgid "demarcacion_hidrografica"
+msgstr "demarcación hidrográfica"
+
+msgid "demografia"
+msgstr "demografía"
+
+msgid "densidad"
+msgstr "densidad"
+
+msgid "desalacion"
+msgstr "desalación"
+
+msgid "desarrollo_sostenible"
+msgstr "desarrollo sostenible"
+
+msgid "desertificacion"
+msgstr "desertificación"
+
+msgid "detritus"
+msgstr "detritus"
+
+msgid "diagnostico_ambiental"
+msgstr "diagnóstico ambiental"
+
+msgid "diferenciacion_genetica"
+msgstr "diferenciación genética"
+
+msgid "dinamica_poblacional"
+msgstr "dinámica poblacional"
+
+msgid "dioxico_de_carbono_co2"
+msgstr "dióxido de carbono (CO₂)"
+
+msgid "dispersion_del_flujo_de_genes"
+msgstr "dispersión del flujo de genes"
+
+msgid "dispositivos"
+msgstr "dispositivos"
+
+msgid "distribucion"
+msgstr "distribución"
+
+msgid "diversidad"
+msgstr "diversidad"
+
+msgid "diversidad_genetica"
+msgstr "diversidad genética"
+
+msgid "ecologia"
+msgstr "ecología"
+
+msgid "economia"
+msgstr "economía"
+
+msgid "eficiencia"
+msgstr "eficiencia"
+
+msgid "embarcaciones"
+msgstr "embarcaciones"
+
+msgid "energias_renovables"
+msgstr "energías renovables"
+
+msgid "enfermedades"
+msgstr "enfermedades"
+
+msgid "enmallamiento"
+msgstr "enmallamiento"
+
+msgid "epizootia"
+msgstr "epizootía"
+
+msgid "erosion"
+msgstr "erosión"
+
+msgid "especies_migratorias"
+msgstr "especies migratorias"
+
+msgid "especies_protegidas"
+msgstr "especies protegidas"
+
+msgid "estres_oxidativo"
+msgstr "estrés oxidativo"
+
+msgid "eutrofizacion"
+msgstr "eutrofización"
+
+msgid "evolucion_morfologica"
+msgstr "evolución morfológica"
+
+msgid "factores_de_estres"
+msgstr "factores de estrés"
+
+msgid "fenologia"
+msgstr "fenología"
+
+msgid "fisologia"
+msgstr "fisiología"
+
+msgid "floracion"
+msgstr "floración"
+
+msgid "formacion_biogenetica"
+msgstr "formación biogénica"
+
+msgid "fotosintesis"
+msgstr "fotosíntesis"
+
+msgid "fragmentacion"
+msgstr "fragmentacion"
+
+msgid "ganaderia"
+msgstr "ganadería"
+
+msgid "genetica"
+msgstr "genética"
+
+msgid "geodiversidad"
+msgstr "geodiversidad"
+
+msgid "geologia"
+msgstr "geología"
+
+msgid "gestacion"
+msgstr "gestación"
+
+msgid "gestion_costera"
+msgstr "gestión costera"
+
+msgid "gestion_de_areas_marinas"
+msgstr "gestión de áreas marinas"
+
+msgid "gestion_forestal"
+msgstr "gestión forestal"
+
+msgid "gestion_sostenible"
+msgstr "gestión sostenible"
+
+msgid "gradiente_termico"
+msgstr "gradiente térmico"
+
+msgid "habitats"
+msgstr "hábitats"
+
+msgid "habitats_amenazados"
+msgstr "hábitats amenazados"
+
+msgid "herbivoria"
+msgstr "herbivoría"
+
+msgid "hidrodinamicas"
+msgstr "hidrodinámicas"
+
+msgid "hipoxia"
+msgstr "hipoxia"
+
+msgid "humedales"
+msgstr "humedales"
+
+msgid "impacto_ambiental"
+msgstr "Impacto ambiental"
+
+msgid "impacto_humano"
+msgstr "impacto humano"
+
+msgid "impacto_socioeconomico"
+msgstr "impacto socieconómico"
+
+msgid "incendios"
+msgstr "incendios"
+
+msgid "infracciones"
+msgstr "infracciones"
+
+msgid "infraestructuras"
+msgstr "infraestructuras"
+
+msgid "inundacion"
+msgstr "Inundación"
+
+msgid "invasiones"
+msgstr "invasiones"
+
+msgid "invernada"
+msgstr "invernada"
+
+msgid "investigacion"
+msgstr "investigación"
+
+msgid "irradiacion"
+msgstr "irradiación"
+
+msgid "jaulas"
+msgstr "jaulas"
+
+msgid "legislacion"
+msgstr "legislación"
+
+msgid "lesiones"
+msgstr "lesiones"
+
+msgid "libro_rojo"
+msgstr "libro rojo"
+
+msgid "lista_roja"
+msgstr "lista roja"
+
+msgid "luz"
+msgstr "luz"
+
+msgid "mapa"
+msgstr "mapa"
+
+msgid "marcaje"
+msgstr "marcaje"
+
+msgid "medicion"
+msgstr "medición"
+
+msgid "medidas"
+msgstr "medidas"
+
+msgid "medidas_de_actuacion"
+msgstr "medidas de actuación"
+
+msgid "medidas_de_gestion"
+msgstr "medidas de gestión"
+
+msgid "mesocosmos"
+msgstr "mesocosmos"
+
+msgid "metabolismo"
+msgstr "metabolismo"
+
+msgid "migracion"
+msgstr "migración"
+
+msgid "mineria"
+msgstr "minería"
+
+msgid "mitigacion"
+msgstr "mitigación"
+
+msgid "monitorizacion"
+msgstr "monitorización"
+
+msgid "montañas"
+msgstr "montañas"
+
+msgid "montes_submarinos"
+msgstr "montes submarinos"
+
+msgid "morfologia"
+msgstr "morfología"
+
+msgid "mortalidad"
+msgstr "mortalidad"
+
+msgid "muestreo"
+msgstr "muestreo"
+
+msgid "nacimientos"
+msgstr "nacimientos"
+
+msgid "navegacion"
+msgstr "navegación"
+
+msgid "nidificacion"
+msgstr "nidificación"
+
+msgid "nutrientes"
+msgstr "nutrientes"
+
+msgid "observacion"
+msgstr "observación"
+
+msgid "oligotrofia"
+msgstr "oligotrofía"
+
+msgid "organismos"
+msgstr "organismos"
+
+msgid "paisajes"
+msgstr "paisajes"
+
+msgid "parajes"
+msgstr "parajes"
+
+msgid "parasitos"
+msgstr "parásitos"
+
+msgid "particulas"
+msgstr "partículas"
+
+msgid "pastoreo"
+msgstr "pastoreo"
+
+msgid "patologia"
+msgstr "patología"
+
+msgid "pesca"
+msgstr "pesca"
+
+msgid "piscicultura"
+msgstr "piscicultura"
+
+msgid "plan_de_proteccion"
+msgstr "plan de protección"
+
+msgid "plan_de_recuperacion"
+msgstr "plan de recuperación"
+
+msgid "planes_de_accion"
+msgstr "planes de acción"
+
+msgid "planes_de_conservacion"
+msgstr "planes de conservación"
+
+msgid "planes_de_gestion"
+msgstr "planes de gestión"
+
+msgid "plantas_desalinizadoras"
+msgstr "plantas desalinizadoras"
+
+msgid "plasticos"
+msgstr "plásticos"
+
+msgid "playas"
+msgstr "playas"
+
+msgid "poblacion"
+msgstr "población"
+
+msgid "polinizadores"
+msgstr "polinizadores"
+
+msgid "precipitaciones"
+msgstr "precipitaciones"
+
+msgid "presas"
+msgstr "presas"
+
+msgid "presiones_y_amenazas"
+msgstr "presiones y amenazas"
+
+msgid "produccion"
+msgstr "producción"
+
+msgid "prospecciones"
+msgstr "prospecciones"
+
+msgid "proteccion"
+msgstr "protección"
+
+msgid "puertos"
+msgstr "puertos"
+
+msgid "radiacion_uv"
+msgstr "radiación UV"
+
+msgid "rasa_mareal"
+msgstr "rasa mareal"
+
+msgid "reciclaje"
+msgstr "reciclaje"
+
+msgid "red_hidrografica"
+msgstr "red hidrográfica"
+
+msgid "redes"
+msgstr "redes"
+
+msgid "reforestacion"
+msgstr "reforestación"
+
+msgid "regeneracion"
+msgstr "regeneración"
+
+msgid "reintroduccion"
+msgstr "reintroducción"
+
+msgid "renaturalizacion"
+msgstr "renaturalización"
+
+msgid "reproduccion"
+msgstr "reproducción"
+
+msgid "reproduccion_clonal"
+msgstr "reproducción clonal"
+
+msgid "rescates"
+msgstr "rescates"
+
+msgid "reservas"
+msgstr "reservas"
+
+msgid "residuos"
+msgstr "residuos"
+
+msgid "restauracion"
+msgstr "restauración"
+
+msgid "rios"
+msgstr "ríos"
+
+msgid "salinizacion"
+msgstr "salinización"
+
+msgid "sanciones"
+msgstr "sanciones"
+
+msgid "secuencias_deposicionales"
+msgstr "secuencias deposicionales"
+
+msgid "sedimentacion"
+msgstr "sedimentación"
+
+msgid "seguimiento"
+msgstr "seguimiento"
+
+msgid "sensores_remotos_teledeteccion"
+msgstr "sensores remotos-teledetección"
+
+msgid "sequia"
+msgstr "sequía"
+
+msgid "silvicultura"
+msgstr "silvicultura"
+
+msgid "sismica"
+msgstr "sísmica"
+
+msgid "soluciones_tecnicas"
+msgstr "soluciones técnicas"
+
+msgid "sostenibilidad"
+msgstr "sostenibilidad"
+
+msgid "suelo"
+msgstr "suelo"
+
+msgid "supervivencia"
+msgstr "supervivencia"
+
+msgid "talud_continental"
+msgstr "talud continental"
+
+msgid "tamaños"
+msgstr "tamaños"
+
+msgid "tasas"
+msgstr "tasas"
+
+msgid "tecnologia"
+msgstr "tecnología"
+
+msgid "tejidos"
+msgstr "tejidos"
+
+msgid "temperatura"
+msgstr "temperatura"
+
+msgid "tipos_de_muestreo"
+msgstr "tipos de muestreo"
+
+msgid "trafico_maritimo"
+msgstr "tráfico marítimo"
+
+msgid "varamientos"
+msgstr "varamientos"
+
+msgid "venenos"
+msgstr "venenos"
+
+msgid "vertebrados"
+msgstr "vertebrados"
+
+msgid "vertidos"
+msgstr "vertidos"
+
+msgid "vias_pecuarias"
+msgstr "vías pecuarias"
+
+msgid "vigilancia"
+msgstr "vigilancia"
+
+msgid "virus"
+msgstr "virus"
+
+msgid "vulnerabilidad"
+msgstr "vulnerabilidad"
+
+msgid "aguas_marinas_someras_permanentes"
+msgstr "Aguas marinas someras permanentes"
+
+msgid "algas"
+msgstr "Algas"
+
+msgid "anfibios"
+msgstr "Anfibios"
+
+msgid "angiospermas"
+msgstr "Angiospermas"
+
+msgid "area_marina_protegida_ospar"
+msgstr "Área Marina Protegida (OSPAR)"
+
+msgid "areas_de_almacenamiento_de_agua"
+msgstr "Áreas de almacenamiento de agua"
+
+msgid "areas_de_tratamiento_de_aguas_residuales"
+msgstr "Áreas de tratamiento de aguas residuales"
+
+msgid "arrecifes_de_coral"
+msgstr "Arrecifes de coral"
+
+msgid "ascidios"
+msgstr "Ascidios"
+
+msgid "aves"
+msgstr "Aves"
+
+msgid "bosques"
+msgstr "Bosques"
+
+msgid "braquiopodos"
+msgstr "Braquiópodos"
+
+msgid "brezales_y_matorrales_de_zona_templada"
+msgstr "Brezales y matorrales de zona templada"
+
+msgid "canales_y_canales_de_drenaje_o_zanjas"
+msgstr "Canales y canales de drenaje o zanjas"
+
+msgid "cetaceos"
+msgstr "Cetáceos"
+
+msgid "corales"
+msgstr "Corales"
+
+msgid "costas_marinas_rocosas"
+msgstr "Costas marinas rocosas"
+
+msgid "cromistas_y_bacterias"
+msgstr "Cromistas y bacterias"
+
+msgid "crustaceos"
+msgstr "Crustáceos"
+
+msgid "deltas_interiores"
+msgstr "Deltas interiores"
+
+msgid "dunas_maritimas_y_continentales"
+msgstr "Dunas marítimas y continentales"
+
+msgid "ecosistemas"
+msgstr "Ecosistemas"
+
+msgid "epifitos"
+msgstr "Epífitos"
+
+msgid "equinodermos"
+msgstr "Equinodermos"
+
+msgid "espacios_naturales_protegidos_enp"
+msgstr "Espacios Naturales Protegidos (ENP)"
+
+msgid "espacios_protegidos"
+msgstr "Espacios Protegidos"
+
+msgid "especies_silvestres"
+msgstr "Especies silvestres"
+
+msgid "estanques"
+msgstr "Estanques (granjas y albercas, pequeños tanques de almacenamiento, o con área de menos de 8 ha)"
+
+msgid "estanques_de_acuicultura"
+msgstr "Estanques de acuicultura"
+
+msgid "estuarios"
+msgstr "Estuarios"
+
+msgid "excavaciones"
+msgstr "Excavaciones"
+
+msgid "fanerogamas"
+msgstr "Fanerógamas"
+
+msgid "forestal"
+msgstr "Forestal"
+
+msgid "formaciones_herbosas_naturales_y_seminaturales"
+msgstr "Formaciones herbosas naturales y seminaturales"
+
+msgid "geoparque"
+msgstr "Geoparque"
+
+msgid "habitat_rocosos_y_cuevas"
+msgstr "Hábitat rocosos y cuevas"
+
+msgid "habitats_costeros_y_vegetacion_halofiticas"
+msgstr "Hábitats costeros y vegetación halófíticas"
+
+msgid "habitats_de_agua_dulce"
+msgstr "Hábitats de agua dulce"
+
+msgid "hongos"
+msgstr "Hongos"
+
+msgid "humedal_de_importancia_internacional_ramsar"
+msgstr "Humedal de Importancia Internacional (RAMSAR)"
+
+msgid "humedales_alpinos_de_montaña"
+msgstr "Humedales alpinos/de montaña"
+
+msgid "humedales_arbolados_intermareales"
+msgstr "Humedales arbolados intermareales"
+
+msgid "humedales_artificiales"
+msgstr "Humedales artificiales"
+
+msgid "humedales_boscosos_de_agua_dulce"
+msgstr "Humedales boscosos de agua dulce"
+
+msgid "humedales_continentales"
+msgstr "Humedales continentales"
+
+msgid "humedales_de_la_tundra"
+msgstr "Humedales de la tundra"
+
+msgid "humedales_geotermicos"
+msgstr "Humedales geotérmicos"
+
+msgid "humedales_marino_costeros"
+msgstr "Humedales marino/costeros"
+
+msgid "intermareales_de_lodo_arena_o_salares"
+msgstr "Intermareales de lodo, arena o salares"
+
+msgid "invertebrados"
+msgstr "Invertebrados"
+
+msgid "karst_y_otros_sistemas_hidricos_subterraneos_artificiales"
+msgstr "Karst y otros sistemas hídricos subterráneos artificiales"
+
+msgid "lagos_estacionales_intermitentes_de_agua_dulce"
+msgstr "Lagos estacionales/intermitentes de agua dulce"
+
+msgid "lagos_permanentes_de_agua_dulce"
+msgstr "Lagos permanentes de agua dulce"
+
+msgid "lagos_permanentes_salinos_salobres_alcalinos"
+msgstr "Lagos permanentes salinos/salobres/alcalinos"
+
+msgid "lagos_y_zonas_inundadas_estacionales_intermitentes_salinos_salobres_alcalinos"
+msgstr "Lagos y zonas inundadas estacionales/intermitentes salinos/salobres/alcalinos"
+
+msgid "lagunas_costeras_de_agua_dulce"
+msgstr "Lagunas costeras de agua dulce"
+
+msgid "lagunas_costeras_salobres_saladas"
+msgstr "Lagunas costeras salobres/saladas"
+
+msgid "lechos_marinos_submareales"
+msgstr "Lechos marinos submareales"
+
+msgid "lugar_de_interes_comunitario_lic"
+msgstr "Lugar de Interés Comunitario (LIC)"
+
+msgid "macroalgas"
+msgstr "Macroalgas"
+
+msgid "mamiferos"
+msgstr "Mamíferos"
+
+msgid "manantiales_de_agua_dulce,_oasis"
+msgstr "Manantiales de agua dulce, oasis"
+
+msgid "marino"
+msgstr "Marino"
+
+msgid "marino_y_terrestre"
+msgstr "Marino y terrestre"
+
+msgid "matorrales_esclerofilos"
+msgstr "Matorrales esclerófilos"
+
+msgid "medusas"
+msgstr "Medusas"
+
+msgid "moluscos"
+msgstr "Moluscos"
+
+msgid "pantanos_con_vegetacion_arbustiva"
+msgstr "Pantanos con vegetación arbustiva"
+
+msgid "pantanos_y_esteros"
+msgstr "Pantanos y esteros"
+
+msgid "pantanos_esteros_charcas_estacionales_intermitentes_de_agua_dulce_sobre_suelos_inorganicos"
+msgstr "Pantanos/esteros/charcas estacionales/intermitentes de agua dulce sobre suelos inorgánicos"
+
+msgid "pantanos_esteros_charcas_estacionales_intermitentes_salinos_salobres_alcalinos"
+msgstr "Pantanos/esteros/charcas estacionales/intermitentes salinos/salobres/alcalinos"
+
+msgid "pantanos_esteros_charcas_permanentes_de_agua_dulce"
+msgstr "Pantanos/esteros/charcas permanentes de agua dulce"
+
+msgid "pantanos_esteros_charcas_permanentes_salinas_salobres_alcalinos"
+msgstr "Pantanos/esteros/charcas permanentes salinas/salobres/alcalinos"
+
+msgid "peces"
+msgstr "Peces"
+
+msgid "plantas_no_vasculares"
+msgstr "Plantas no vasculares"
+
+msgid "plantas_vasculares"
+msgstr "Plantas vasculares"
+
+msgid "playas_de_arena_o_guijarros"
+msgstr "Playas de arena o guijarros"
+
+msgid "recursos_geneticos"
+msgstr "Recursos genéticos"
+
+msgid "red_natura_2000"
+msgstr "Red Natura 2000"
+
+msgid "reptiles"
+msgstr "Reptiles"
+
+msgid "reserva_de_la_biosfera_mab"
+msgstr "Reserva de la Biosfera (MAB)"
+
+msgid "rios__arroyos_permanentes"
+msgstr "Ríos /arroyos permanentes"
+
+msgid "rios_arroyos_estacionales_intermitentes_irregulares"
+msgstr "Ríos/arroyos estacionales/intermitentes/irregulares"
+
+msgid "sistemas_karsticos_y_otros_sistemas_hidricos_subterraneos"
+msgstr "Sistemas kársticos y otros sistemas hídricos subterráneos"
+
+msgid "sitio_natural_de_la_lista_de_patrimonio_mundial_unesco"
+msgstr "Sitio Natural de la Lista de Patrimonio Mundial (UNESCO)"
+
+msgid "suelos"
+msgstr "Suelos"
+
+msgid "terrestre"
+msgstr "Terrestre"
+
+msgid "tierras_agricolas_inundadas_estacionalmente"
+msgstr "Tierras agrícolas inundadas estacionalmente"
+
+msgid "tierras_de_regadio"
+msgstr "Tierras de regadío"
+
+msgid "turberas_altas._turberas_bajas_y_areas_pantanosas"
+msgstr "Turberas altas. turberas bajas (Fens y Mires) y áreas pantanosas"
+
+msgid "turberas_arboladas"
+msgstr "Turberas arboladas"
+
+msgid "turberas_no_arboladas"
+msgstr "Turberas no arboladas"
+
+msgid "zona_especialmente_protegida_de_importancia_para_el_mediterraneo_zepim"
+msgstr "Zona Especialmente Protegida de Importancia para el Mediterráneo (ZEPIM)"
+
+msgid "zonas_de_especial_conservacion_zec"
+msgstr "Zonas de Especial Conservación (ZEC)"
+
+msgid "zonas_de_especial_proteccion_para_las_aves_zepa"
+msgstr "Zonas de Especial Protección para las Aves (ZEPA)"
+
+msgid "zonas_de_explotacion_de_sal"
+msgstr "Zonas de explotación de sal"
