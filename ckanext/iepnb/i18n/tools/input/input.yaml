@@ -1,0 +1,971 @@
+  field_name: keywords_iepnb
+  label: 
+    en: IEPNB Keywords
+    es: Palabras clave del IEPNB
+  preset: multiple_choice_custom_tag
+  display_property: dct:subject
+  select_size: 10
+  sorted_choices: True
+  help_text:
+    en: 'eg.: Labels from IEPNB Vocab.'
+    es: 'ej: Etiquetas del vocabulario del IEPNB.'
+  help_allow_html: True
+  choices:
+  - label:
+        es: accidentes
+    value: accidentes
+  - label:
+        es: acidificación
+    value: acidificacion
+  - label:
+        es: acuicultura
+    value: acuicultura
+  - label:
+        es: adaptabilidad
+    value: adaptabilidad
+  - label:
+        es: ADN
+    value: adn
+  - label:
+        es: afecciones
+    value: afecciones
+  - label:
+        es: agricultura
+    value: agricultura
+  - label:
+        es: aguas exteriores
+    value: aguas_exteriores
+  - label:
+        es: aguas interiores
+    value: aguas_interiores
+  - label:
+        es: aguas residuales
+    value: aguas_residuales
+  - label:
+        es: aire
+    value: aire
+  - label:
+        es: alertas
+    value: alertas
+  - label:
+        es: alimentación
+    value: alimentacion
+  - label:
+        es: alóctonas
+    value: aloctonas
+  - label:
+        es: amenazas
+    value: amenazas
+  - label:
+        es: análisis espacial
+    value: analisis_espacial
+  - label:
+        es: anidación
+    value: anidacion
+  - label:
+        es: anillamiento
+    value: anillamiento
+  - label:
+        es: apicultura
+    value: apicultura
+  - label:
+        es: áreas de importancia ecológica
+    value: areas_de_importancia_ecologica
+  - label:
+        es: arrecifes
+    value: arrecifes
+  - label:
+        es: asentamiento larval
+    value: asentamiento_larval
+  - label:
+        es: avistamientos
+    value: avistamientos
+  - label:
+        es: bancos de arena
+    value: bancos_de_arena
+  - label:
+        es: bentos
+    value: bentos
+  - label:
+        es: bioeconomía
+    value: bioeconomia
+  - label:
+        es: biogeografía
+    value: biogeografia
+  - label:
+        es: bioindicadores
+    value: bioindicadores
+  - label:
+        es: bioinformática
+    value: bioinformatica
+  - label:
+        es: biomarcadores
+    value: biomarcadores
+  - label:
+        es: biomasa
+    value: biomasa
+  - label:
+        es: cambio climático
+    value: cambio_climatico
+  - label:
+        es: cañón submarino
+    value: cañon_submarino
+  - label:
+        es: capturas accidentales
+    value: capturas_accidentales
+  - label:
+        es: cartografía
+    value: cartografia
+  - label:
+        es: caza
+    value: caza
+  - label:
+        es: censo
+    value: censo
+  - label:
+        es: chimeneas submarinas
+    value: chimeneas_submarinas
+  - label:
+        es: ciclo vegetativo
+    value: ciclo_vegetativo
+  - label:
+        es: clima
+    value: clima
+  - label:
+        es: colisión
+    value: colision
+  - label:
+        es: columnas marinas
+    value: columnas_marinas
+  - label:
+        es: comercio ilegal
+    value: comercio_ilegal
+  - label:
+        es: conducta alimentaria
+    value: conducta_alimentaria
+  - label:
+        es: conservación ex situ
+    value: conservacion_ex_situ
+  - label:
+        es: conservación in situ
+    value: conservacion_in_situ
+  - label:
+        es: contaminación
+    value: contaminacion
+  - label:
+        es: crecimiento
+    value: crecimiento
+  - label:
+        es: cría de animales
+    value: cria_de_animales
+  - label:
+        es: criterios de planificación
+    value: criterios_de_planificacion
+  - label:
+        es: criterios de selección
+    value: criterios_de_seleccion
+  - label:
+        es: cuevas
+    value: cuevas
+  - label:
+        es: cultivos
+    value: cultivos
+  - label:
+        es: custodia del territorio
+    value: custodia_del_territorio
+  - label:
+        es: daños
+    value: daños
+  - label:
+        es: declive
+    value: declive
+  - label:
+        es: defensa
+    value: defensa
+  - label:
+        es: degradación
+    value: degradacion
+  - label:
+        es: demarcación hidrográfica
+    value: demarcacion_hidrografica
+  - label:
+        es: demografía
+    value: demografia
+  - label:
+        es: densidad
+    value: densidad
+  - label:
+        es: desalación
+    value: desalacion
+  - label:
+        es: desarrollo sostenible
+    value: desarrollo_sostenible
+  - label:
+        es: desertificación
+    value: desertificacion
+  - label:
+        es: detritus
+    value: detritus
+  - label:
+        es: diagnóstico ambiental
+    value: diagnostico_ambiental
+  - label:
+        es: diferenciación genética
+    value: diferenciacion_genetica
+  - label:
+        es: dinámica poblacional
+    value: dinamica_poblacional
+  - label:
+        es: dióxido de carbono (CO₂)
+    value: dioxico_de_carbono_co2
+  - label:
+        es: dispersión del flujo de genes
+    value: dispersion_del_flujo_de_genes
+  - label:
+        es: dispositivos
+    value: dispositivos
+  - label:
+        es: distribución
+    value: distribucion
+  - label:
+        es: diversidad
+    value: diversidad
+  - label:
+        es: diversidad genética
+    value: diversidad_genetica
+  - label:
+        es: ecología
+    value: ecologia
+  - label:
+        es: economía
+    value: economia
+  - label:
+        es: eficiencia 
+    value: eficiencia
+  - label:
+        es: embarcaciones
+    value: embarcaciones
+  - label:
+        es: energías renovables
+    value: energias_renovables
+  - label:
+        es: enfermedades
+    value: enfermedades
+  - label:
+        es: enmallamiento
+    value: enmallamiento
+  - label:
+        es: epizootía
+    value: epizootia
+  - label:
+        es: erosión
+    value: erosion
+  - label:
+        es: especies migratorias
+    value: especies_migratorias
+  - label:
+        es: especies protegidas
+    value: especies_protegidas
+  - label:
+        es: estrés oxidativo
+    value: estres_oxidativo
+  - label:
+        es: eutrofización
+    value: eutrofizacion
+  - label:
+        es: evolución morfológica
+    value: evolucion_morfologica
+  - label:
+        es: factores de estrés
+    value: factores_de_estres
+  - label:
+        es: fenología
+    value: fenologia
+  - label:
+        es: fisiología
+    value: fisologia
+  - label:
+        es: floración
+    value: floracion
+  - label:
+        es: formación biogénica
+    value: formacion_biogenetica
+  - label:
+        es: fotosíntesis
+    value: fotosintesis
+  - label:
+        es: fragmentacion
+    value: fragmentacion
+  - label:
+        es: ganadería
+    value: ganaderia
+  - label:
+        es: genética
+    value: genetica
+  - label:
+        es: geodiversidad
+    value: geodiversidad
+  - label:
+        es: geología
+    value: geologia
+  - label:
+        es: gestación
+    value: gestacion
+  - label:
+        es: gestión costera
+    value: gestion_costera
+  - label:
+        es: gestión de áreas marinas
+    value: gestion_de_areas_marinas
+  - label:
+        es: gestión forestal
+    value: gestion_forestal
+  - label:
+        es: gestión sostenible
+    value: gestion_sostenible
+  - label:
+        es: gradiente térmico
+    value: gradiente_termico
+  - label:
+        es: hábitats
+    value: habitats
+  - label:
+        es: hábitats amenazados
+    value: habitats_amenazados
+  - label:
+        es: herbivoría
+    value: herbivoria
+  - label:
+        es: hidrodinámicas
+    value: hidrodinamicas
+  - label:
+        es: hipoxia
+    value: hipoxia
+  - label:
+        es: humedales
+    value: humedales
+  - label:
+        es: Impacto ambiental
+    value: impacto_ambiental
+  - label:
+        es: impacto humano
+    value: impacto_humano
+  - label:
+        es: impacto socieconómico
+    value: impacto_socioeconomico
+  - label:
+        es: incendios
+    value: incendios
+  - label:
+        es: infracciones
+    value: infracciones
+  - label:
+        es: infraestructuras
+    value: infraestructuras
+  - label:
+        es: Inundación
+    value: inundacion
+  - label:
+        es: invasiones
+    value: invasiones
+  - label:
+        es: invernada
+    value: invernada
+  - label:
+        es: investigación
+    value: investigacion
+  - label:
+        es: irradiación
+    value: irradiacion
+  - label:
+        es: jaulas
+    value: jaulas
+  - label:
+        es: legislación
+    value: legislacion
+  - label:
+        es: lesiones
+    value: lesiones
+  - label:
+        es: libro rojo
+    value: libro_rojo
+  - label:
+        es: lista roja
+    value: lista_roja
+  - label:
+        es: luz
+    value: luz
+  - label:
+        es: mapa
+    value: mapa
+  - label:
+        es: marcaje
+    value: marcaje
+  - label:
+        es: medición
+    value: medicion
+  - label:
+        es: medidas
+    value: medidas
+  - label:
+        es: medidas de actuación
+    value: medidas_de_actuacion
+  - label:
+        es: medidas de gestión
+    value: medidas_de_gestion
+  - label:
+        es: mesocosmos
+    value: mesocosmos
+  - label:
+        es: metabolismo
+    value: metabolismo
+  - label:
+        es: migración
+    value: migracion
+  - label:
+        es: minería
+    value: mineria
+  - label:
+        es: mitigación
+    value: mitigacion
+  - label:
+        es: monitorización
+    value: monitorizacion
+  - label:
+        es: montañas
+    value: montañas
+  - label:
+        es: montes submarinos
+    value: montes_submarinos
+  - label:
+        es: morfología
+    value: morfologia
+  - label:
+        es: mortalidad
+    value: mortalidad
+  - label:
+        es: muestreo
+    value: muestreo
+  - label:
+        es: nacimientos
+    value: nacimientos
+  - label:
+        es: navegación
+    value: navegacion
+  - label:
+        es: nidificación
+    value: nidificacion
+  - label:
+        es: nutrientes
+    value: nutrientes
+  - label:
+        es: observación
+    value: observacion
+  - label:
+        es: oligotrofía
+    value: oligotrofia
+  - label:
+        es: organismos
+    value: organismos
+  - label:
+        es: paisajes
+    value: paisajes
+  - label:
+        es: parajes
+    value: parajes
+  - label:
+        es: parásitos
+    value: parasitos
+  - label:
+        es: partículas
+    value: particulas
+  - label:
+        es: pastoreo
+    value: pastoreo
+  - label:
+        es: patología
+    value: patologia
+  - label:
+        es: pesca
+    value: pesca
+  - label:
+        es: piscicultura
+    value: piscicultura
+  - label:
+        es: plan de protección
+    value: plan_de_proteccion
+  - label:
+        es: plan de recuperación
+    value: plan_de_recuperacion
+  - label:
+        es: planes de acción
+    value: planes_de_accion
+  - label:
+        es: planes de conservación
+    value: planes_de_conservacion
+  - label:
+        es: planes de gestión
+    value: planes_de_gestion
+  - label:
+        es: plantas desalinizadoras
+    value: plantas_desalinizadoras
+  - label:
+        es: plásticos
+    value: plasticos
+  - label:
+        es: playas
+    value: playas
+  - label:
+        es: población
+    value: poblacion
+  - label:
+        es: polinizadores
+    value: polinizadores
+  - label:
+        es: precipitaciones
+    value: precipitaciones
+  - label:
+        es: presas
+    value: presas
+  - label:
+        es: presiones y amenazas
+    value: presiones_y_amenazas
+  - label:
+        es: producción
+    value: produccion
+  - label:
+        es: prospecciones
+    value: prospecciones
+  - label:
+        es: protección
+    value: proteccion
+  - label:
+        es: puertos
+    value: puertos
+  - label:
+        es: radiación UV
+    value: radiacion_uv
+  - label:
+        es: rasa mareal
+    value: rasa_mareal
+  - label:
+        es: reciclaje
+    value: reciclaje
+  - label:
+        es: red hidrográfica
+    value: red_hidrografica
+  - label:
+        es: redes
+    value: redes
+  - label:
+        es: reforestación
+    value: reforestacion
+  - label:
+        es: regeneración
+    value: regeneracion
+  - label:
+        es: reintroducción
+    value: reintroduccion
+  - label:
+        es: renaturalización
+    value: renaturalizacion
+  - label:
+        es: reproducción
+    value: reproduccion
+  - label:
+        es: reproducción clonal
+    value: reproduccion_clonal
+  - label:
+        es: rescates
+    value: rescates
+  - label:
+        es: reservas
+    value: reservas
+  - label:
+        es: residuos
+    value: residuos
+  - label:
+        es: restauración
+    value: restauracion
+  - label:
+        es: ríos
+    value: rios
+  - label:
+        es: salinización
+    value: salinizacion
+  - label:
+        es: sanciones
+    value: sanciones
+  - label:
+        es: secuencias deposicionales
+    value: secuencias_deposicionales
+  - label:
+        es: sedimentación
+    value: sedimentacion
+  - label:
+        es: seguimiento
+    value: seguimiento
+  - label:
+        es: sensores remotos-teledetección
+    value: sensores_remotos_teledeteccion
+  - label:
+        es: sequía
+    value: sequia
+  - label:
+        es: silvicultura
+    value: silvicultura
+  - label:
+        es: sísmica
+    value: sismica
+  - label:
+        es: soluciones técnicas
+    value: soluciones_tecnicas
+  - label:
+        es: sostenibilidad
+    value: sostenibilidad
+  - label:
+        es: suelo
+    value: suelo
+  - label:
+        es: supervivencia
+    value: supervivencia
+  - label:
+        es: talud continental
+    value: talud_continental
+  - label:
+        es: tamaños
+    value: tamaños
+  - label:
+        es: tasas
+    value: tasas
+  - label:
+        es: tecnología
+    value: tecnologia
+  - label:
+        es: tejidos
+    value: tejidos
+  - label:
+        es: temperatura
+    value: temperatura
+  - label:
+        es: tipos de muestreo
+    value: tipos_de_muestreo
+  - label:
+        es: tráfico marítimo
+    value: trafico_maritimo
+  - label:
+        es: varamientos
+    value: varamientos
+  - label:
+        es: venenos
+    value: venenos
+  - label:
+        es: vertebrados
+    value: vertebrados
+  - label:
+        es: vertidos
+    value: vertidos
+  - label:
+        es: vías pecuarias
+    value: vias_pecuarias
+  - label:
+        es: vigilancia
+    value: vigilancia
+  - label:
+        es: virus
+    value: virus
+  - label:
+        es: vulnerabilidad
+    value: vulnerabilidad
+  - label:
+        es: Aguas marinas someras permanentes
+    value: aguas_marinas_someras_permanentes
+  - label:
+        es: Algas
+    value: algas
+  - label:
+        es: Anfibios
+    value: anfibios
+  - label:
+        es: Angiospermas
+    value: angiospermas
+  - label:
+        es: Área Marina Protegida (OSPAR)
+    value: area_marina_protegida_ospar
+  - label:
+        es: Áreas de almacenamiento de agua
+    value: areas_de_almacenamiento_de_agua
+  - label:
+        es: Áreas de tratamiento de aguas residuales
+    value: areas_de_tratamiento_de_aguas_residuales
+  - label:
+        es: Arrecifes de coral
+    value: arrecifes_de_coral
+  - label:
+        es: Ascidios
+    value: ascidios
+  - label:
+        es: Aves
+    value: aves
+  - label:
+        es: Bosques
+    value: bosques
+  - label:
+        es: Braquiópodos
+    value: braquiopodos
+  - label:
+        es: Brezales y matorrales de zona templada
+    value: brezales_y_matorrales_de_zona_templada
+  - label:
+        es: Canales y canales de drenaje o zanjas
+    value: canales_y_canales_de_drenaje_o_zanjas
+  - label:
+        es: Cetáceos
+    value: cetaceos
+  - label:
+        es: Corales
+    value: corales
+  - label:
+        es: Costas marinas rocosas
+    value: costas_marinas_rocosas
+  - label:
+        es: Cromistas y bacterias
+    value: cromistas_y_bacterias
+  - label:
+        es: Crustáceos
+    value: crustaceos
+  - label:
+        es: Deltas interiores
+    value: deltas_interiores
+  - label:
+        es: Dunas marítimas y continentales
+    value: dunas_maritimas_y_continentales
+  - label:
+        es: Ecosistemas
+    value: ecosistemas
+  - label:
+        es: Epífitos
+    value: epifitos
+  - label:
+        es: Equinodermos
+    value: equinodermos
+  - label:
+        es: Espacios Naturales Protegidos (ENP)
+    value: espacios_naturales_protegidos_enp
+  - label:
+        es: Espacios Protegidos
+    value: espacios_protegidos
+  - label:
+        es: Especies silvestres
+    value: especies_silvestres
+  - label:
+        es: Estanques (granjas y albercas, pequeños tanques de almacenamiento, o con área de menos de 8 ha)
+    value: estanques
+  - label:
+        es: Estanques de acuicultura
+    value: estanques_de_acuicultura
+  - label:
+        es: Estuarios
+    value: estuarios
+  - label:
+        es: Excavaciones
+    value: excavaciones
+  - label:
+        es: Fanerógamas
+    value: fanerogamas
+  - label:
+        es: Forestal
+    value: forestal
+  - label:
+        es: Formaciones herbosas naturales y seminaturales
+    value: formaciones_herbosas_naturales_y_seminaturales
+  - label:
+        es: Geoparque
+    value: geoparque
+  - label:
+        es: Hábitat rocosos y cuevas
+    value: habitat_rocosos_y_cuevas
+  - label:
+        es: Hábitats costeros y vegetación halófíticas
+    value: habitats_costeros_y_vegetacion_halofiticas
+  - label:
+        es: Hábitats de agua dulce
+    value: habitats_de_agua_dulce
+  - label:
+        es: Hongos
+    value: hongos
+  - label:
+        es: Humedal de Importancia Internacional (RAMSAR)
+    value: humedal_de_importancia_internacional_ramsar
+  - label:
+        es: Humedales alpinos/de montaña
+    value: humedales_alpinos_de_montaña
+  - label:
+        es: Humedales arbolados intermareales
+    value: humedales_arbolados_intermareales
+  - label:
+        es: Humedales artificiales
+    value: humedales_artificiales
+  - label:
+        es: Humedales boscosos de agua dulce
+    value: humedales_boscosos_de_agua_dulce
+  - label:
+        es: Humedales continentales
+    value: humedales_continentales
+  - label:
+        es: Humedales de la tundra
+    value: humedales_de_la_tundra
+  - label:
+        es: Humedales geotérmicos
+    value: humedales_geotermicos
+  - label:
+        es: Humedales marino/costeros
+    value: humedales_marino_costeros
+  - label:
+        es: Intermareales de lodo, arena o salares
+    value: intermareales_de_lodo_arena_o_salares
+  - label:
+        es: Invertebrados
+    value: invertebrados
+  - label:
+        es: Karst y otros sistemas hídricos subterráneos artificiales
+    value: karst_y_otros_sistemas_hidricos_subterraneos_artificiales
+  - label:
+        es: Lagos estacionales/intermitentes de agua dulce
+    value: lagos_estacionales_intermitentes_de_agua_dulce
+  - label:
+        es: Lagos permanentes de agua dulce
+    value: lagos_permanentes_de_agua_dulce
+  - label:
+        es: Lagos permanentes salinos/salobres/alcalinos
+    value: lagos_permanentes_salinos_salobres_alcalinos
+  - label:
+        es: Lagos y zonas inundadas estacionales/intermitentes salinos/salobres/alcalinos
+    value: lagos_y_zonas_inundadas_estacionales_intermitentes_salinos_salobres_alcalinos
+  - label:
+        es: Lagunas costeras de agua dulce
+    value: lagunas_costeras_de_agua_dulce
+  - label:
+        es: Lagunas costeras salobres/saladas
+    value: lagunas_costeras_salobres_saladas
+  - label:
+        es: Lechos marinos submareales
+    value: lechos_marinos_submareales
+  - label:
+        es: Lugar de Interés Comunitario (LIC)
+    value: lugar_de_interes_comunitario_lic
+  - label:
+        es: Macroalgas
+    value: macroalgas
+  - label:
+        es: Mamíferos
+    value: mamiferos
+  - label:
+        es: Manantiales de agua dulce, oasis
+    value: manantiales_de_agua_dulce,_oasis
+  - label:
+        es: Marino
+    value: marino
+  - label:
+        es: Marino y terrestre
+    value: marino_y_terrestre
+  - label:
+        es: Matorrales esclerófilos
+    value: matorrales_esclerofilos
+  - label:
+        es: Medusas
+    value: medusas
+  - label:
+        es: Moluscos
+    value: moluscos
+  - label:
+        es: Pantanos con vegetación arbustiva
+    value: pantanos_con_vegetacion_arbustiva
+  - label:
+        es: Pantanos y esteros
+    value: pantanos_y_esteros
+  - label:
+        es: Pantanos/esteros/charcas estacionales/intermitentes de agua dulce sobre suelos inorgánicos
+    value: pantanos_esteros_charcas_estacionales_intermitentes_de_agua_dulce_sobre_suelos_inorganicos
+  - label:
+        es: Pantanos/esteros/charcas estacionales/intermitentes salinos/salobres/alcalinos
+    value: pantanos_esteros_charcas_estacionales_intermitentes_salinos_salobres_alcalinos
+  - label:
+        es: Pantanos/esteros/charcas permanentes de agua dulce
+    value: pantanos_esteros_charcas_permanentes_de_agua_dulce
+  - label:
+        es: Pantanos/esteros/charcas permanentes salinas/salobres/alcalinos
+    value: pantanos_esteros_charcas_permanentes_salinas_salobres_alcalinos
+  - label:
+        es: Peces
+    value: peces
+  - label:
+        es: Plantas no vasculares
+    value: plantas_no_vasculares
+  - label:
+        es: Plantas vasculares
+    value: plantas_vasculares
+  - label:
+        es: Playas de arena o guijarros
+    value: playas_de_arena_o_guijarros
+  - label:
+        es: Recursos genéticos
+    value: recursos_geneticos
+  - label:
+        es: Red Natura 2000
+    value: red_natura_2000
+  - label:
+        es: Reptiles
+    value: reptiles
+  - label:
+        es: Reserva de la Biosfera (MAB)
+    value: reserva_de_la_biosfera_mab
+  - label:
+        es: Ríos /arroyos permanentes
+    value: rios__arroyos_permanentes
+  - label:
+        es: Ríos/arroyos estacionales/intermitentes/irregulares
+    value: rios_arroyos_estacionales_intermitentes_irregulares
+  - label:
+        es: Sistemas kársticos y otros sistemas hidricos subterráneos
+    value: sistemas_karsticos_y_otros_sistemas_hidricos_subterraneos
+  - label:
+        es: Sistemas kársticos y otros sistemas hídricos subterráneos
+    value: sistemas_karsticos_y_otros_sistemas_hidricos_subterraneos
+  - label:
+        es: Sitio Natural de la Lista de Patrimonio Mundial (UNESCO)
+    value: sitio_natural_de_la_lista_de_patrimonio_mundial_unesco
+  - label:
+        es: Suelos
+    value: suelos
+  - label:
+        es: Terrestre
+    value: terrestre
+  - label:
+        es: Tierras agrícolas inundadas estacionalmente
+    value: tierras_agricolas_inundadas_estacionalmente
+  - label:
+        es: Tierras de regadío
+    value: tierras_de_regadio
+  - label:
+        es: Turberas altas. turberas bajas (Fens y Mires) y áreas pantanosas
+    value: turberas_altas._turberas_bajas_y_areas_pantanosas
+  - label:
+        es: Turberas arboladas
+    value: turberas_arboladas
+  - label:
+        es: Turberas no arboladas
+    value: turberas_no_arboladas
+  - label:
+        es: Zona Especialmente Protegida de Importancia para el Mediterráneo (ZEPIM) 
+    value: zona_especialmente_protegida_de_importancia_para_el_mediterraneo_zepim
+  - label:
+        es: Zonas de Especial Conservación (ZEC)
+    value: zonas_de_especial_conservacion_zec
+  - label:
+        es: Zonas de Especial Protección para las Aves (ZEPA)
+    value: zonas_de_especial_proteccion_para_las_aves_zepa
+  - label:
+        es: Zonas de explotación de sal
+    value: zonas_de_explotacion_de_sal
+  form_group_id: vocabs
