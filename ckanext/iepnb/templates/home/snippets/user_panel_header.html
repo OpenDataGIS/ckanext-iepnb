@@ -1,0 +1,30 @@
+<div class="user-panel-header">
+    <a href="{{ h.url_for('/') }}" title="{{ _('Home') }}"
+        class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
+        <img src="{{ h.url_for_static('img/icono_csw.svg') }}" loading="lazy" alt="{{ _('Home') }}">
+    </a>
+    <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Ajustes del administrador') }}"
+        class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
+        <img src="{{ h.url_for_static('img/icono_administrador.svg') }}" loading="lazy" alt="{{ _('Ajustes del administrador') }}">
+    </a>
+    <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" title="{{ _('Tus datos') }}"
+        class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
+        <img src="{{ h.url_for_static('img/icono_datos.svg') }}" loading="lazy" alt="{{ _('Tus datos') }}">
+    </a>
+    <a href="{{ h.url_for('dashboard.index') }}" title="{{ _('Panel de control') }}"
+        class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
+        <img src="{{ h.url_for_static('img/icono_panel_de_control.svg') }}" loading="lazy" alt="{{ _('Panel de control') }}">
+    </a>
+    <a href="{{ h.url_for('/harvest') }}" title="{{ _('Harvest') }}"
+    class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
+    <img src="{{ h.url_for_static('img/icono_harvest.svg') }}" loading="lazy" alt="{{ _('Harvest') }}">
+    </a>
+    <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Ajustes de perfil') }}"
+    class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
+    <img src="{{ h.url_for_static('img/icono_perfil.svg') }}" loading="lazy" alt="{{ _('Ajustes de perfil') }}">
+    </a>
+    <a href="{{ h.url_for('/user/_logout') }}" title="{{  _('Cerrar sesión') }}"
+    class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
+    <img src="{{ h.url_for_static('img/icono_salir.svg') }}" loading="lazy" alt="{{  _('Cerrar sesión') }}">
+    </a>
+</div>

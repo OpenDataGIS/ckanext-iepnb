@@ -1,11 +1,13 @@
 {# Used to insert the home icon into a breadcrumb #}
 {% set ns = namespace(found=false) %}
 {% set ns.lang='' %}
-{% if h.lang() != "" and h.lang() != h.iepnb_locale_default() %}
-  {% set ns.lang = '/' + h.lang() %}
-{% endif %}
-<li><a href = "{{ns.lang}}/" aria-label="{{ _('Inicio') }}"><span> {{ _('Inicio') }}</span></a></li>
 {% set breadcrumbs = h.iepnb_breadcrumbs(h.lang()) %}
-{% for elemento in h.iepnb_decode_json(breadcrumbs) %}
-<li><a href="{{ns.lang}}{{ elemento.relative }}" aria-label="{{ _(elemento.description) }}"><span> {{ _(elemento.title) }}</span></a></li>
+{% set decoded_breadcrumbs = h.iepnb_decode_json(breadcrumbs) %}
+<li><a href = "{{ns.lang}}/" aria-label="{{ _('Inicio') }}"><span> {{ _('Inicio') }}</span></a></li>
+{% for elemento in decoded_breadcrumbs %}
+  {% if elemento.relative|lower == h.iepnb_root_path()|lower %}
+    <li><a href="{{ elemento.relative }}{{ns.lang}}" aria-label="{{ _(elemento.description) }}"><span> {{ _(elemento.title) }}</span></a></li>
+  {% else %}
+    <li><a href="{{ns.lang}}{{ elemento.relative }}" aria-label="{{ _(elemento.description) }}"><span> {{ _(elemento.title) }}</span></a></li>
+  {% endif %}
 {% endfor %}
