@@ -3,6 +3,19 @@ from urllib.parse import urlparse
 import os
 import shutil
 
+def get_ckanext_directory():
+    # Get the absolute path of the script
+    script_path = os.path.abspath(__file__)
+    
+    # Split the path into components
+    path_components = script_path.split(os.sep)
+    
+    # Find the index of the 'ckanext-*' component
+    ckanext_index = next(i for i, component in enumerate(path_components) if component.startswith('ckanext-'))
+    
+    # Return the 'ckanext-*' component
+    return path_components[ckanext_index]
+
 def append_to_file(file_path, data, lang=None):
     """
     Appends translation data to a file.
@@ -112,13 +125,15 @@ def main():
     field_name = data["field_name"]
     langs = get_languages(data)
     create_directories(langs, field_name)
+
+    directory = get_ckanext_directory()
     for lang in langs:
         # Copy existing file to output directory
-        shutil.copy(f'../{lang}/LC_MESSAGES/ckanext-schemingdcat.po', f'./output/{field_name}/{lang}/LC_MESSAGES/ckanext-schemingdcat.po')
-        append_to_file(f'{lang}/LC_MESSAGES/ckanext-schemingdcat.po', data, lang)
+        shutil.copy(f'../{lang}/LC_MESSAGES/{directory}.po', f'./output/{field_name}/{lang}/LC_MESSAGES/{directory}.po')
+        append_to_file(f'{lang}/LC_MESSAGES/{directory}.po', data, lang)
     # Copy existing .pot file to output directory
-    shutil.copy('../ckanext-schemingdcat.pot', f'./output/{field_name}/ckanext-schemingdcat.pot')
-    append_to_file('ckanext-schemingdcat.pot', data)
+    shutil.copy(f'../{directory}.pot', f'./output/{field_name}/{directory}.pot')
+    append_to_file(f'{directory}.pot', data)
 
 if __name__ == "__main__":
     main()

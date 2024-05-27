@@ -204,6 +204,15 @@ msgstr ""
 msgid "Featured groups"
 msgstr ""
 
+#: ckanext/iepnb/templates/home/snippets/featured_dataset.html:1
+msgid "Featured datasets"
+msgstr ""
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:37
+#: ckanext/iepnb/templates/header.html:31
+msgid "Private area"
+msgstr ""
+
 # IEPNB Keywords - Schema field_name: keywords_iepnb
 msgid "accidentes"
 msgstr ""
@@ -1158,3 +1167,77 @@ msgstr ""
 
 msgid "zonas_de_explotacion_de_sal"
 msgstr ""
+
+# Resource type - Schema field_name: dcat_type
+msgid "dataset"
+msgstr ""
+
+msgid "art"
+msgstr ""
+
+msgid "bda"
+msgstr ""
+
+msgid "Collection"
+msgstr ""
+
+msgid "dtb"
+msgstr ""
+
+msgid "doc"
+msgstr ""
+
+msgid "Event"
+msgstr ""
+
+msgid "gov"
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "StillImage"
+msgstr ""
+
+msgid "jou"
+msgstr ""
+
+msgid "leg"
+msgstr ""
+
+msgid "MovingImage"
+msgstr ""
+
+msgid "PhysicalObject"
+msgstr ""
+
+msgid "rpt"
+msgstr ""
+
+msgid "InteractiveResource"
+msgstr ""
+
+msgid "series"
+msgstr ""
+
+msgid "Service"
+msgstr ""
+
+msgid "service"
+msgstr ""
+
+msgid "Sound"
+msgstr ""
+
+msgid "Software"
+msgstr ""
+
+msgid "stp"
+msgstr ""
+
+msgid "ter"
+msgstr ""
+
+msgid "Text"
+msgstr ""
+

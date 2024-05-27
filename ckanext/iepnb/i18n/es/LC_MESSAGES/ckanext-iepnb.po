@@ -200,6 +200,15 @@ msgstr "Organizaciones destacadas"
 msgid "Featured groups"
 msgstr "Grupos destacados"
 
+#: ckanext/iepnb/templates/home/snippets/featured_dataset.html:1
+msgid "Featured datasets"
+msgstr "Conjuntos de datos destacados"
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:37
+#: ckanext/iepnb/templates/header.html:31
+msgid "Private area"
+msgstr "Área privada"
+
 # IEPNB Keywords - Schema field_name: keywords_iepnb
 msgid "accidentes"
 msgstr "accidentes"
@@ -1154,3 +1163,76 @@ msgstr "Zonas de Especial Protección para las Aves (ZEPA)"
 
 msgid "zonas_de_explotacion_de_sal"
 msgstr "Zonas de explotación de sal"
+
+# Resource type - Schema field_name: dcat_type
+msgid "dataset"
+msgstr "Conjunto de datos espacial"
+
+msgid "art"
+msgstr "Artículo"
+
+msgid "bda"
+msgstr "Datos bibliográficos"
+
+msgid "Collection"
+msgstr "Colección"
+
+msgid "dtb"
+msgstr "Base de datos"
+
+msgid "doc"
+msgstr "Documento (informático)"
+
+msgid "Event"
+msgstr "Evento"
+
+msgid "gov"
+msgstr "Publicación gubernamental"
+
+msgid "Image"
+msgstr "Imagen"
+
+msgid "StillImage"
+msgstr "Imagen fija"
+
+msgid "jou"
+msgstr "Revista"
+
+msgid "leg"
+msgstr "Legislación"
+
+msgid "MovingImage"
+msgstr "Imagen en movimiento"
+
+msgid "PhysicalObject"
+msgstr "Objeto físico"
+
+msgid "rpt"
+msgstr "Informe"
+
+msgid "InteractiveResource"
+msgstr "Recurso interactivo"
+
+msgid "series"
+msgstr "Series de datos espaciales"
+
+msgid "Service"
+msgstr "Servicio"
+
+msgid "service"
+msgstr "Servicio de datos espaciales"
+
+msgid "Sound"
+msgstr "Sonido"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "stp"
+msgstr "Norma o especificación"
+
+msgid "ter"
+msgstr "Informe técnico"
+
+msgid "Text"
+msgstr "Texto"
