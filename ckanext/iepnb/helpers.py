@@ -16,7 +16,10 @@ from six import text_type
 import ckan.plugins as p
 import ckan.model as model
 
-logger = logging.getLogger(__name__)
+from functools import lru_cache
+
+
+log = logging.getLogger(__name__)
 all_helpers = {}
 
 def helper(fn):
@@ -36,49 +39,41 @@ def iepnb_decode_json(cadena):
     #objeto=cadena    
     return objeto
 
+@lru_cache(maxsize=100)
+def get_breadcrumbs_url(tmp_lang):
+    breadcrumbs_url = iepnb_config.server_menu
+    if iepnb_config.server_i18n and tmp_lang != '' and tmp_lang != iepnb_config.locale_default:
+        return f'{breadcrumbs_url}/{iepnb_config.path_breadcrumbs}/{tmp_lang}'
+    return f'{breadcrumbs_url}{iepnb_config.path_breadcrumbs}'
+
+@lru_cache(maxsize=100)
+def get_breadcrumbs_from_url(breadcrumbs_url):
+    try:
+        breadcrumbs_page = urlopen(breadcrumbs_url, context=iepnb_config.gcontext)
+        breadcrumbs_text_bytes = breadcrumbs_page.read()
+        return breadcrumbs_text_bytes.decode("utf-8")
+    except HTTPError as err:
+        log.warning(f"No se puede acceder a {breadcrumbs_url}: {err.reason}")
+        return None
+
 @helper
 def iepnb_breadcrumbs(lang = ''):
-    """'Devuelve un texto con el json que contiene las migas de pan.
-    Si puede, lo obtiene dinámicamente del servidor iepnb.home, con la ruta path_breadcrumbs.
-    Si la ruta no está definida, toma por defecto el valor indicado en iepnb.breadcrumbs
-    """
     respuesta = iepnb_config.default_breadcrumbs
-    #logger.debug("Preparada la respuesta "+__name__)
-    
     if iepnb_config.path_breadcrumbs:
-        logger.debug("path_breadcrumbs: " + iepnb_config.path_breadcrumbs)
-        breadcrumbs_url = iepnb_config.server_menu
         tmp_lang = lang or iepnb_config.locale_default
         if not tmp_lang in iepnb_config.breadcrumbs:
             tmp_lang = iepnb_config.locale_default
-        
-        logger.debug("tmp_lang "+tmp_lang)    
         if not iepnb_config.breadcrumbs[tmp_lang]:
-
-            logger.debug("No está definido breadcrumbs["+tmp_lang+"]")
-            if tmp_lang == '' or tmp_lang ==iepnb_config.locale_default:
-                breadcrumbs_url += iepnb_config.path_breadcrumbs
-            else:
-                breadcrumbs_url += ('/'+tmp_lang+iepnb_config.path_breadcrumbs)
-
-            breadcrumbs_page = None    
-            try:
-                breadcrumbs_page = urlopen(breadcrumbs_url, context=iepnb_config.gcontext)
-            except HTTPError as err:
-                logger.warning("No se puede acceder a {0}: {1}".format(breadcrumbs_url, err.reason))
+            breadcrumbs_url = get_breadcrumbs_url(tmp_lang)
+            respuesta = get_breadcrumbs_from_url(breadcrumbs_url)
+            if respuesta is None:
                 if tmp_lang != '' and tmp_lang != iepnb_config.locale_default:
                     respuesta = iepnb_breadcrumbs()+"Sin acceso"
                 else:
-                    logger.error("No se puede recuperar el menú por defecto")
+                    log.error("No se puede recuperar el menú por defecto")
                     respuesta = iepnb_config.default_breadcrumbs+"Error html"
-            if breadcrumbs_page:
-                breadcrumbs_text_bytes = breadcrumbs_page.read()
-                respuesta = breadcrumbs_text_bytes.decode("utf-8")
+            else:
                 iepnb_config.breadcrumbs[tmp_lang] = respuesta
-        else:
-            logger.debug("Está definido breadcrumbs["+tmp_lang+"]: " + iepnb_config.breadcrumbs[tmp_lang])
-    else:
-        logger.debug("No hay definido path_breadcrumbs")
     return respuesta
 
 @helper        
@@ -88,8 +83,21 @@ def iepnb_home():
     return iepnb_config.server_menu
 
 @helper
+def iepnb_server_i18n():
+    """Devuelve si el CMS tiene habilitado el 18n de la configuración
+    """
+    
+    return iepnb_config.server_i18n
+
+@helper
+def iepnb_root_path():
+    """Devuelve el root_path de la configuración
+    """
+    return p.toolkit.config.get("ckan.root_path", "").replace("/{{LANG}}", "")
+
+@helper
 def iepnb_locale_default():
-    """DEvuelve el locale_default de la configuración
+    """Devuelve el locale_default de la configuración
     """
     
     return iepnb_config.locale_default
@@ -100,6 +108,13 @@ def iepnb_popular_tags():
     """
     
     return iepnb_config.popular_tags
+
+@helper    
+def iepnb_featured_datasets():
+    """Devuelve el número de datasets destacados que se mostrarán, según iepnb.featured_datasets
+    """
+    
+    return iepnb_config.featured_datasets
 
 @helper
 def iepnb_menu(lang = ''):
@@ -118,23 +133,23 @@ def iepnb_menu(lang = ''):
         else:
             menu_url += ('/'+lang+iepnb_config.path_menu)
 
-        logger.debug(u'menu_url ({0}): {0}'.format(tmp_lang, menu_url))
+        #log.debug(u'menu_url ({0}): {0}'.format(tmp_lang, menu_url))
         
         menu_page = None
 
         try:
             menu_page=urlopen(menu_url, context=iepnb_config.gcontext)
         except HTTPError as err:
-            logger.warning("No se puede acceder a {0}: {1}".format(menu_url, err.reason))
+            log.warning("No se puede acceder a {0}: {1}".format(menu_url, err.reason))
             if tmp_lang != '' and tmp_lang != iepnb_config.locale_default:
                 return iepnb_menu()
             else:
-                logger.error("No se puede recuperar el menú por defecto")
+                log.error("No se puede recuperar el menú por defecto")
 
         if menu_page:
-            logger.debug(u'menu_url open')
+            #log.debug(u'menu_url open')
             menu_text_bytes = menu_page.read()
-            logger.debug(u'menu_url received')
+            #log.debug(u'menu_url received')
             iepnb_config.menu[tmp_lang] = menu_text_bytes.decode("utf-8")
         else:
             iepnb_config.menu[tmp_lang] = ""
@@ -175,24 +190,23 @@ def iepnb_organization_name(item):
         if org_dic is not None:
             respuesta=org_dic['name']
         else:
-            logger.warning('No se ha podido encontrar el nombre de la organización con id %'.format(item['display_name']))
+            log.warning('No se ha podido encontrar el nombre de la organización con id %'.format(item['display_name']))
     except Exception as e:
-        logger.error("Excepción al intentar encontrar el nombre de la organización: %".format(e))
+        log.error("Excepción al intentar encontrar el nombre de la organización: %".format(e))
     return respuesta
 
 @helper
 def iepnb_tag_img_ministerio():
-    attrs = get_logo_ministerio_attrs()
-    if attrs:
+    try:
+        attrs = get_logo_ministerio_attrs()
         tag = '<img'
         for x in attrs:
             tag = tag+" " + x[0]
             if x[1]:
                 tag = tag + '="' + x[1]+'"'
         tag = tag+'>'
-    else:
-        tag=iepnb_config.default_logo_ministerio.format(ckan_helpers.url_for_static("/img/Logotipo_Minteco.png"))
-
+    except:
+        tag=iepnb_config.default_logo_ministerio.format(ckan_helpers.url_for_static("/img/logo/Logotipo_Minteco.png"))
     return tag
 
 @helper
@@ -210,11 +224,11 @@ def iepnb_get_footer(lang=''):
         try:
             page = urlopen(url, context=iepnb_config.gcontext)
         except HTTPError as err:
-            logger.warning("No se puede acceder a {0}: {1}".format(url, err.reason))
+            log.warning("No se puede acceder a {0}: {1}".format(url, err.reason))
             if tmp_lang != '' and tmp_lang != iepnb_config.locale_default:
                 return iepnb_get_footer()
             else:
-                logger.error("No se puede recuperar el pie de página por defecto")
+                log.error("No se puede recuperar el pie de página por defecto")
         if page:
             text_bytes=page.read()
             text=text_bytes.decode("utf-8")
