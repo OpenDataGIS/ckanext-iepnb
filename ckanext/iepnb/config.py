@@ -7,6 +7,9 @@ default_breadcrumbs = ""
 #servidor al que se ha de solicitar el objeto json con el menú y las migas de pan
 server_menu = "https://iepnb-des.tragsatec.es"
 
+#sí el servidor tiene habilitado i18n, para aplicar las breadcrumbs correctamente. False por defecto
+server_i18n = False
+
 #path dentro del servidor para solicitar el menu. Va separado para poder intercalar el prefijo de idioma
 #se define en el menú ini con epnb.path_menu
 path_menu = "/api/menu_items/main"
@@ -16,6 +19,9 @@ path_breadcrumbs = ""
 
 # número de etiquetas populares para mostrar en la página principal
 popular_tags = 3
+
+# número de datasets destacados para mostrar en la página principal
+featured_datasets = 4
 
 # lista de campos sobre los que realizar un facetado y etiqueta correspondiente
 facets_dict_default = {
@@ -54,3 +60,15 @@ menu = None
 breadcrumbs = None
 
 stats = False
+
+# Vocabs
+IEPNB_DEFAULT_DATASET_SCHEMA_NAME = "dataset"
+SCHEMINGDCAT_IEPNB_KEYWORDS_VOCAB = "keywords_iepnb"
+
+static_logos = {
+    "logo_footer_prtr": "/img/logo/miteco-prtr_1.png",
+    "logo_ministerio": "/img/logo/Logotipo_Minteco.png",
+    "logo_iepnb": "/img/logo/logoIEPNB.png",
+    "logo_footer_ue": "/img/logo/financiacion_UE.png",
+    "logo_footer_minbn": "/img/logo/logo_ministerio_bn",
+}
