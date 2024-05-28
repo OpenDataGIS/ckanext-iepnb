@@ -546,6 +546,24 @@ button.image {
     gap: 1px; /* Espacio entre las etiquetas */
 }
 
+.navbar-nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav-iepnb {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto; /* Esto permitirá que el contenedor se ajuste al tamaño de su contenido */
+    max-width: 100%; /* Esto evitará que el contenedor se desborde */
+}
+
+.navbar-nav-iepnb,
+.navbar.navbar-expand-lg.justify-content-between.navbar-light.sticky-top {
+    width: 100%; 
+}
+
 @media (min-width: 1900px) {
     ul.nav.navbar-nav-iepnb {
         gap: 4rem !important;
