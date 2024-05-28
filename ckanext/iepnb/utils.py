@@ -124,8 +124,8 @@ def iepnb_handle_data(obj,data):
     if obj.footer_counter:
         if data.strip(" \t\n\r")!="":
             obj.footer=obj.footer+data
-            logger.debug("Datos: ---{0!s}---".format(data))
-            logger.debug("longitud: {}".format(len(data)))
+            #logger.debug("Datos: ---{0!s}---".format(data))
+            #logger.debug("longitud: {}".format(len(data)))
             
 def plugin_defined(_plugin):
 

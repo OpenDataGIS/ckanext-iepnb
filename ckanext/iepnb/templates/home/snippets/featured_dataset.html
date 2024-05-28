@@ -1,0 +1,11 @@
+<h2 class="titular_linea_verde featured_element" >{{ _('Featured datasets') }}</h2>
+
+{% set packages = h.get_featured_datasets(h.iepnb_featured_datasets()) %}
+
+<div class="container featured-elements">
+  {% for package in packages %}
+    <div class="box featured">
+      {% snippet 'iepnb/snippets/package_item.html', package=package, truncate=120, truncate_title=35 %}
+    </div>
+  {% endfor %}
+</div>

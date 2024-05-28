@@ -12,24 +12,59 @@
 {#- inicio emulación region/region.html.twig -#}
   {#- inicio emulación block/block--system-branding-block.html.twig #}
             <div class="wrapper-logo-brand">
-              <div class="logoGobierno">
+              <div class="imagenMinisterio">
                 {{ h.iepnb_tag_img_ministerio()|safe }}
-                <!-- img src="{{h.iepnb_home()}}/sites/default/files/2023-03/logo_miteco.png" width="233" height="54" alt="logo MITECO" loading="lazy" typeof="foaf:Image" class="img-fluid" -->
               </div>
               <a href="{{h.iepnb_home()}}/" class="navbar-brand d-flex align-items-center " aria-label="Inventario español del Patrimonio Natural y la Biodiversidad">
-                <img src="{{h.iepnb_home()}}/themes/custom/iepnb/logo.png" width="120" " alt="Inventario español del Patrimonio Natural y la Biodiversidad logo" class="mr-2" />
+                <img src="{{h.url_for_static("/img/logo/logoIEPNB.png")}}" width="120" " alt="Inventario español del Patrimonio Natural y la Biodiversidad logo" class="mr-2" />
               </a>
             </div>
   {#- fin emulación block/block--system-branding-block.html.twig -#}
+  <div class="nav-right col-9 col-md-5 col-lg-4">
+    <div class="d-flex flex-wrap justify-content-md-end">
   {#- inicio emulación block/block--system-menu-block.html.twig' #}
             <div class="settings-tray-editable block block--menudecuentadeusuario" data-drupal-settingstray="editable">
     {#- inicio emulación menu/menu--account.html.twig'  #}
       {% if not c.user %}
+      <div class="area-login">
+        <div class="area-login__name area-login__name--no-name">
+        {{ _('Private area') }}
+      </div>
+        <div class="area-login__icon">
                 {#% link_for 'login', named_route='user.login', class_='login-menu content-login-navbar-menu w-inline-block' %#}
                 <a href="{{h.url_for('user.login')}}" class='login-menu content-login-navbar-menu w-inline-block' type='button' title='login'>
-                  <span>login</span>
                 </a>
-      {% endif %}
+              </div>
+                {% endif %}
+                {% if c.userobj %}
+                    {% block user_panel_header %}
+                      {% snippet 'home/snippets/user_panel_header.html' %}
+                    {% endblock %}
+                {% endif %}
+            </div>
+
+
+      <a href="/buscador" class="container__lupa">
+        <div class="wrapper-lupa">
+          <!--?xml version="1.0" encoding="utf-8"?-->
+        <!-- Generator: Adobe Illustrator 27.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+        <style type="text/css">
+        .st0{fill:#82B62D;}
+        </style>
+        <g>
+        <path class="st0" d="M272.8,258.5l-74.7-74.7c31.1-38.1,28.9-94.5-6.7-130c-18.3-18.3-42.7-28.4-68.7-28.4
+          c-25.9,0-50.3,10.1-68.7,28.4c-37.9,37.9-37.9,99.5,0,137.4c18.3,18.3,42.7,28.5,68.7,28.5c22.6,0,44-7.7,61.3-21.8l74.7,74.7
+          c1.9,1.9,4.5,2.9,7,2.9c2.5,0,5.1-1,7-2.9C276.6,268.6,276.6,262.4,272.8,258.5z M68.1,177.2C37.9,147,37.9,98,68.1,67.8
+          c14.6-14.6,34-22.6,54.7-22.6c20.7,0,40.1,8,54.7,22.6c30.1,30.1,30.1,79.2,0,109.3c-14.6,14.6-34,22.6-54.7,22.6
+          C102.1,199.8,82.7,191.8,68.1,177.2z"></path>
+        <path class="st0" d="M87.8,68.6c-5,2.3-7.1,8.2-4.8,13.2c2.3,5,8.2,7.1,13.2,4.8c0.3-0.1,30.8-13.8,59.2,12.3
+          c1.9,1.7,4.3,2.6,6.7,2.6c2.7,0,5.4-1.1,7.3-3.2c3.7-4,3.4-10.3-0.6-14C130.7,49.5,89.5,67.8,87.8,68.6z"></path>
+        </g>
+        </svg>
+        </div>
+        </a>
+
     {#- fin emulación menu/menu--account.html.twig'  #}
             </div>
   {#- fin emulación block/block--system-menu-block.html.twig'  -#}
@@ -51,15 +86,14 @@
 		    </div>  
   {#- fin emulación block/block.html.twig #}
 {#- fin emulación region/region.html.twig -#} 
-            <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse">
+</div>
+</div>
 {#- inicio emulación region/region.html.twig -#}
 {#- inicio emulación block/block--system-menu-block.html.twig #}
               <div class="settings-tray-editable block block--navegacionprincipal" data-drupal-settingstray="editable">
 {#- inicio emulación menu/menu--main.html.twig #}
-                <ul class="nav navbar-nav" aria-labelledby="submenu">
+<div class="navbar-nav-container">
+  <ul class="nav navbar-nav-iepnb" aria-labelledby="submenu">
         {% set barra_menu=h.iepnb_menu(h.lang()) %}
         {%- for entrada in h.iepnb_decode_json(barra_menu) %}
           {% if entrada.below %}
@@ -71,25 +105,30 @@
             {% set class_menu_active=" active" %}
           {%- endif -%}
           {%- if entrada["uri"]=="node/88" -%}
-            {% set class_li_item="menu-icon-102" %}
+            {% set class_li_item="tb-megamenu-item level-1 mega dropdown" %}
           {%- else -%}
-            {% set class_li_item="menu-icon-58" %}
+            {% set class_li_item="tb-megamenu-item level-1 mega" %}
           {%- endif -%}
-                  <li class="menu-icon {{class_li_item}} nav-item {{class_menu_active}}{{class_dropdown_li}}">
-                    <a href='{{ entrada["relative"] }}' title='{{ entrada["title"] }}' class="nav-link{{class_dropdown_a}}"{{extra_dropdown_a}} data-drupal-link-system-path='{{ entrada["uri"] }}'>{{ entrada["title"] }}</a>
-                    {% if entrada.below %}
-                    <div class="dropdown-menu" aria-expanded="false">
-                      {%- for submenu in entrada.below %}
-                        {%- if submenu["relative"]=="/catalogo" -%}
-                          {% set class_active=" active is_active" %}
-                        {%- endif -%}
-                      <a href="{{ submenu['relative'] }}" class="dropdown-item{{class_active}}" data-drupal-link-system-path="{{ submenu['uri'] }}">{{ submenu["title"] }}</a>
-                      {%- endfor %}
-                    </div>
-                    {% endif %}
-                  </li>
+          <li class="{{class_li_item}} {{class_menu_active}}{{class_dropdown_li}}">
+            <a href='{{ entrada["relative"] }}' title='{{ entrada["title"] }}' class="nav-link{{class_dropdown_a}}"{{extra_dropdown_a}} data-drupal-link-system-path='{{ entrada["uri"] }}'>{{ entrada["title"] }}</a>
+            {% if entrada.below %}
+            <div class="dropdown-menu header-dropdown-menu" aria-expanded="false">
+              {%- for submenu in entrada.below %}
+                {%- if submenu["relative"]=="/catalogo" -%}
+                  {% set class_active=" is_active" %}
+                  {% set submenu_root_catalogo = "/catalogo/dataset" %}
+                  {% set submenu_relative = "/catalogo/dataset" %}
+                {%- else -%}
+                  {% set submenu_relative = submenu["relative"] %}
+                {%- endif -%}
+              <a href="{{ submenu_relative }}" class="dropdown-item{{class_active}}" data-drupal-link-system-path="{{ submenu['uri'] }}">{{ submenu["title"] }}</a>
+              {%- endfor %}
+            </div>
+            {% endif %}
+          </li>
         {%- endfor %}
-                </ul>
+      </ul>
+    </div>
       {#- fin emulación menu/menu--main.html.twig #}
               </div>
 {#- fin emulación block/block--system-menu-block.html.twig -#}
@@ -98,9 +137,11 @@
             </nav>
           </div>
         </div>
-        <div style="height:200px; background-repeat: no-repeat;background-size: cover;background-image:url({{ h.url_for_static('/img/cabecera_catalogo.jpg')}}); background-position:0% 75%;" class="layout__region layout__region--content contenedor-titulo">
-          <h1>{{_('Catálogo de datos')}}</h1>
-	      <div class="linea-titulo">
+        <div style="height:352px; background-repeat: no-repeat;background-size: cover;background-image:url({{ h.url_for_static('/img/cabecera_catalogo.jpg')}}); background-position:0% 75%;" class="layout__region layout__region--content contenedor-titulo">
+          <div class="wrapper-texto-carrousel">
+            <h1 class="head_cabecera_home-2">{{_('Catálogo de datos')}}</h1>
+              <div class="wrapper-linea-verde-texto-carrousel"></div>
+              </div>
           </div>
         </div>
 {%- endblock %}

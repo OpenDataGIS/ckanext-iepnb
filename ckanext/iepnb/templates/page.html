@@ -73,6 +73,13 @@
           {% endblock %}
                 <div class="row wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' or c.action=='resource_read' %} no-nav{% endif %}">
            {% block pre_primary %}
+
+              {% block header_endpoints %}
+                {% if c.action=='search' %}
+                  {% snippet 'schemingdcat/endpoints/header_endpoints.html' %}
+                {% endif %}
+              {% endblock %}
+
             {% endblock %}
 
             {% block secondary %}

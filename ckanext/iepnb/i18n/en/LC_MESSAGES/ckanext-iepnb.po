@@ -1,4 +1,4 @@
-# Spanish translations for ckanext-iepnb.
+# English translations for ckanext-iepnb.
 # Copyright (C) 2023 ORGANIZATION
 # This file is distributed under the same license as the ckanext-iepnb
 # project.
@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2023-06-12 17:03+0200\n"
 "PO-Revision-Date: 2024-04-11 14:23+0200\n"
 "Last-Translator: \n"
-"Language-Team: es <LL@li.org>\n"
-"Language: es\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,35 +22,37 @@ msgstr ""
 
 #: ckanext/iepnb/templates/footer.html:11
 msgid "Contacto"
-msgstr "Contacto"
+msgstr "Contact"
 
 #: ckanext/iepnb/templates/footer.html:14
 msgid "Accesibilidad"
-msgstr "Accesibilidad"
+msgstr "Accesibility"
 
 #: ckanext/iepnb/templates/footer.html:17
 msgid "Política de privacidad"
-msgstr "Política de privacidad"
+msgstr "Privacity policy"
 
 #: ckanext/iepnb/templates/footer.html:20
 msgid "Política de cookies"
-msgstr "Política de cookies"
+msgstr "Cookie policy"
 
 #: ckanext/iepnb/templates/footer.html:23
 msgid "Aviso legal"
-msgstr "Aviso legal"
+msgstr "Legal disclaimer"
 
 #: ckanext/iepnb/templates/footer.html:32
 msgid "logo financiación UE"
-msgstr "logo financiación UE"
+msgstr "UE funding logo"
+
 
 #: ckanext/iepnb/templates/page.html:18
 msgid "Migas de pan"
-msgstr "Migas de pan"
+msgstr "Breadcrumb"
 
+# | msgid "medio ambiente"
 #: ckanext/iepnb/templates/home/columna_derecha.html:4
 msgid "Ej.: ambiente"
-msgstr "Ej: medio ambiente"
+msgstr "E.g. environment"
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:13
 msgid ""
@@ -62,29 +64,29 @@ msgid ""
 "\"><strong>catálogo CSW</strong></a> (estándar OGC) para la publicación "
 "y descubrimiento de metadatos sobre recursos espaciales en la web."
 msgstr ""
-"El catálogo de datos abiertos del <a href=\"%(iepnb_url)s\" "
-"style=\"color: #333333;\"><strong>Inventario Español del Patrimonio "
-"Natural y la Biodiversidad</strong></a> consta de una aplicación con "
-"tecnología CKAN que se utiliza para distribuir mapas, datos y metadatos "
-"espaciales y un <a href=\"%(base_url)s/csw\" style=\"color: #333333;"
-"\"><strong>catálogo CSW</strong></a> (estándar OGC) para la publicación "
-"y descubrimiento de metadatos sobre recursos espaciales en la web."
+"The open data catalog of the <a href=\"%(iepnb_url)s\" style=\"color: "
+"#333333;\"><strong>Biodiversitity and Natural Heritage Spanish "
+"Inventory</strong></a> consists of an application with CKAN technology "
+"used to distribute maps, data and spatial metadata, and a <a "
+"href=\"%(base_url)s/csw\" style=\"color: #333333;\"><strong>CSW catalog</"
+"strong></a> (OGC standard) for the publication and discovery of metadata "
+"about spatial resources on the web."
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:21
 msgid "Buscar"
-msgstr "Buscar"
+msgstr "Search"
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:24
 msgid "Buscar conjuntos de datos"
-msgstr "Buscar conjuntos de datos"
+msgstr "Search datasets"
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:31
 msgid "Etiquetas populares"
-msgstr "Etiquetas populares"
+msgstr "Popular tags"
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:37
 msgid "medio ambiente"
-msgstr "medio ambiente"
+msgstr "Environment"
 
 #: ckanext/iepnb/templates/home/columna_derecha.html:39
 msgid "biota"
@@ -97,105 +99,187 @@ msgstr "iepnb"
 #: ckanext/iepnb/templates/home/columna_izquierda.html:5
 msgid "Pizarra (%(num)d nuevo item"
 msgid_plural "Pizarra (%(num)d nuevos items)"
-msgstr[0] "Pizarra (%(num)d nuevo item"
-msgstr[1] "Pizarra (%(num)d nuevos items"
+msgstr[0] "Dashboard (%(num)d new item)"
+msgstr[1] "Dashboard (%(num)d new items)"
 
-#: ckanext/iepnb/templates/home/columna_izquierda.html:15
+#: ckanext/iepnb/templates/home/columna_izquierda.html:11
 msgid "Administrador"
-msgstr "Administrador"
+msgstr "Administrator"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:13
 msgid "Ver perfil"
-msgstr "Ver perfil"
+msgstr "View profile"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:15
 msgid "Tus datos"
-msgstr "Tus datos"
+msgstr "Your data"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:19
 msgid "Panel de control"
-msgstr "Panel de control"
+msgstr "Control panel"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:22
 msgid "harvest"
-msgstr "harvest"
+msgstr ""
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:24
 msgid "Harvest"
-msgstr "Harvest"
+msgstr ""
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:27
 #: ckanext/iepnb/templates/home/columna_izquierda.html:29
 msgid "Ajustes de perfil"
-msgstr "Ajustes de perfil"
+msgstr "Profile settings"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:32
 #: ckanext/iepnb/templates/home/columna_izquierda.html:34
 msgid "Punto SPARQL"
-msgstr "Punto SPARQL"
+msgstr "Sparql point"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:37
 #: ckanext/iepnb/templates/home/columna_izquierda.html:39
 msgid "Cerrar sesión"
-msgstr "Cerrar sesión"
+msgstr "Log out"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:49
 msgid "Estadísticas"
-msgstr "Estadísticas"
+msgstr "Stats"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:53
 msgid "Menu de estadísticas"
 msgstr "Menu de estadísticas"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:55
-msgid "Catálogo de datos"
-msgstr "Catálogo de datos"
+msgid "Conjuntos de datos"
+msgstr "Datasets"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:56
 msgid "Organización"
-msgstr "Organización"
+msgstr "Organization"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:56
 msgid "Organizaciones"
-msgstr "Organizaciones"
+msgstr "Organizations"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:57
 msgid "Grupo"
-msgstr "Grupo"
+msgstr "Group"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:57
 msgid "Grupos"
-msgstr "Grupos"
+msgstr "Groups"
 
 #: ckanext/iepnb/templates/home/columna_izquierda.html:86
 msgid "Datos Abiertos Enlazados"
-msgstr "Datos Abiertos Enlazados"
+msgstr "Linked Open Data"
 
 #: ckanext/iepnb/templates/home/index.html:4
 msgid "Bienvenido"
-msgstr "Bienvenido"
+msgstr "Welcome"
 
 #: ckanext/iepnb/templates/home/index.html:28
 msgid "Inicio"
-msgstr "Inicio"
+msgstr "Home"
 
 #: ckanext/iepnb/templates/home/index.html:28
 #: ckanext/iepnb/templates/snippets/home_breadcrumb_item.html:7
 msgid "Home"
-msgstr "Inicio"
+msgstr "Home"
 
 #: ckanext/iepnb/templates/package/base.html:16
 msgid "Organizations"
-msgstr "Organizaciones"
+msgstr "Organizations"
 
 #: ckanext/iepnb/templates/package/base.html:24
 msgid "Crear conjunto de datos"
-msgstr "Crear conjunto de datos"
+msgstr "Create Dataset"
 
 #: ckanext/iepnb/templates/home/snippets/featured_organization.html:1
 msgid "Featured organizations"
-msgstr "Organizaciones destacadas"
+msgstr "Featured organizations"
 
 #: ckanext/iepnb/templates/home/snippets/group_organization.html:1
 msgid "Featured groups"
-msgstr "Grupos destacados"
+msgstr "Featured groups"
+
+#: ckanext/iepnb/templates/home/snippets/featured_dataset.html:1
+msgid "Featured datasets"
+msgstr "Featured datasets"
+
+#: ckanext/iepnb/templates/home/columna_izquierda.html:37
+#: ckanext/iepnb/templates/header.html:31
+msgid "Private area"
+msgstr "Private area"
+
+# Resource type - Schema field_name: dcat_type
+msgid "dataset"
+msgstr "Spatial data set"
+
+msgid "art"
+msgstr "Article"
+
+msgid "bda"
+msgstr "Bibliographic data"
+
+msgid "Collection"
+msgstr "Collection"
+
+msgid "dtb"
+msgstr "Database"
+
+msgid "doc"
+msgstr "Document (computer)"
+
+msgid "Event"
+msgstr "Event"
+
+msgid "gov"
+msgstr "Government publication"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "StillImage"
+msgstr "Still Image"
+
+msgid "jou"
+msgstr "Journal"
+
+msgid "leg"
+msgstr "Legislation"
+
+msgid "MovingImage"
+msgstr "Moving Image"
+
+msgid "PhysicalObject"
+msgstr "Physical Object"
+
+msgid "rpt"
+msgstr "Reporting"
+
+msgid "InteractiveResource"
+msgstr "Interactive Resource"
+
+msgid "series"
+msgstr "Spatial data set series"
+
+msgid "Service"
+msgstr "Service"
+
+msgid "service"
+msgstr "Spatial data service"
+
+msgid "Sound"
+msgstr "Sound"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "stp"
+msgstr "Standard or specification"
+
+msgid "ter"
+msgstr "Technical report"
+
+msgid "Text"
+msgstr "Text"

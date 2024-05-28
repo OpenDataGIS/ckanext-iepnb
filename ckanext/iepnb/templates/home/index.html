@@ -27,6 +27,7 @@
     {% set ns.lang = '/' + h.lang() %}
   {% endif %}
   <li><a href = "{{ns.lang}}/" aria-label="{{ _('Inicio') }}"><span> {{ _('Home') }}</span></a></li>
+
   {% set breadcrumbs = h.iepnb_decode_json(h.iepnb_breadcrumbs(h.lang())) %}
   {% set ns.breadcrumbs_count = breadcrumbs | length %}
   {%- for elemento in breadcrumbs %}

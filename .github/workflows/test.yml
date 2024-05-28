@@ -33,9 +33,14 @@ jobs:
     - name: Install requirements
       # Install any extra requirements your extension has here (dev requirements, other extensions etc)
       run: |
-        pip install -r requirements.txt
-        pip install -r dev-requirements.txt
-        pip install -e .
+        pip install --no-cache-dir -r requirements.txt
+        pip install --no-cache-dir -r dev-requirements.txt
+        pip install --no-cache-dir -e .
+        pip install --no-cache-dir -e git+https://github.com/mjanez/ckanext-dcat.git@v1.6.0#egg=ckanext-dcat
+        pip install --no-cache-dir -r https://raw.githubusercontent.com/mjanez/ckanext-dcat/v1.6.0/requirements.txt
+        pip install --no-cache-dir -e git+https://github.com/ckan/ckanext-scheming.git@release-3.0.0#egg=ckanext-scheming
+        pip install --no-cache-dir -e git+https://github.com/mjanez/ckanext-schemingdcat.git@v3.1.0#egg=ckanext_schemingdcat 
+        pip install --no-cache-dir -r https://raw.githubusercontent.com/mjanez/ckanext-schemingdcat/v3.1.0/requirements.txt
     - name: Setup extension
       # Extra initialization steps
       run: |

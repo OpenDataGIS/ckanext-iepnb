@@ -23,7 +23,7 @@
                 <p class="titulo_etiquetas">{% trans %}Etiquetas populares{% endtrans %}</p>
                 <div class="contenedor_etiquetas">
                 {%- for tag in tags %}
-                  <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+                  <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}">{{ _(tag.display_name)|truncate(22) }}</a>
                   {%- endfor %}
                   {%- if (h.iepnb_popular_tags()-len_tags)>0 %}
                                   <a class="tag" href="{% url_for 'dataset.search', tags='medio ambiente' %}">{% trans %}medio ambiente{% endtrans %}</a>
@@ -47,8 +47,8 @@
             <!-- <div class="container"> --> 
               <div class="row row2">
                 <div class="col-md-6 col2">
-        {%- block featured_organization %}
-          {%- snippet 'home/snippets/featured_organization.html' %}
+        {%- block featured_dataset %}
+          {%- snippet 'home/snippets/featured_dataset.html' %}
         {%- endblock %}
                 </div>
                 <div class="col-md-6 col1">

@@ -1,0 +1,11 @@
+    <h2 class="titular_linea_verde featured_element">{{ _('Catalog endpoints') }}</h2>
+    <div class="contenedor_links">
+        {% if h.iepnb_plugin_defined("schemingdcat") %}
+            <div class="home-left-col-container">
+                <a href="{{ h.url_for('/endpoints') }}" title="{{ _('Catalog endpoints') }}" class="menu_area_publica w-inline-block">
+                    <img src="{{ h.url_for_static('img/icono_csw.svg') }}" loading="lazy" alt="{{ _('Catalog endpoints') }}" class="image-5-endpoint">
+                    <p class="text_menu_endpoints">{{_('Catalog endpoints') }}</p> 
+                </a>
+            </div>
+        {% endif %}
+    </div>
