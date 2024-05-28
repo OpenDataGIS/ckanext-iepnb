@@ -75,7 +75,7 @@
            {% block pre_primary %}
 
               {% block header_endpoints %}
-                {% if c.action=='search' %}
+                {% if c.action=='search' and c.controller=="dataset" %}
                   {% snippet 'schemingdcat/endpoints/header_endpoints.html' %}
                 {% endif %}
               {% endblock %}
