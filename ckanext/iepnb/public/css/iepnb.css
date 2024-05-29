@@ -1417,6 +1417,10 @@ a.btn.btn-multiple-remove {
 }
 
 /* featured datasets */
+.dataset-featured-icon {
+    color:#417400;
+}
+
 .content-row {
     display: flex;
     align-items: center; /* This will center items vertically */
