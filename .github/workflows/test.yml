@@ -37,7 +37,7 @@ jobs:
         pip install --no-cache-dir -r requirements.txt
         pip install --no-cache-dir -r dev-requirements.txt
         pip install --no-cache-dir -e .
-
+        
         # Install ckanext-dcat
         pip install --no-cache-dir -e git+https://github.com/mjanez/ckanext-dcat.git@v1.6.0#egg=ckanext-dcat
         pip install --no-cache-dir -r https://raw.githubusercontent.com/mjanez/ckanext-dcat/v1.6.0/requirements.txt
