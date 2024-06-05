@@ -33,14 +33,29 @@ jobs:
     - name: Install requirements
       # Install any extra requirements your extension has here (dev requirements, other extensions etc)
       run: |
+        # Install general requirements
         pip install --no-cache-dir -r requirements.txt
         pip install --no-cache-dir -r dev-requirements.txt
         pip install --no-cache-dir -e .
+
+        # Install ckanext-dcat
         pip install --no-cache-dir -e git+https://github.com/mjanez/ckanext-dcat.git@v1.6.0#egg=ckanext-dcat
         pip install --no-cache-dir -r https://raw.githubusercontent.com/mjanez/ckanext-dcat/v1.6.0/requirements.txt
+
+        # Install ckanext-scheming
         pip install --no-cache-dir -e git+https://github.com/ckan/ckanext-scheming.git@release-3.0.0#egg=ckanext-scheming
+
+        # Install ckanext-schemingdcat
         pip install --no-cache-dir -e git+https://github.com/mjanez/ckanext-schemingdcat.git@v3.1.0#egg=ckanext_schemingdcat 
         pip install --no-cache-dir -r https://raw.githubusercontent.com/mjanez/ckanext-schemingdcat/v3.1.0/requirements.txt
+
+        # Install ckanext-fluent
+        pip install --no-cache-dir -e git+hhttps://github.com/mjanez/ckanext-fluent.git@v1.0.1#egg=ckanext-fluent
+
+        # Install ckanext-sparql_interface
+        pip install --no-cache-dir -e git+https://github.com/OpenDataGIS/ckanext-sparql_interface.git@2.0.3-iepnb#egg=ckanext-sparql_interface && \
+        pip install --no-cache-dir -r https://raw.githubusercontent.com/OpenDataGIS/ckanext-sparql_interface/2.0.3-iepnb/requirements.txt
+
     - name: Setup extension
       # Extra initialization steps
       run: |
