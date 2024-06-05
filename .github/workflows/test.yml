@@ -50,7 +50,7 @@ jobs:
         pip install --no-cache-dir -r https://raw.githubusercontent.com/mjanez/ckanext-schemingdcat/v3.1.0/requirements.txt
 
         # Install ckanext-fluent
-        pip install --no-cache-dir -e git+hhttps://github.com/mjanez/ckanext-fluent.git@v1.0.1#egg=ckanext-fluent
+        pip install --no-cache-dir -e git+https://github.com/mjanez/ckanext-fluent.git@v1.0.1#egg=ckanext-fluent
 
         # Install ckanext-sparql_interface
         pip install --no-cache-dir -e git+https://github.com/OpenDataGIS/ckanext-sparql_interface.git@2.0.3-iepnb#egg=ckanext-sparql_interface && \
