@@ -201,6 +201,10 @@ msgstr ""
 msgid "Private area"
 msgstr ""
 
+#: ckanext/iepnb/templates/iepnb/snippets/thematic_area.html
+msgid "Thematic areas"
+msgstr ""
+
 # IEPNB Keywords - Schema field_name: keywords_iepnb
 msgid "accidentes"
 msgstr ""

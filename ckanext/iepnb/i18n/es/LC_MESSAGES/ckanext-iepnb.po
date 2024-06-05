@@ -197,6 +197,10 @@ msgstr "Crear conjunto de datos"
 msgid "Private area"
 msgstr "Área privada"
 
+#: ckanext/iepnb/templates/iepnb/snippets/thematic_area.html
+msgid "Thematic areas"
+msgstr "Áreas temáticas"
+
 # IEPNB Keywords - Schema field_name: keywords_iepnb
 msgid "accidentes"
 msgstr "accidentes"

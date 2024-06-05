@@ -199,6 +199,10 @@ msgstr "Create Dataset"
 msgid "Private area"
 msgstr "Private area"
 
+#: ckanext/iepnb/templates/iepnb/snippets/thematic_area.html
+msgid "Thematic areas"
+msgstr "Thematic areas"
+
 # Resource type - Schema field_name: dcat_type
 msgid "dataset"
 msgstr "Spatial data set"
