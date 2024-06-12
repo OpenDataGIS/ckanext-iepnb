@@ -778,11 +778,6 @@ button.image {
   margin-left: auto !important;
 }
 
-
-#iepnb_ckan select[multiple].form-control {
-	height: 200px;
-}
-
 #iepnb_ckan textarea.form-control {
 	height: 150px;
 }
@@ -1477,7 +1472,7 @@ a.btn.btn-multiple-remove {
     display: none;
     min-width: 10rem;
     padding: 0.5rem 0;
-    margin: 0;
+    margin: 5px 0;
     font-size: 1rem;
     color: #333;
     text-align: left;
@@ -1619,7 +1614,7 @@ nav.navbar.navbar-expand-lg.justify-content-between.navbar-light.sticky-top {
 
 ul.nav.navbar-nav-iepnb {
     background-color: white;
-    border-bottom: 1px solid #83b62c;
+    /*border-bottom: 1px solid #83b62c;*/
     padding-bottom: 5px;
 }
 
@@ -1710,4 +1705,13 @@ footer .nav > li > a:hover, footer .nav > li > a:focus, .nav > li > a:hover, .na
     height: 200px;
     font-size: 14px;
     border-radius: 10px;
+}
+
+.error-block {
+    border-radius: 0 0 3px 3px;
+    display: block;
+    padding: 6px 8px 3px;
+    background: #c6898b;
+    color: #fff;
+    width: 95% !important;
 }

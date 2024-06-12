@@ -52,3 +52,4 @@ ckanext/iepnb/i18n/tools/output/*
 ckanext/iepnb/i18n/tools/input/*
 ckanext/iepnb/i18n/tools/input/input.yaml
 ckanext/iepnb/i18n/tools/input/input.yaml
+ckanext/iepnb/harvesters/*.json
