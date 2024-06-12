@@ -22,11 +22,6 @@
       {% snippet "schemingdcat/snippets/data_access_license.html", pkg_dict=pkg, dataset_type=dataset_type %}
     {% endif %}
   {% endblock %}
-  
-  {% set dataset_extent = pkg.spatial %}
-  {% if dataset_extent %}
-    {% snippet "snippets/dataset_map_sidebar.html", extent=dataset_extent %}
-  {% endif %}
 
   {% block package_thematic_area %}
     {% if pkg.thematic_area %}
