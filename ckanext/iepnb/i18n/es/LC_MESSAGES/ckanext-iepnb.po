@@ -201,7 +201,7 @@ msgstr "Área privada"
 msgid "Thematic areas"
 msgstr "Áreas temáticas"
 
-# IEPNB Keywords - Schema field_name: keywords_iepnb
+# IEPNB Keywords - Schema field_name: keyword_iepnb
 msgid "accidentes"
 msgstr "accidentes"
 

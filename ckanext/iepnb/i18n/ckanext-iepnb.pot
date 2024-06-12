@@ -205,7 +205,7 @@ msgstr ""
 msgid "Thematic areas"
 msgstr ""
 
-# IEPNB Keywords - Schema field_name: keywords_iepnb
+# IEPNB Keywords - Schema field_name: keyword_iepnb
 msgid "accidentes"
 msgstr ""
 
