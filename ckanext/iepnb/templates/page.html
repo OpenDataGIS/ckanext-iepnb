@@ -1,5 +1,6 @@
 {% ckan_extends %}
 {# El bloque page es todo lo que va dentro del body -#}
+
 {% block page -%}
     <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
 {#- inicio emulación page/page.html.twig #}
@@ -55,7 +56,6 @@
        {# Me salto el bloque node content/node.html.twig #}
 	{% block content %}
 <!-- Bloques content @ page -->
-
        <!-- Bloque super.content @ page -->
     {% block maintag %}<div class="main" id="iepnb_ckan">{% endblock %}
               <div id="content" class="container">
@@ -73,10 +73,16 @@
           {% endblock %}
                 <div class="row wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' or c.action=='resource_read' %} no-nav{% endif %}">
            {% block pre_primary %}
-
               {% block header_endpoints %}
                 {% if c.action=='search' and c.controller=="dataset" %}
                   {% snippet 'schemingdcat/endpoints/header_endpoints.html' %}
+
+                  {% block toolbar_templates %}
+                    {% if h.schemingdcat_get_show_metadata_templates_toolbar() %}
+                      {% snippet 'schemingdcat/snippets/header_metadata_templates.html' %}               
+                  {% endif %}
+                {% endblock %}
+
                 {% endif %}
               {% endblock %}
 
