@@ -16,7 +16,7 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # http://packaging.python.org/en/latest/tutorial.html#version
-    version='0.0.1',
+    version='2.0.2',
 
     description='''Plantillas iepnb''',
     long_description=long_description,
@@ -26,8 +26,7 @@ setup(
     url='https://github.com/OpenDataGIS/ckanext-iepnb',
 
     # Author details
-    author='''Daniel Sanjurjo''',
-    author_email='''iepnb@tragsa.es''',
+    author='''OpenDataGIS''',
 
     # Choose your license
     license='AGPL',
@@ -85,6 +84,8 @@ setup(
     entry_points='''
         [ckan.plugins]
         iepnb=ckanext.iepnb.plugin:IepnbPlugin
+        
+        iepnb_harvester=ckanext.iepnb.harvesters:IEPNBHarvester
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
