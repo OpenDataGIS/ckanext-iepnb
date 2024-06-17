@@ -1,9 +1,9 @@
 <div class="user-panel-header">
     <a href="{{ h.url_for('/') }}" title="{{ _('Home') }}"
         class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
-        <img src="{{ h.url_for_static('img/icono_csw.svg') }}" loading="lazy" alt="{{ _('Home') }}">
+        <img src="{{ h.url_for_static('img/icono-home.svg') }}" loading="lazy" alt="{{ _('Home') }}">
     </a>
-    <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Ajustes del administrador') }}"
+    <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Administer CKAN') }}"
         class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
         <img src="{{ h.url_for_static('img/icono_administrador.svg') }}" loading="lazy" alt="{{ _('Ajustes del administrador') }}">
     </a>
@@ -15,9 +15,9 @@
         class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
         <img src="{{ h.url_for_static('img/icono_panel_de_control.svg') }}" loading="lazy" alt="{{ _('Panel de control') }}">
     </a>
-    <a href="{{ h.url_for('/harvest') }}" title="{{ _('Harvest') }}"
+    <a href="{{ h.url_for('/harvest') }}" title="{{ _('Harvest Sources') }}"
     class="login-menu content-admin-navbar-menu w-inline-block" type='button'>
-    <img src="{{ h.url_for_static('img/icono_harvest.svg') }}" loading="lazy" alt="{{ _('Harvest') }}">
+    <img src="{{ h.url_for_static('img/icono_harvest.svg') }}" loading="lazy" alt="{{ _('Harvest Sources') }}">
     </a>
     <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Ajustes de perfil') }}"
     class="login-menu content-admin-navbar-menu w-inline-block" type='button'>

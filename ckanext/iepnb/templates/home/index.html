@@ -8,6 +8,12 @@
 
 {% block content %}
 
+{% block toolbar_templates %}
+  {% if h.schemingdcat_get_show_metadata_templates_toolbar() %}
+    {% snippet 'schemingdcat/metadata_templates/header_metadata_templates.html' %}               
+  {% endif %}
+{% endblock %}
+
   <div class="homepage layout-{{ homepage_style }}">
     <div id="content" class="container">
       {{ self.flash() }}

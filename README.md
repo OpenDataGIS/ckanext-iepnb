@@ -12,6 +12,7 @@
     <a href="#requirements">Requirements</a> •
     <a href="#improvements">Improvements</a> •
     <a href="#installation">Installation</a> •
+    <a href="#harvesters">Harvesters</a> •
     <a href="#config-settings">Config settings</a> •
     <a href="#developer-installation">Developer installation</a> •
     <a href="#tests">Tests</a> •
@@ -109,60 +110,199 @@ ckanext.sparql.hide_endpoint_url=False
  ```
 
 ## Improvements
-As `ckanext-iepnb` tries to merge ckan and iepnb styles, it might be good if the values used in 
-the values used in css directives were stored in css variables, so that `ckanext-iepnb` could recall them to override ckan 
-could invoke them to override ckan styles, and changes made by the design 
-team without having to rewrite them in the extension.
+`ckanext-iepnb` tries to merge the CKAN and IEPNB styles, it might be good if the values used in the CSS directives were stored in CSS variables, so that `ckanext-iepnb` could call them to override CKAN, and changes made by the design team without having to rewrite them in the extension.
 
-Since header and footer are the block shared between ckan and the rest of the
-iepnb site, perhaps it would be a good improvement to wrap them in a class that lets
-which lets iepnb styles take precedence over ckan styles in those blocks. This
-could be further improved by having the styles that affect those blocks in their own
-css files, separate from the styles that affect the main block or the page as a whole. 
-as a whole.
+Since header and footer are the blocks shared between CKAN and the rest of the iepnb site, perhaps it would be a good improvement to wrap them in a class that allows iepnb styles to take precedence over CKAN styles in these blocks. This could be further improved by having the styles that affect those blocks in their own css files, separate from the styles that affect the main block or the page as a whole.
 
-This extension displays a summary of the record's publisher in the left column.
-It shows the name of the publisher, their web and their email. If information about
-is missing, the extension will only display the relevant
-data. If the name is missing, the extension omits all information about the publisher.
-in the left column.
-
-The name of the publisher is a link to find all records that use that publisher.
-publisher.
+This extension displays a summary of various metadata elements in the left column.
 
 ## Installation
 
-To install ckanext-iepnb:
+To install `ckanext-iepnb`:
 
 1. Activate your CKAN virtual environment, for example:
 
+    ```bash
     `. /usr/lib/ckan/default/bin/activate`
+    ```
 
 2. Clone the source and install it on the virtualenv
 
-    ```
+    ```bash
     git clone https://github.com/OpenDataGIS/ckanext-iepnb.git
     cd ckanext-iepnb
     pip install -e .
-	pip install -r requirements.txt
+	  pip install -r requirements.txt
     ```
 
 3. Add `iepnb` to the `ckan.plugins` setting in your CKAN
    config file (by default the config file is located at
    `/etc/ckan/default/ckan.ini`).
-   
-4. In order to let the English profile work, is absolutely mandatory to make 
-   the directory `/ckan/ckan/public/base/i18n` writable by the ckan user. 
-   ¡CKAN WILL NOT START IF YOU DON'T DO SO!
-		
-5. Add iepnb specific configuration to the CKAN config file
+   		
+4. Add `iepnb` specific configuration to the CKAN config file
 
-6. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
+5. Restart CKAN.
 
-     `sudo service apache2 reload`
+>[!TIP]
+> If CKAN does not start, try making the directory `/ckan/ckan/public/base/i18n` writable by the ckan user.
+
+
+## Harvesters
+### Basic using
+In production, when `gather` and `consumer` processes are running, the following command are used to start and stop the background processes:
+
+  - `ckan harvester run`: Starts any harvest jobs that have been created by putting them onto
+    the gather queue. Also checks running jobs - if finished it
+    changes their status to Finished.
+
+To testing harvesters in development, you can use the following command:
+  - `ckan harvester run-test {source-id/name}`: This does all the stages of the harvest (creates job, gather, fetch, import) without involving the web UI or the queue backends. This is useful for testing a harvester without having to fire up gather/fetch_consumer processes, as is done in production.
+
+    > [!WARNING]
+    > After running the `run-test` command, you should stop all background processes for `gather` and `consumer` to avoid conflicts.
+
+### Remote Google Sheet/Onedrive Excel metadata upload Harvester - IEPNB
+A harvester for remote Excel files with Metadata records. This harvester is a subclass of the Scheming DCAT Base Harvester provided by `ckanext-schemingdcat` to provide a more versatile and customizable harvester for Excel files that have metadata records in them.
+
+To use it, you need to add the `iepnb_harvester` plugin to your options file:
+
+  ```ini
+  ckan.plugins = harvest schemingdcat schemingdcat_datasets iepnb ... iepnb_harvester
+  ```
+
+Remote Google Sheet/Onedrive Excel metadata upload Harvester supports the options described in the [`ckanext-schemingdcat harvester`](https://github.com/mjanez/ckanext-schemingdcat?tab=readme-ov-file#remote-google-sheetonedrive-excel-metadata-upload-harvester)
+
+**Example**
+Here are some examples of configuration files:
+
+* *Field positions*: With `field_position` to define the mapping based on positions of attributes in the remote sheet (`A`, `B`, `AA`, etc.).
+  ```json
+  {
+    "storage_type": "gspread",
+    "dataset_sheet": "Dataset",
+    "distribution_sheet": "Distribution",
+
+    ...
+    # other properties
+    ...
+
+    "field_mapping_schema_version": 2,
+    "dataset_field_mapping": {
+      "title": {
+          "field_position": "A"
+        },
+      "title_translated": {
+          "languages": {
+              "en": {
+                  "field_position": "AC"
+              },
+              "de": {
+                  "field_value": ""
+              },
+              "es": {
+                  "field_position": "A"
+              }
+          }
+      },
+      "private": {
+          "field_position": "F"
+      },
+      "theme": {
+          "field_position": ["G", "AA"],
+      },
+      "tag_custom": {
+          "field_position": "B"
+      },
+      "tag_string": {
+          "field_position": ["A", "B", "AC"]
+      },
+      "theme_es": {
+          "field_value": "http://datos.gob.es/kos/sector-publico/sector/medio-ambiente"
+      },
+      "tag_uri": {
+          "field_position": "Z",
+          // "field_value" extends the original list of values retrieved from the remote file for all records.
+          "field_value": ["https://www.example.org/codelist/a","https://www.example.org/codelist/b", "https://www.example.org/codelist/c"] 
+      },
+    }
+  }
+  ```
+
+  * *Field names*: With `field_name` to define the mapping based on names of attributes in the remote sheet (`my_title`, `org_identifier`, `keywords`).
+
+  ```json
+  {
+    "storage_type": "gspread",
+    "dataset_sheet": "Dataset",
+    "distribution_sheet": "Distribution",
+
+    ...
+    # other properties
+    ...
+
+    "field_mapping_schema_version": 2,
+    "dataset_field_mapping": {
+      "title": {
+          "field_name": "my_title"
+        },
+      "title_translated": {
+          "languages": {
+              "en": {
+                  "field_name": "my_title-en"
+              },
+              "de": {
+                  "field_value": ""
+              },
+              "es": {
+                  "field_name": "my_title"
+              }
+          }
+      },
+      "private": {
+          "field_name": "private"
+      },
+      "theme": {
+          "field_name": ["theme", "theme_eu"]
+      },
+      "tag_custom": {
+          "field_name": "keywords"
+      },
+      "tag_string": {
+          "field_name": ["theme_a", "theme_b", "theme_c"]
+      },
+      "theme_es": {
+          "field_value": "http://datos.gob.es/kos/sector-publico/sector/medio-ambiente"
+      },
+      "tag_uri": {
+          "field_name": "keyword_uri",
+          // "field_value" extends the original list of values retrieved from the remote file for all records.
+          "field_value": ["https://www.example.org/codelist/a","https://www.example.org/codelist/b", "https://www.example.org/codelist/c"] 
+      },
+    }
+  }
+  ```
+
+>[!IMPORTANT]
+> All `*_translated` fields need their fallback `non-suffix` field as simple field, e.g: 
+> ```json
+> ...
+>    "title": {
+>         "field_position": "A"
+>      },
+>    "title_translated": {
+>        "languages": {
+>            "en": {
+>                "field_value": ""
+>            },
+>            "es": {
+>                "field_position": "A"
+>            }
+>       }
+>    },
+> ...
+>```
 
 ## Config settings
-
 At CKAN config .ini file (in `/etc/ckan/default` dir), into the [app:main] 
 section, add:
 
@@ -194,8 +334,7 @@ ckan.favicon=/base/images/iepnb.ico
 
 breadcrumbs are shown in the same order that are defined in the key's value
 
-###Stats configuration
-
+### Stats configuration
 Having stats on is a bit tricky. First of all you must have the plugin 
 activated at the `ckan.plugins` setting in the config .ini file. usually you 
 have it out-of-the-box, so it's not a big deal. Since you have it enabled, 
@@ -215,7 +354,6 @@ menu option and checking the stats), and only then apply the proposed patch (if
 the plugin doesn't works).
 
 ## Developer installation
-
 To install ckanext-iepnb for development, activate your CKAN virtualenv and
 do:
 
@@ -227,7 +365,6 @@ pip install -r dev-requirements.txt
 ```
 
 ## Tests
-
 Be sure that ckan user has write rights in the root dir of the extension 
 (perhaps ckanext-iepnb?). If that is not the case and if for security or other 
 reasons you can't do it, create a .pytest_cache dir at the root dir of the
@@ -252,7 +389,6 @@ libs it uses, so please do not mess upgrading libs in order to supress the
 warnings. Just ignore them.
 
 ## Releasing a new version of ckanext-iepnb
-
 If ckanext-iepnb should be available on PyPI you can follow these steps to 
 publish a new version:
 
@@ -297,5 +433,4 @@ publish a new version:
 	```
 
 ## License
-
 [AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html)

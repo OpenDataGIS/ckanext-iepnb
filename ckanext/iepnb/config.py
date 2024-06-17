@@ -63,7 +63,7 @@ stats = False
 
 # Vocabs
 IEPNB_DEFAULT_DATASET_SCHEMA_NAME = "dataset"
-SCHEMINGDCAT_IEPNB_KEYWORDS_VOCAB = "keywords_iepnb"
+SCHEMINGDCAT_IEPNB_KEYWORDS_VOCAB = "keyword_iepnb"
 
 static_logos = {
     "logo_footer_prtr": "/img/logo/miteco-prtr_1.png",
@@ -71,4 +71,107 @@ static_logos = {
     "logo_iepnb": "/img/logo/logoIEPNB.png",
     "logo_footer_ue": "/img/logo/financiacion_UE.png",
     "logo_footer_minbn": "/img/logo/logo_ministerio_bn",
+}
+
+# Dataset default values
+IEPNB_HARVESTER_MD_CONFIG = {
+    'access_rights': 'http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations',
+    'conformance': [
+        'http://inspire.ec.europa.eu/documents/inspire-metadata-regulation','http://inspire.ec.europa.eu/documents/commission-regulation-eu-no-13122014-10-december-2014-amending-regulation-eu-no-10892010-0'
+    ],
+    'author': 'ckanext-schemingdcat',
+    'author_email': 'admin@{ckan_instance}',
+    'author_url': '{ckan_instance}/organization/test',
+    'author_uri': '{ckan_instance}/organization/test',
+    'contact_name': 'Área de Banco de Datos de la Naturaleza. Dirección General Biodiversidad, Bosques y Desertificación. Ministerio para la Transición Ecológica y el Reto Demográfico',
+    'contact_email': 'buzon-bdatos@miteco.es',
+    'contact_url': 'https://www.miteco.gob.es/',
+    'contact_uri': 'http://datos.gob.es/recurso/sector-publico/org/Organismo/E05068001',
+    'dcat_type': {
+        'series': 'http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series',
+        'dataset': 'http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset',
+        'spatial_data_service': 'http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service',
+        'default': 'http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset',
+        'collection': 'http://purl.org/dc/dcmitype/Collection',
+        'event': 'http://purl.org/dc/dcmitype/Event',
+        'image': 'http://purl.org/dc/dcmitype/Image',
+        'still_image': 'http://purl.org/dc/dcmitype/StillImage',
+        'moving_image': 'http://purl.org/dc/dcmitype/MovingImage',
+        'physical_object': 'http://purl.org/dc/dcmitype/PhysicalObject',
+        'interactive_resource': 'http://purl.org/dc/dcmitype/InteractiveResource',
+        'service': 'http://purl.org/dc/dcmitype/Service',
+        'sound': 'http://purl.org/dc/dcmitype/Sound',
+        'software': 'http://purl.org/dc/dcmitype/Software',
+        'text': 'http://purl.org/dc/dcmitype/Text',
+    },
+    'encoding': 'UTF-8',
+    'frequency' : 'http://publications.europa.eu/resource/authority/frequency/UNKNOWN',
+    'inspireid_theme': 'HB',
+    'language': 'http://publications.europa.eu/resource/authority/language/ENG',
+    'license': 'http://creativecommons.org/licenses/by/4.0/',
+    'license_id': 'cc-by',
+    'lineage_process_steps': 'ckanext-schemingdcat lineage process steps.',
+    'maintainer': 'ckanext-schemingdcat',
+    'maintainer_email': 'admin@{ckan_instance}',
+    'maintainer_url': '{ckan_instance}/organization/test',
+    'maintainer_uri': '{ckan_instance}/organization/test',
+    'metadata_profile': [
+        "http://semiceu.github.io/GeoDCAT-AP/releases/2.0.0","http://inspire.ec.europa.eu/document-tags/metadata"
+    ],
+    'notes_translated': {
+        'es': 'Metadatos del conjunto de datos',
+        'en': 'Dataset metadata.'
+    },
+    'provenance': 'ckanext-schemingdcat provenance statement.',
+    'publisher_name': 'Área de Banco de Datos de la Naturaleza. Dirección General Biodiversidad, Bosques y Desertificación. Ministerio para la Transición Ecológica y el Reto Demográfico',
+    'publisher_email': 'buzon-bdatos@miteco.es',
+    'publisher_url': 'https://www.miteco.gob.es/',
+    'publisher_identifier': 'http://datos.gob.es/recurso/sector-publico/org/Organismo/E05068001',
+    'publisher_uri': 'https://iepnb.es/catalogo/organization/iepnb',
+    'publisher_type': 'http://purl.org/adms/publishertype/NationalAuthority',
+    'reference_system': 'http://www.opengis.net/def/crs/EPSG/0/4258',
+    'representation_type': {
+        'wfs': 'http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/vector',
+        'wcs': 'http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid',
+        'default': 'http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/vector',
+        'grid': 'http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid',
+        'vector': 'http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/vector',
+        'textTable': 'http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/textTable',
+        'tin': 'http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/tin',
+        'stereoModel': 'http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/stereoModel',
+        'video': 'http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/video',
+    },
+    'resources': {
+        'availability': 'http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE',
+        'name': {
+            'es': 'Distribución {format}',
+            'en': 'Distribution {format}'
+        },
+    },
+    'rights': 'http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations',
+    'spatial': None,
+    'spatial_uri': 'http://datos.gob.es/recurso/sector-publico/territorio/Pais/España',
+    'status': 'http://purl.org/adms/status/UnderDevelopment',
+    'temporal_start': None,
+    'temporal_end': None,
+    'theme': 'http://inspire.ec.europa.eu/theme/hb',
+    'theme_es': 'http://datos.gob.es/kos/sector-publico/sector/medio-ambiente',
+    'theme_eu': 'http://publications.europa.eu/resource/authority/data-theme/ENVI',
+    'topic': 'http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota',
+    'valid': None
+}
+
+IEPNB_PUBLISHER_TYPES = {
+    'national_authority': {
+        'label': 'ministerio',
+        'value': 'http://purl.org/adms/publishertype/NationalAuthority'
+    },
+    'regional_authority': {
+        'label': 'consejeria',
+        'value': 'http://purl.org/adms/publishertype/RegionalAuthority'
+    },
+    'local_authority': {
+        'label': 'concejalia',
+        'value': 'http://purl.org/adms/publishertype/LocalAuthority'
+    }
 }

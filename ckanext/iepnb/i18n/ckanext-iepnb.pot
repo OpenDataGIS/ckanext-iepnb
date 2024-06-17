@@ -196,24 +196,16 @@ msgstr ""
 msgid "Crear conjunto de datos"
 msgstr ""
 
-#: ckanext/iepnb/templates/home/snippets/featured_organization.html:1
-msgid "Featured organizations"
-msgstr ""
-
-#: ckanext/iepnb/templates/home/snippets/group_organization.html:1
-msgid "Featured groups"
-msgstr ""
-
-#: ckanext/iepnb/templates/home/snippets/featured_dataset.html:1
-msgid "Featured datasets"
-msgstr ""
-
 #: ckanext/iepnb/templates/home/columna_izquierda.html:37
 #: ckanext/iepnb/templates/header.html:31
 msgid "Private area"
 msgstr ""
 
-# IEPNB Keywords - Schema field_name: keywords_iepnb
+#: ckanext/iepnb/templates/iepnb/snippets/thematic_area.html
+msgid "Thematic areas"
+msgstr ""
+
+# IEPNB Keywords - Schema field_name: keyword_iepnb
 msgid "accidentes"
 msgstr ""
 

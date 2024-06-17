@@ -1,7 +1,7 @@
 import pytest
 import ckanext.iepnb.utils as iepnb_utils
 import ckanext.iepnb.config as iepnb_config
-import ckan.logic as logic
+from ckanapi import LocalCKAN, NotFound
 from html.parser import HTMLParser
 import ckan.tests.helpers as helpers
 from pathlib import Path
@@ -68,16 +68,10 @@ class TestGetFacetsDict:
         result_dataset = { elemento['field_name']:elemento['label'] for nombre,lista in test_dataset.items() for elemento in lista }
         monkeypatch.setattr(iepnb_utils, "_facets_dict", None)
     
-        def innerpach(context, data_dict):
-            assert context == {}
-            assert data_dict == {'type': 'dataset'}
-            return test_dataset
-    
-        def patch(funcion):
-            assert funcion == 'scheming_dataset_schema_show'
-            return innerpach
-    
-        monkeypatch.setattr(logic,"get_action", patch)
+        def test_dataset_schema_show(self):
+            lc = LocalCKAN("visitor")
+            schema = lc.action.scheming_dataset_schema_show(type="dataset")
+            assert schema["dataset_fields"][2]["label"] == "Humps"
         
         assert iepnb_utils.get_facets_dict() == result_dataset
         assert iepnb_utils._facets_dict == result_dataset

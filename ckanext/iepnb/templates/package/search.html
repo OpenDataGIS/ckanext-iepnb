@@ -16,7 +16,7 @@
                 {% set label_function = h.schemingdcat_organization_name %}
             {% else %}
                 {% set label_function = None %}
-                {{ h.snippet('schemingdcat/snippets/schemingdcat_facet_list.html', title=facet_titles[facet], name=facet, search_facets=search_facets, scheming_choices=h.scheming_field_by_name(h.scheming_get_dataset_schema('dataset').dataset_fields,facet).choices, label_function = label_function) }}
+                {{ h.snippet('schemingdcat/snippets/schemingdcat_facet_list.html', title=facet_titles[facet], name=facet, search_facets=search_facets, scheming_choices=h.scheming_field_by_name(h.schemingdcat_get_dataset_schema('dataset').dataset_fields,facet).choices, label_function = label_function) }}
             {% endif %}
         {% endfor %}
         </div>
