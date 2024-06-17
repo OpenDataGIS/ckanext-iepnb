@@ -1274,6 +1274,16 @@ a.tag:hover {
     max-height: 70px;
     vertical-align: middle;
 }
+
+.module-image {
+    float: left;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
 .module-heading-featured {
     margin: 0;
     padding: 10px 25px;
