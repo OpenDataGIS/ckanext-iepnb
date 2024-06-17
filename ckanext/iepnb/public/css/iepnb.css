@@ -1900,9 +1900,9 @@ footer .nav > li > a:hover, footer .nav > li > a:focus, .nav > li > a:hover, .na
     font-weight: 500;
   }
   
-  .metadata-sidebar-nav li a:hover {
-    color: #056e36;
-  }
+  .metadata-sidebar-nav li:hover a {
+    color: #056e36 !important;
+}
   
   .metadata-sidebar-nav li a i {
     margin-right: 10px;
