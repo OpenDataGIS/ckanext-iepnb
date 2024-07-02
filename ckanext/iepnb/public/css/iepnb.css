@@ -789,20 +789,30 @@ button.image {
 
 @media (min-width: 992px) {
 #iepnb_ckan {
-    	max-width: 970px;
-    	width: 970px;
+        max-width: 90%;
+        width: 90%;
 	}
 	
 .modal-lg {
     width: 900px;
   }
+  
+  .breadcrumb {
+    padding-left: 60px !important;
+    }
+
+
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
 #iepnb_ckan {
-    	max-width: 1170px;
-    	width: 1170px;
+        max-width: 88%;
+        width: 88%;
 	}
+
+.breadcrumb {
+    padding-left: 105px !important;
+    }
 
 }
 
